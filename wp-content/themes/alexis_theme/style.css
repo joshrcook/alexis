@@ -10,4 +10,153 @@ Tags: flexble-width, translation-ready, microformats, rtl-language-support
 License: 
 License URI: 
 
-/******************************************************************
+******************************************************************/
+
+
+/*
+    Stick footer styles
+*/
+
+html, body {
+  height: 100%;
+  background-color: #f8fff5;
+}
+
+#outer-container {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.footer {
+  display: table-row;
+  height: 1px;
+}
+
+/*
+		Header styles
+*/
+
+.top-strip {
+	height: 10px;
+  background-color: #202120;
+}
+
+.header-replacement {
+  height: 100%;
+  margin: 0;
+  max-width: 100%;
+	text-indent: -9999px;
+  background: url(img/assets/logos/ac-logo-red-shadow.svg) no-repeat;
+  background-size: contain;
+}
+
+header .main-logo {
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+}	
+
+header .row.nav-bar {
+ 	height: 10.5em;
+}
+
+header .row hr {
+ 	margin-top: 0; 
+}
+
+header .row .columns {
+ 	height: 100%; 
+}
+
+header .row .nav {
+ 	display: table-row;
+}
+
+header .row .nav li {
+ 	display: table;
+  height: 100%;
+  vertical-align: middle;
+}
+
+header .row .nav li a {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/*
+		Body styles
+*/
+.large-9 ul {
+	height: 100%;  
+}
+
+/*
+		Footer styles
+*/
+
+.footer {
+	background-color: #202120;    
+  color: white;
+}
+
+.footer .row {
+	margin: .5em auto;
+}
+
+.footer .row .columns {
+	height: 32px;
+}
+
+.footer .social-icon {
+	margin-right: 1.5em;  
+}
+
+.footer .copyright {
+	height: 32px;
+	display: table;   
+}
+    
+.footer .copyright span {
+	display: table-cell;
+	vertical-align: middle;          
+}
+
+/* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
+@media only screen and (min-width: 768px) {
+	.copyright {
+  	text-align: right;
+  }
+
+}
+
+/* Used to alter styles for screens at least 1280px wide. */
+@media only screen and (min-width: 1280px) {
+
+
+
+}
+
+/* Used to alter styles for screens at least 1440px wide. */
+@media only screen and (min-width: 1440px) {
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -40,5 +40,26 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div id="outer-container" />
+<div class="top-strip">&nbsp;</div>
+<header>
+    <div class="row nav-bar">
+        <div class="large-3 columns main-logo">
+            <a href="<?php echo get_home_url(); ?>"><h1 class="header-replacement">Alexis Contreras</h1></a>
+        </div>
+        <div class="large-9 columns">
+            <ul class="button-group right nav">
+                <li><a class="button secondary" href="#">Home</a></li>
+                <li><a class="button secondary" href="#">Work</a></li>
+                <li><a class="button secondary" href="#">Art</a></li>
+                <li><a class="button secondary" href="#">Blog</a></li>
+                <li><a class="button secondary" href="#">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <span class="columns large-12"><hr /></span>
+    </div>
+</header><!-- end header -->
 
             
