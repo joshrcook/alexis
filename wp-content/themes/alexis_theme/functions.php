@@ -1,5 +1,15 @@
 <?php
 
+/************ REGULAR FUNCTIONS ***************/
+function add_scripts_styles() {
+    // add league gothic font
+    wp_register_style('league-gothic', get_template_directory_uri() . '/fonts/League-Gothic/league-gothic.css');
+    wp_enqueue_style('league-gothic');
+}
+
+add_action('wp_enqueue_scripts', 'add_scripts_styles');
+
+
 /************ INCLUDE THE FOUNDATION CORE ************/
 require_once( get_template_directory() . '/foundation-functions.php');
 

@@ -29,7 +29,7 @@ function f4_enqueue_styles() {
 	wp_enqueue_style('foundation-base-css');
 }
 
-add_action('wp_head', 'f4_enqueue_styles');
+add_action('wp_enqueue_scripts', 'f4_enqueue_styles');
 
 // init the js in the footer for faster loading times
 function f4_enqueue_scripts() {

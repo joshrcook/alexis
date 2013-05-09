@@ -47,13 +47,23 @@
         <div class="large-3 columns main-logo">
             <a href="<?php echo get_home_url(); ?>"><h1 class="header-replacement">Alexis Contreras</h1></a>
         </div>
-        <div class="large-9 columns">
-            <ul class="button-group right nav">
-                <li><a class="button secondary" href="#">Home</a></li>
-                <li><a class="button secondary" href="#">Work</a></li>
-                <li><a class="button secondary" href="#">Art</a></li>
-                <li><a class="button secondary" href="#">Blog</a></li>
-                <li><a class="button secondary" href="#">About</a></li>
+        <div class="large-9 columns nav">
+            <ul class="button-group">
+                <?php 
+                $menu_name = 'main-nav';
+                $locations = get_nav_menu_locations();
+                $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+                $menu_items = wp_get_nav_menu_items( $menu->term_id );
+                global $post;
+                // echo '<pre>' . print_r($menu_items, 1) . '</pre>';
+                foreach($menu_items as $menu_item) {
+                    echo '<li';
+                    if(isset($post->ID) && $post->ID == $menu_item->object_id) {
+                        echo ' class="selected"';
+                    }
+                    echo '><a class="button secondary" href="' . $menu_item->url . '">' . $menu_item->title . '</a></li>';
+                }
+                ?>
             </ul>
         </div>
     </div>
