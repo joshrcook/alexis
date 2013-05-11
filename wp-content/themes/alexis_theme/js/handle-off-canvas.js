@@ -14,6 +14,9 @@ jQuery(document).ready(function($) {
         if($(window).width() >= maxWindowWidth) {
             hideSidebar();
         }
+        
+        // run the resize of the sidebar no matter what
+        setSidebarHeight();
     });
     
     function showSidebar() {
@@ -32,6 +35,15 @@ jQuery(document).ready(function($) {
         }, hideDelay);
     }
     
+    function setSidebarHeight() {
+        var newHeight = $('#outer-container').height();
+        $('section[role="complementary-nav"]').height(newHeight);
+        
+    }
+    
     // run removeSidebar once on page load
     hideSidebar();
+    
+    // set sidebar height
+    setSidebarHeight();
 });
