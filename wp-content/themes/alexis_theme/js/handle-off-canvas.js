@@ -6,9 +6,13 @@ jQuery(document).ready(function($) {
     });
     
     
-    $(document).on('swipeleft', showSidebar());
+    $(window).on('swipeleft', function() {
+        showSidebar();
+    });
     
-    $(document).on('swiperight', hideSidebar());
+    $(window).on('swiperight', function() {
+        hideSidebar();
+    });
     
     
     $('.show-nav-off-canvas').on('click tap', 'img.active-sidebar', function() {
