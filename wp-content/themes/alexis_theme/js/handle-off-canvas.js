@@ -6,9 +6,9 @@ jQuery(document).ready(function($) {
     });
     
     
-    $(document).on('swipeone swipeleft', showSidebar());
+    $(document).on('swipeleft', showSidebar());
     
-    $(document).on('swipeone swiperight', hideSidebar());
+    $(document).on('swiperight', hideSidebar());
     
     
     $('.show-nav-off-canvas').on('click tap', 'img.active-sidebar', function() {
