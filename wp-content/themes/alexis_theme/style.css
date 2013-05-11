@@ -19,7 +19,6 @@ License URI:
 
 html, body {
   height: 100%;
-  /* background-color: #f8fff5; */
   font-family: 'LeagueGothicRegular', sans-serif;
   font-size: 14px;
   letter-spacing: .05em;
@@ -44,22 +43,92 @@ html, body {
 	font-family: 'LeagueGothicRegular', sans-serif;  
 }
 
+.crimson {
+    font-family: 'CrimsonRoman', serif;
+}
+
+/*
+    Styles for off-canvas nav 
+*/
+section[role="complementary-nav"],
+#outer-container {
+    transition: .2s all ease;
+    float: left;
+}
+
+#outer-container {
+    margin-left: 0;
+}
+
+#outer-container.active-sidebar {
+    margin-left: -80%;
+}
+
+section[role="complementary-nav"] {
+    margin-right: -200%;
+    width: 80%;
+    height: 100%;
+    display: block;
+    background-color: #1b1c1c;
+}
+
+section[role="complementary-nav"] p.header-replace {
+    height: 9.58928571428571em;
+    margin: 0;
+    padding: 0;
+}
+
+section[role="complementary-nav"] hr {
+    margin-top: 0;
+}
+
+section[role="complementary-nav"] li a {
+    color: white;
+    font-size: 4em;
+    text-transform: uppercase;
+}
+
+section[role="complementary-nav"] ul {
+    list-style-type: none;
+}
+
 /*
 		Header styles
 */
 
 .top-strip {
-	height: 10px;
+  height: 10px;
   background-color: #202120;
+  border: none;
 }
 
 .header-replacement {
   height: 3em;
   margin: 0;
   max-width: 100%;
-	text-indent: -9999px;
-  background: url(img/assets/logos/ac-logo-red-shadow.svg) no-repeat center center;
+  text-indent: -9999px;
+  background: url(img/assets/logos/ac-logo-red-shadow.svg) no-repeat left center;
   background-size: contain;
+}
+
+header .nav-bar .nav {
+    height: 8.875em;
+}
+
+header .nav-bar .nav .show-nav-off-canvas {
+    height: 8.875em;
+    position: relative;
+}
+
+header .nav-bar .nav .show-nav-off-canvas img {
+    position: absolute;
+    top: 2.5em;
+    right: 0;
+}
+
+header .nav-bar .nav .button-group {
+    display: none;
+    height: 10.78571428571429em;
 }
 
 header .main-logo {
@@ -71,29 +140,38 @@ header .row hr {
  	margin-top: 0; 
 }
 
-header .row .columns {
- 	height: 100%; 
-}
-
 header .row .nav li {
- 	display: inline-block;
+  display: inline-block;
   height: 100%;
   vertical-align: middle;
   margin: auto 1em;
+  text-align: center;
+  position: relative;
+  width: 75px;
 }
 
-header .row .nav li.selected a {
-	background: url(img/assets/components/nav-bottom-border-red.gif) bottom left repeat-x;
+header .row .nav li.selected {
+  background-color: white;
+  background: url(img/assets/components/nav-bottom-border-red.gif) left bottom repeat-x;
+  border: none;
+  z-index: 100;
+}
+
+header .row .nav li.selected img {
+    position: absolute;
+    z-index: 1000;
+    left: 40%;
 }
 
 header .row .nav li a {
-  display: table-cell;
-  vertical-align: middle;
+  display: block;
   background-color: inherit;
   border: none;
   font-size: 1.71428571428571em;
-  padding-left: .5em;
-  padding-right: .5em;
+  padding: 0;
+  margin: 0;
+  padding-top: 2.4em;
+  height: 100%;
   text-transform: uppercase;
   color: #6D6E70;
   font-weight: 500;
@@ -122,22 +200,25 @@ button.secondary:focus,
 */
 
 #outer-container {
-  background: url(img/assets/photos/alexis-background.jpg) 30% 90% no-repeat;
-  background-size: 600px auto;
+  background: url(img/assets/photos/alexis-background.jpg) left 92% no-repeat;
+  background-size: 120% ;
 }
 
 .large-9.nav ul {
-	height: 100%; 
+  height: 100%; 
   text-align: center; 
 }
 
 /* Styles for main page */
 .background-wrapper {
   width: 100%;
+  position: relative;
+  height: 25em;
+  
 }
 
 .rw-div p {
-  font-size: 4.5em;
+  font-size: 3em;
   line-height: 1.5em;
   text-transform: uppercase;
   text-shadow: 0px 0px 4px #fff;
@@ -152,12 +233,12 @@ button.secondary:focus,
 */
 
 .footer {
-	background-color: #202120;    
+  background-color: #202120;    
   color: white;
 }
 
 .footer .row {
-	margin: .5em auto;
+  margin: 1em auto;
 }
 
 .footer .row .columns {
@@ -170,12 +251,26 @@ button.secondary:focus,
 
 .footer .copyright {
 	height: 32px;
-	display: table;   
+	display: table;  
+        font-size: 1.2em;
+        line-height: 32px;
 }
     
 .footer .copyright span {
 	display: table-cell;
 	vertical-align: middle;          
+}
+
+@media only screen and (min-width: 430px) {
+    .background-wrapper {
+        height: 35em;
+    }
+}
+
+@media only screen and (min-width: 500px), screen and (min-height: 700px) {
+  .rw-div p {
+    font-size: 4.5em;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -185,19 +280,38 @@ button.secondary:focus,
   }
 }
 
+@media only screen and (max-width: 768px) {
+    /*
+       Non-descript styles
+    */
+    .small-content-centered {
+        text-align: center !important;
+    }
+}
+
 /* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
-@media only screen and (min-width: 768px) {
+/* Grid changes from small to medium here */
+@media only screen and (min-width: 768px) { 
   #outer-container {
     background: url(img/assets/photos/alexis-background.jpg) right 98% no-repeat;
     background-size: 900px auto;
   }
 
-	.copyright {
-  	text-align: right;
+  .copyright {
+    text-align: right;
   }
 
   .rw-div p {
     font-size: 6em;
+    line-height: 1.3em;
+  }
+  
+  .background-wrapper {
+        height: 45em;
+  }
+  
+  header .nav-bar .nav {
+        display: inherit;
   }
 
 }

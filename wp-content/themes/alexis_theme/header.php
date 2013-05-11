@@ -44,24 +44,25 @@
 <div class="top-strip">&nbsp;</div>
 <header>
     <div class="row nav-bar">
-        <div class="large-3 columns main-logo">
+        <div class="large-3 small-6 columns main-logo">
             <a href="<?php echo get_home_url(); ?>"><h1 class="header-replacement">Alexis Contreras</h1></a>
         </div>
-        <div class="large-9 columns nav">
-            <ul class="button-group">
+        <div class="large-9 small-6 columns nav">
+            <p class="show-nav-off-canvas hide-for-medium-up">
+                <img class="inactive-sidebar" src="<?php echo get_template_directory_uri() . '/img/assets/components/show-nav-button.png'; ?>" alt="Show off-canvas navigation" />
+            </p>
+            <ul class="button-group hide-for-small">
                 <?php 
-                $menu_name = 'main-nav';
-                $locations = get_nav_menu_locations();
-                $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
-                $menu_items = wp_get_nav_menu_items( $menu->term_id );
+                
+                $menu_items = get_nav_menu_items('main-nav');
                 global $post;
                 // echo '<pre>' . print_r($menu_items, 1) . '</pre>';
                 foreach($menu_items as $menu_item) {
                     echo '<li';
                     if(isset($post->ID) && $post->ID == $menu_item->object_id) {
-                        echo ' class="selected"';
+                        echo ' class="selected"><img src="' . get_template_directory_uri() . '/img/assets/components/nav-arrow-top-black.png" /';
                     }
-                    echo '><a class="button secondary" href="' . $menu_item->url . '">' . $menu_item->title . '</a></li>';
+                        echo '><a class="button secondary" href="' . $menu_item->url . '">' . $menu_item->title . '</a></li>';
                 }
                 ?>
             </ul>

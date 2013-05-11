@@ -5,9 +5,32 @@ function add_scripts_styles() {
     // add league gothic font
     wp_register_style('league-gothic', get_template_directory_uri() . '/fonts/League-Gothic/league-gothic.css');
     wp_enqueue_style('league-gothic');
+    // add crimson font
+    wp_register_style('crimson', get_template_directory_uri() . '/fonts/Crimson/crimson.css');
+    wp_enqueue_style('crimson');
+    
+    // add gestures script to handle mobile tap event
+    wp_register_script('jgestures', get_template_directory_uri() . '/js/jgestures.min.js', array('jquery'));
+    wp_enqueue_script('jgestures');
+    
+    // add js to handle sidebar flyout
+    wp_register_script('handle-off-canvas', get_template_directory_uri() . '/js/handle-off-canvas.js', array('jquery', 'jgestures'));
+    wp_enqueue_script('handle-off-canvas');
 }
 
 add_action('wp_enqueue_scripts', 'add_scripts_styles');
+
+/**
+ * Function to get the menu items from a menu, given a slug
+ * 
+ * @param string $menu_slug The menu slug
+ * @return array Manu items
+ */
+function get_nav_menu_items($menu_slug) {
+    $locations = get_nav_menu_locations();
+    $menu = wp_get_nav_menu_object( $locations[ $menu_slug ] );
+    return wp_get_nav_menu_items( $menu->term_id );
+}
 
 
 /************ INCLUDE THE FOUNDATION CORE ************/
