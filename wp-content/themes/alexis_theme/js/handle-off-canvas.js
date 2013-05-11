@@ -5,6 +5,12 @@ jQuery(document).ready(function($) {
         showSidebar();
     });
     
+    
+    $(document).on('swipeone swipeleft', showSidebar());
+    
+    $(document).on('swipeone swiperight', hideSidebar());
+    
+    
     $('.show-nav-off-canvas').on('click tap', 'img.active-sidebar', function() {
        hideSidebar(); 
     });
