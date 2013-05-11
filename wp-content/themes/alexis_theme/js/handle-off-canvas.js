@@ -1,10 +1,15 @@
 jQuery(document).ready(function($) {
     // set the max width before it will automatically remove the active sidebar class
     var maxWindowWidth = 768, hideDelay = 200;
-    $('.show-nav-off-canvas').on('click tap', 'img.inactive-sidebar', function() {
+    $('.show-nav-off-canvas').on('click tap', 'img.inactive-sidebar', function(e) {
+        e.preventDefault();
         showSidebar();
     });
     
+    $('.show-nav-off-canvas').on('click tap', 'img.active-sidebar', function(e) {
+        e.preventDefault();
+       hideSidebar(); 
+    });
     
     $(window).on('swipeleft', function() {
         showSidebar();
@@ -14,10 +19,6 @@ jQuery(document).ready(function($) {
         hideSidebar();
     });
     
-    
-    $('.show-nav-off-canvas').on('click tap', 'img.active-sidebar', function() {
-       hideSidebar(); 
-    });
     
     $(window).on('resize', function() {
         // if the window gets too big, hide the off-canvas nav
