@@ -1,0 +1,58 @@
+#outer-container {
+  background: url(../img/assets/photos/alexis-background.jpg) left 92% no-repeat;
+  background-size: 120% ;
+}
+
+/* Styles for main page */
+.background-wrapper {
+  width: 100%;
+  position: relative;
+  height: 25em;
+}
+
+.rw-div p {
+  font-size: 3em;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 2px #fff;
+}
+
+.rw-div span {
+  color: #d71f37;
+}
+
+@media only screen and (min-width: 430px) {
+    .background-wrapper {
+        height: 35em;
+    }
+}
+
+@media only screen and (min-width: 500px), screen and (min-height: 700px) {
+  .rw-div p {
+    font-size: 4.5em;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /* change the background picture size and position */
+  #outer-container {
+    background-size: 750px auto;
+  }
+}
+
+@media only screen and (min-width: 768px) { 
+  #outer-container {
+    background: url(../img/assets/photos/alexis-background.jpg) right 98% no-repeat;
+    background-size: 900px auto;
+  }
+
+  .rw-div p {
+    font-size: 6em;
+    line-height: 1.3em;
+  }
+  
+  .background-wrapper {
+        height: 45em;
+  }
+
+}
