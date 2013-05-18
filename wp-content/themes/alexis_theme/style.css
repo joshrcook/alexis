@@ -280,9 +280,9 @@ button.secondary:focus,
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     /*
-       Non-descript styles
+       Non-descript styles only for small screens
     */
     .small-content-centered {
         text-align: center !important;
