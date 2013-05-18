@@ -13,24 +13,26 @@ jQuery(document).ready(function($) {
         hideSidebar(); 
     });
     
-    $(document).on('swipeleft', function() {
-        showSidebar();
-    });
+    $(window).on('resize', setSwipe());
     
-    $(document).on('swiperight', function() {
-        hideSidebar();
-    });
-    
-    
-    $(window).on('resize', function() {
+    function setSwipe() {
         // if the window gets too big, hide the off-canvas nav
         if($(window).width() >= maxWindowWidth) {
             hideSidebar();
+            $(document).off('swipeleft swiperight');
+        } else {
+            $(document).off('swipeleft').on('swipeleft', function() {
+                showSidebar();
+            });
+
+            $(document).off('swiperight').on('swiperight', function() {
+                hideSidebar();
+            });
         }
         
         // run the resize of the sidebar no matter what
         setSidebarHeight();
-    });
+    }
     
     function showSidebar() {
         // trade click handlers
@@ -59,4 +61,7 @@ jQuery(document).ready(function($) {
     
     // set sidebar height
     setSidebarHeight();
+    
+    // set the swipe stuff
+    setSwipe();
 });
