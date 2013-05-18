@@ -16,7 +16,6 @@ jQuery(document).ready(function($) {
     $(window).on('resize', setSwipe);
     
     function setSwipe() {
-        console.log('got here.');
         // if the window gets too big, hide the off-canvas nav
         if($(window).width() >= maxWindowWidth) {
             hideSidebar();
@@ -58,10 +57,7 @@ jQuery(document).ready(function($) {
     }
     
     function setSidebarHeight() {
-        var newHeight = $(document).height();
         var outerHeight = $('#outer-container').height();
-        console.log(outerHeight);
-        console.log(newHeight);
         $('section[role="complementary-nav"]').height(outerHeight);
         
     }
