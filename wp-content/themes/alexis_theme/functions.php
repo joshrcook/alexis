@@ -8,6 +8,11 @@ function add_scripts_styles() {
     // add crimson font
     wp_register_style('crimson', get_template_directory_uri() . '/fonts/Crimson/crimson.css');
     wp_enqueue_style('crimson');
+    // add home page specific styles
+    if(is_front_page()) {
+        wp_register_style('home-page-css', get_template_directory_uri() . '/css/home-page.css');
+        wp_enqueue_style('home-page-css');
+    }
     
     // add jquery mobile
     wp_register_script('jqueryMobile', get_template_directory_uri() . '/js/jquery.mobile.custom/jquery.mobile.custom.min.js', array('jquery'));
