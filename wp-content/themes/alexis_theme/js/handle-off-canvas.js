@@ -3,19 +3,21 @@ jQuery(document).ready(function($) {
     var maxWindowWidth = 768, hideDelay = 200;
     $('.show-nav-off-canvas').on('click tap', 'img.inactive-sidebar', function(e) {
         e.preventDefault();
+        e.stopPropagation();
         showSidebar();
     });
     
     $('.show-nav-off-canvas').on('click tap', 'img.active-sidebar', function(e) {
         e.preventDefault();
-       hideSidebar(); 
+        e.stopPropagation();
+        hideSidebar(); 
     });
     
-    $(window).on('swipeleft', function() {
+    $(document).on('swipeleft', function() {
         showSidebar();
     });
     
-    $(window).on('swiperight', function() {
+    $(document).on('swiperight', function() {
         hideSidebar();
     });
     
