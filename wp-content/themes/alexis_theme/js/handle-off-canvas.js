@@ -13,9 +13,10 @@ jQuery(document).ready(function($) {
         hideSidebar(); 
     });
     
-    $(window).on('resize', setSwipe());
+    $(window).on('resize', setSwipe);
     
     function setSwipe() {
+        console.log('got here.');
         // if the window gets too big, hide the off-canvas nav
         if($(window).width() >= maxWindowWidth) {
             hideSidebar();
@@ -39,6 +40,9 @@ jQuery(document).ready(function($) {
         $('.show-nav-off-canvas img').removeClass('inactive-sidebar').addClass('active-sidebar');
         $('#outer-container').addClass('active-sidebar');
         $('section[role="complementary-nav"]').show();
+        
+        // run the resize of the sidebar no matter what
+        setSidebarHeight();
     }
     
     function hideSidebar() {
@@ -48,11 +52,17 @@ jQuery(document).ready(function($) {
         window.setTimeout(function() {
             $('section[role="complementary-nav"]').hide();
         }, hideDelay);
+        
+        // run the resize of the sidebar no matter what
+        setSidebarHeight();
     }
     
     function setSidebarHeight() {
-        var newHeight = $('#outer-container').height();
-        $('section[role="complementary-nav"]').height(newHeight);
+        var newHeight = $(document).height();
+        var outerHeight = $('#outer-container').height();
+        console.log(outerHeight);
+        console.log(newHeight);
+        $('section[role="complementary-nav"]').height(outerHeight);
         
     }
     
