@@ -1,7 +1,6 @@
 jQuery(document).ready(function($) {
    var startingWidth = $('.nav .selected').width();
    var startingPosition = $('.nav .selected').position().left;
-   console.log(startingPosition);
    
    // remove no js
    $('.nav .no-js').removeClass('no-js');
