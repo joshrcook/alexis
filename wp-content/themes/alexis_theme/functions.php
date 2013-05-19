@@ -21,6 +21,10 @@ function add_scripts_styles() {
     // add js to handle sidebar flyout
     wp_register_script('handle-off-canvas', get_template_directory_uri() . '/js/handle-off-canvas.js', array('jquery', 'jqueryMobile'));
     wp_enqueue_script('handle-off-canvas');
+    
+    // add js to handle rotating words
+    wp_register_script('rotating-words', get_template_directory_uri() . '/js/rotating-words.js', array('jquery'));
+    wp_enqueue_script('rotating-words');
 }
 
 add_action('wp_enqueue_scripts', 'add_scripts_styles');
