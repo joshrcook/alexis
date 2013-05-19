@@ -25,6 +25,10 @@ function add_scripts_styles() {
     // add js to handle rotating words
     wp_register_script('rotating-words', get_template_directory_uri() . '/js/rotating-words.js', array('jquery'));
     wp_enqueue_script('rotating-words');
+    
+    // add js to handle moving line
+    wp_register_script('magic-line', get_template_directory_uri() . '/js/magic-line.js', array('jquery'));
+    wp_enqueue_script('magic-line');
 }
 
 add_action('wp_enqueue_scripts', 'add_scripts_styles');

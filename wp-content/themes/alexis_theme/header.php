@@ -51,7 +51,7 @@
             <p class="show-nav-off-canvas hide-for-medium-up">
                 <img class="inactive-sidebar" src="<?php echo get_template_directory_uri() . '/img/assets/components/show-nav-button.png'; ?>" alt="Show off-canvas navigation" />
             </p>
-            <ul class="button-group hide-for-small">
+            <ul class="button-group hide-for-small text-right magic-line">
                 <?php 
                 
                 $menu_items = get_nav_menu_items('main-nav');
@@ -60,11 +60,13 @@
                 foreach($menu_items as $menu_item) {
                     echo '<li';
                     if(isset($post->ID) && $post->ID == $menu_item->object_id) {
-                        echo ' class="selected"><img src="' . get_template_directory_uri() . '/img/assets/components/nav-arrow-top-black.png" /';
+                        echo ' class="selected no-js"><img src="' . get_template_directory_uri() . '/img/assets/components/nav-arrow-top-black.png" /';
                     }
                         echo '><a class="button secondary" href="' . $menu_item->url . '">' . $menu_item->title . '</a></li>';
                 }
                 ?>
+                <!-- add magic line -->
+                
             </ul>
         </div>
     </div>

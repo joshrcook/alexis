@@ -126,9 +126,10 @@ header .nav-bar .nav .show-nav-off-canvas img {
     right: 0;
 }
 
-header .nav-bar .nav .button-group {
+header .nav-bar .nav ul.button-group {
     display: none;
     height: 10.78571428571429em;
+    position: relative;
 }
 
 header .main-logo {
@@ -152,14 +153,16 @@ header .row .nav li {
 
 header .row .nav li.selected {
   background-color: white;
-  background: url(img/assets/components/nav-bottom-border-red.gif) left bottom repeat-x;
   border: none;
-  z-index: 100;
+}
+
+header .row .nav li.selected.no-js {
+  background: url(img/assets/components/nav-bottom-border-red.gif) left bottom repeat-x; 
 }
 
 header .row .nav li.selected img {
     position: absolute;
-    z-index: 1000;
+    z-index: 10;
     left: 40%;
 }
 
@@ -181,7 +184,7 @@ header .row .nav li a {
 }
 
 header .row .nav li:last-child {
- 	margin-right: 0; 
+   margin-right: 0; 
 }
 
 header .button-group > * {
@@ -193,6 +196,17 @@ button.secondary:focus,
 .button.secondary:hover, 
 .button.secondary:focus {
   background-color: inherit;
+}
+
+/*
+    Magic Line Styles
+*/
+#magic-line {
+    position: absolute;
+    height: 5px;
+    background-color: #d71f37;
+    bottom: 0;
+    z-index: 10;
 }
 
 /*
