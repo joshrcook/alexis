@@ -24,11 +24,11 @@
 jQuery(document).ready(function($) {
    $('.rw-1').rotate({
        text: ['creative thinker', 'problem solver', 'graphic artist'],
-       interval: 2500 
+       interval: 3000 
    });
    
    $('.rw-2').rotate({
        text: ['design', 'art', 'illustration'],
-       interval: 3000
+       interval: 3550
    })
 });
