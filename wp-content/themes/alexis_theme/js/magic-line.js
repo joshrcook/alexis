@@ -33,4 +33,12 @@ jQuery(document).ready(function($) {
           width: startingWidth
        });
    });
+   
+   $(window).resize(function() {
+       startingPosition = $('.nav .selected').position().left;
+       $('#magic-line').stop().animate({
+          left: startingPosition 
+       });
+       console.log('did it');
+   });
 });
