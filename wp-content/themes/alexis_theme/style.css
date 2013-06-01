@@ -250,6 +250,11 @@ button.secondary:focus,
     display: inline-block;
     font-size: 0.85714285714286em;
     margin-top: 1em; 
+    margin-bottom: 3em;
+}
+
+.work-row hr {
+    margin: 0;
 }
 
 
