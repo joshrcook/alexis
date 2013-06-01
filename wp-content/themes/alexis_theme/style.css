@@ -22,6 +22,7 @@ html, body {
   font-family: 'LeagueGothicRegular', sans-serif;
   font-size: 14px;
   letter-spacing: .05em;
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 #outer-container {
@@ -30,9 +31,17 @@ html, body {
   width: 100%;
 }
 
+.row {
+    max-width: 73em;
+}
+
 .footer {
   display: table-row;
   height: 1px;
+}
+
+ul, li {
+    list-style-type: none;
 }
 
 /*
@@ -107,8 +116,7 @@ section[role="complementary-nav"] ul {
   margin: 0;
   max-width: 100%;
   text-indent: -9999px;
-  background: url(img/assets/logos/ac-logo-red-shadow.svg) no-repeat left center;
-  background-size: contain;
+  background: url(img/assets/logos/ac-logo-red-shadow.png) no-repeat left center;
 }
 
 header .nav-bar .nav {
@@ -218,6 +226,32 @@ button.secondary:focus,
   text-align: center; 
 }
 
+/*
+    Work page styles
+*/
+
+.work-row {
+    font-family: 'Asap', sans-serif;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.work-title {
+    font-size: 1.85714285714286em;
+    color: #333333;
+}
+
+.work-tags li, .work-tags span.tag-separator {
+    color: #6D6E70;
+    text-transform: uppercase;
+}
+
+.work-tags li {
+    display: inline-block;
+    font-size: 0.85714285714286em;
+    margin-top: 1em; 
+}
+
 
 /*
 		Footer styles
@@ -236,15 +270,35 @@ button.secondary:focus,
 	height: 32px;
 }
 
-.footer .social-icon {
-	margin-right: 1.5em;  
+/*
+    Social icon settings
+*/
+div.circle {
+    display:inline-block;
+    background-color: white;
+    margin-left: 1.5em;
+    border-radius: 100px;
+    width: 32px;
+    height: 32px;
+}
+
+.social-icon:first-child .circle {
+    margin-left: 0;
+}
+
+.social-icon i {
+    color: #202120;
+    padding: 8px;
+    font-size: 17px;
+    line-height: 35px;
+    padding-left: 5px;
 }
 
 .footer .copyright {
-	height: 32px;
-	display: table;  
-        font-size: 1.2em;
-        line-height: 32px;
+    height: 32px;
+    display: table;  
+    font-size: 1.2em;
+    line-height: 32px;
 }
     
 .footer .copyright span {
@@ -288,24 +342,11 @@ button.secondary:focus,
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.header-replacement-back {
+    background: url(img/assets/logos/ac-logo-b-w.png) no-repeat left center;
+    text-indent: -9999px;
+    height: 3em;
+    width: 3em;
+    margin: 0;
+}
 

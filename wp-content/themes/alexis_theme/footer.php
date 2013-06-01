@@ -4,9 +4,22 @@
                     <div class="row">
                         
                         <div class="large-6 columns small-content-centered text-left">
-                            <a class="social-icon" href="#"><img alt="Connect via LinkedIn" src="<?php echo get_template_directory_uri() . '/img/assets/icons/linkedin-circle-white-32x32.png'; ?>" /></a>
-                            <a class="social-icon" href="#"><img alt="Connect via Facebook" src="<?php echo get_template_directory_uri() . '/img/assets/icons/facebook-circle-white-32x32.png'; ?>" /></a>
-                            <a class="social-icon" href="#"><img alt="Connect via Instagram" src="<?php echo get_template_directory_uri() . '/img/assets/icons/instagram-circle-white-32x32.png'; ?>" /></a>                            
+                            <!-- <img alt="Connect via LinkedIn" src="<?php echo get_template_directory_uri() . '/img/assets/icons/linkedin-circle-white-32x32.png'; ?>" /> -->
+                            <a class="social-icon" href="#">
+                                <div class="circle">
+                                    <i class="icon-linkedin-rect animate-spin"></i>
+                                </div>
+                            </a>
+                            <a class="social-icon" href="#">
+                                <div class="circle">
+                                    <i class="icon-facebook-1"></i>
+                                </div>
+                            </a>
+                            <a class="social-icon" href="#">
+                                <div class="circle">
+                                    <i class="icon-instagram-filled"></i>
+                                </div>
+                            </a>                            
                         </div>
                         
                         <div class="large-6 columns hide-for-small copyright crimson text-right">
@@ -22,7 +35,7 @@
                     <div class="row">
                         <p class="header-replace columns">&nbsp;</p>
                     </div>
-                    <div class="row"">
+                    <div class="row">
                          <div class="columns">
                             <hr />
                         </div>

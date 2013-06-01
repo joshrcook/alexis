@@ -29,6 +29,9 @@
     <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
 
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+    
+    <!-- add Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Asap:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
 
     <!-- wordpress head functions -->
     <?php wp_head(); ?>
@@ -45,7 +48,14 @@
 <header>
     <div class="row nav-bar">
         <div class="large-3 small-6 columns main-logo">
-            <a href="<?php echo get_home_url(); ?>"><h1 class="header-replacement">Alexis Contreras</h1></a>
+            <div class="flipbox-container">
+                <div class="flipbox">
+                    <h1 class="header-replacement">Alexis Contreras</h1>
+                </div>
+                <div class="back" style="display:none;">
+                    <h1 class="header-replacement-back">Alexis Contreras</h1>
+                </div>
+            </div>
         </div>
         <div class="large-9 small-6 columns nav">
             <p class="show-nav-off-canvas hide-for-medium-up">
