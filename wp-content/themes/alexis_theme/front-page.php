@@ -5,7 +5,7 @@
             <span>I am a</span>
             <br />
             <div class="rw-words rw-words-1">
-                <span>creative thinker</span>
+                <span style="opacity: 1;">creative thinker</span>
                 <span>problem solver</span>
                 <span>graphic artist</span>
             </div><span></span><br />
@@ -13,7 +13,7 @@
             <br />
             <span>for&nbsp;</span>
             <div class="rw-words rw-words-2">
-                <span>design</span>
+                <span style="opacity: 1;">design</span>
                 <span>art</span>
                 <span>illustration</span>
             </div>
