@@ -41,10 +41,10 @@
 }
 
 .rw-words-2 span {
-    -webkit-animation: rotateWords 9s linear infinite 0s;
-    -moz-animation: rotateWords 9s linear infinite 0s;
-    -o-animation: rotateWords 9s linear infinite 0s;
-    animation: rotateWords 9s linear infinite 0s;
+    -webkit-animation: rotateWords 10.5s linear infinite 0s;
+    -moz-animation: rotateWords 10.5s linear infinite 0s;
+    -o-animation: rotateWords 10.5s linear infinite 0s;
+    animation: rotateWords 10.5s linear infinite 0s;
 }
 
 .rw-words-1 span:nth-child(2) {
