@@ -5,16 +5,16 @@
             <span>I am a</span>
             <br />
             <div class="rw-words rw-words-1">
-                <span style="opacity: 1;">creative thinker</span>
-                <span>problem solver</span>
+                <span>creative thinker</span>
+                <span style="opacity: 1;">problem solver</span>
                 <span>graphic artist</span>
             </div><span></span><br />
             <span>with a passion</span>
             <br />
             <span>for&nbsp;</span>
             <div class="rw-words rw-words-2">
-                <span style="opacity: 1;">design</span>
-                <span>art</span>
+                <span>design</span>
+                <span style="opacity: 1;">art</span>
                 <span>illustration</span>
             </div>
         </div>
