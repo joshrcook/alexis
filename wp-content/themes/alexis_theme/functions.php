@@ -27,8 +27,8 @@ function add_scripts_styles() {
     wp_enqueue_script('handle-off-canvas');
     
     // add js to handle rotating words
-    wp_register_script('rotating-words', get_template_directory_uri() . '/js/rotating-words.js', array('jquery'));
-    wp_enqueue_script('rotating-words');
+    // wp_register_script('rotating-words', get_template_directory_uri() . '/js/rotating-words.js', array('jquery'));
+    // wp_enqueue_script('rotating-words');
     
     // add js to handle moving line
     wp_register_script('magic-line', get_template_directory_uri() . '/js/magic-line.js', array('jquery'));
