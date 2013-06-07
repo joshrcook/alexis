@@ -8,7 +8,7 @@
                 <span>creative thinker</span>
                 <span>problem solver</span>
                 <span>graphic artist</span>
-            </div><span></span><br />
+            </div><span>&nbsp;</span><br />
             <span>with a passion</span>
             <br />
             <span>for&nbsp;</span>
