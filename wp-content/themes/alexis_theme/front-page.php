@@ -17,9 +17,6 @@
                 <span>art</span>
                 <span>illustration</span>
             </div>
-            <?php
-            
-            ?>
         </div>
     </div>
 </div>

@@ -40,13 +40,95 @@
 <div class="top-strip">&nbsp;</div>
 <header>
     <div class="row nav-bar">
-        <div class="large-3 small-6 columns main-logo">
-            <div class="flipbox-container">
-                <div class="flipbox">
-                    <h1 class="header-replacement">Alexis Contreras</h1>
-                </div>
-                <div class="back" style="display:none;">
-                    <h1 class="header-replacement-back">Alexis Contreras</h1>
+        <div class="main-logo columns large-3">
+            <style>
+            .movement {
+                -moz-transform: rotateY(0deg);
+                -webkit-backface-visibility: hidden;
+                -o-backface-visibility: hidden;
+                -ms-backface-visibility: hidden;
+                backface-visibility: hidden;
+                height: 116px;
+                width: 116px;
+                -webkit-transform-style: preserve-3d;
+                -moz-transform-style: preserve-3d;
+                -o-transform-style: preserve-3d;
+                -ms-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+                -webkit-transition: 0.5s;
+                -moz-transition: all 1s ease;
+                -o-transition: 0.5s;
+                -ms-transition: 0.5s;
+                transition: 0.5s;
+            }
+            
+            .face {
+                position: absolute;
+                -webkit-backface-visibility: hidden;
+                -moz-backface-visibility: hidden;
+                -o-backface-visibility: hidden;
+                -ms-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+            
+            .back {
+                width: 116px;
+                height: 116px;
+                -webkit-backface-visibility: hidden;
+                -o-backface-visibility: hidden;
+                -ms-backface-visibility: hidden;
+                backface-visibility: hidden;
+                -webkit-transform: rotateY(180deg);
+                -o-transform: rotateY(180deg);
+                -ms-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+            }
+            
+            .front {
+                z-index: 5;
+                width: 116px;
+                height: 116px;
+            }
+            
+            .movement:hover .front {
+                z-index: 0;
+                filter: alpha(opacity=0);
+                opacity: 0;
+                -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+                -webkit-transition: all 0.2s linear;
+                -o-transition: all 0.2s linear;
+                -ms-transition: all 0.2s linear;
+                transition: all 0.2s linear;
+            }
+            
+            .poster {
+                height: 116px;
+                width: 116px;
+                -webkit-perspective: 1000;
+                -moz-perspective: 1000;
+                -o-perspective: 1000;
+                -ms-perspective: 1000;
+                perspective: 1000;
+            }
+            
+            .poster:hover .movement {
+                -webkit-transform: rotateY(180deg); 
+                /*-moz-transform: rotateY(180deg);*/ 
+                -o-transform: rotateY(180deg); 
+                -ms-transform: rotateY(180deg); 
+                transform: rotateY(180deg);
+            }
+            
+            
+            </style>
+            <div class="poster">
+                <div class="movement">
+                    <div class="face front">
+                        <img height="116" width="116" src="<?php echo get_template_directory_uri() . '/img/assets/logos/ac-logo-red-shadow.png'; ?>"/>
+                    </div>
+                    <div class="face back">
+                        <img height="116" width="116" src="<?php echo get_template_directory_uri() . '/img/assets/logos/ac-logo-b-w.png'; ?>" />
+                    </div>
                 </div>
             </div>
         </div>

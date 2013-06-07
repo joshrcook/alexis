@@ -36,12 +36,13 @@ function add_scripts_styles() {
     
     wp_register_style('rotating-words', get_template_directory_uri() . '/css/rotating-words-anim.css');
     
+    wp_register_script('load-css', get_template_directory_uri() . '/js/load-css.js', array('jquery'));
 }
 
 add_action('wp_enqueue_scripts', 'add_scripts_styles');
 
 function add_footer_scripts_styles() {
-    wp_enqueue_style('rotating-words');
+     wp_enqueue_style('rotating-words');
 }
 
 add_action('wp_footer', 'add_footer_scripts_styles');
