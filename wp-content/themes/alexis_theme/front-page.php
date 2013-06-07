@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="background-wrapper">
     <div class="row">
-        <div class="rw-div columns large-6">
+        <div class="rw-div columns large-12">
             <span>I am a</span>
             <br />
             <div class="rw-words rw-words-1">
