@@ -34,11 +34,17 @@ function add_scripts_styles() {
     wp_register_script('magic-line', get_template_directory_uri() . '/js/magic-line.js', array('jquery'));
     wp_enqueue_script('magic-line');
     
+    wp_register_style('rotating-words', get_template_directory_uri() . '/css/rotating-words-anim.css');
     
 }
 
 add_action('wp_enqueue_scripts', 'add_scripts_styles');
 
+function add_footer_scripts_styles() {
+    wp_enqueue_style('rotating-words');
+}
+
+add_action('wp_footer', 'add_footer_scripts_styles');
 /**
  * Function to get the menu items from a menu, given a slug
  * 

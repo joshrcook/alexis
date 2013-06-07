@@ -6,7 +6,7 @@
             <br />
             <div class="rw-words rw-words-1">
                 <span>creative thinker</span>
-                <span style="opacity: 1;">problem solver</span>
+                <span>problem solver</span>
                 <span>graphic artist</span>
             </div><span></span><br />
             <span>with a passion</span>
@@ -14,9 +14,12 @@
             <span>for&nbsp;</span>
             <div class="rw-words rw-words-2">
                 <span>design</span>
-                <span style="opacity: 1;">art</span>
+                <span>art</span>
                 <span>illustration</span>
             </div>
+            <?php
+            
+            ?>
         </div>
     </div>
 </div>
