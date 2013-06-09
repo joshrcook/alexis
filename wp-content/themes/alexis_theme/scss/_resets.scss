@@ -1,0 +1,26 @@
+html, body {
+  height: 100%;
+  font-family: 'LeagueGothicRegular', sans-serif;
+  font-size: 14px;
+  letter-spacing: .05em;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+#outer-container {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.row {
+    max-width: 73em;
+}
+
+.footer {
+  display: table-row;
+  height: 1px;
+}
+
+ul, li {
+    list-style-type: none;
+}

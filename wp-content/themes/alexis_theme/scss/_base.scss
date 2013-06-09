@@ -1,0 +1,299 @@
+/*
+		Typography
+*/
+
+.league-gothic {
+	font-family: 'LeagueGothicRegular', sans-serif;  
+}
+
+.crimson {
+    font-family: 'CrimsonRoman', serif;
+}
+
+/*
+    Styles for off-canvas nav 
+*/
+section[role="complementary-nav"],
+#outer-container {
+    transition: .2s all ease;
+    float: left;
+}
+
+#outer-container {
+    margin-left: 0;
+}
+
+#outer-container.active-sidebar {
+    margin-left: -80%;
+}
+
+section[role="complementary-nav"] {
+  margin-right: -200%;
+  width: 80%;
+  height: 100%;
+  display: block;
+  background-color: #1b1c1c;
+
+  p.header-replace {
+    height: 9.58928571428571em;
+    margin: 0;
+    padding: 0;
+  }
+
+  hr {
+    margin-top: 0;
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+
+      a {
+        color: white;
+        font-size: 3em;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+/*
+		Header styles
+*/
+
+.top-strip {
+  height: 10px;
+  background-color: #202120;
+  border: none;
+}
+
+header {
+
+  .nav-bar {
+
+    .nav {
+
+      .show-nav-off-canvas {
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 1.9em;
+          right: 0;
+        }
+      }
+
+      ul.button-group {
+        display: none;
+        height: 10.78571428571429em;
+        position: relative;
+      }
+
+      li {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin: auto 1em;
+        text-align: center;
+        position: relative;
+        width: 75px;
+
+        a {
+          display: block;
+          background-color: inherit;
+          border: none;
+          font-size: 1.71428571428571em;
+          padding: 0;
+          margin: 0;
+          padding-top: 2.4em;
+          height: 100%;
+          text-transform: uppercase;
+          color: #6D6E70;
+          font-weight: 500;
+          -webkit-transition: all .35s linear 0;
+          -moz-transition: all .35s linear 0;
+          transition: all .35s linear 0;
+        }
+      }
+
+      li:first-child {
+        margin-right: 0; 
+      }
+
+      li.selected {
+        background-color: white;
+        border: none;
+
+        img {
+          position: absolute;
+          z-index: 10;
+          left: 40%;
+        }
+      }
+
+      li.selected.no-js {
+        background: url(img/assets/components/nav-bottom-border-red.gif) left bottom repeat-x; 
+      }
+    }
+  }
+
+  .main-logo {
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+    height: 8.875em;
+
+    img {
+      height: 6.375em;
+    }
+  }
+
+  .row {
+
+    hr {
+      margin-top: 0; 
+    }
+  }
+
+  .button-group > * {
+    float: none;
+  }
+}
+
+button.secondary:hover, 
+button.secondary:focus, 
+.button.secondary:hover, 
+.button.secondary:focus {
+  background-color: inherit;
+}
+
+/*
+    Magic Line Styles
+*/
+#magic-line {
+    position: absolute;
+    height: 5px;
+    background-color: #d71f37;
+    bottom: 0;
+    z-index: 10;
+}
+
+/*
+    Body styles
+*/
+
+.large-9.nav ul {
+  height: 100%; 
+  text-align: center; 
+}
+
+/*
+    Work page styles
+*/
+
+.work-row {
+    font-family: 'Asap', sans-serif;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.work-title {
+    font-size: 1.85714285714286em;
+    color: #333333;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.work-tags li, .work-tags span.tag-separator {
+    color: #6D6E70;
+    text-transform: uppercase;
+}
+
+.work-tags li {
+    display: inline-block;
+    font-size: 0.85714285714286em;
+    margin-top: 1em; 
+    margin-bottom: 3em;
+}
+
+.work-row hr {
+    margin: 0;
+}
+
+
+/*
+		Footer styles
+*/
+
+.footer {
+  background-color: #202120;    
+  color: white;
+}
+
+.footer .row {
+  margin: 1em auto;
+}
+
+.footer .row .columns {
+	height: 32px;
+}
+
+/*
+    Social icon settings
+*/
+div.circle {
+    display:inline-block;
+    background-color: white;
+    margin-left: 1.5em;
+    border-radius: 100px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+}
+
+.social-icon:first-child .circle {
+    margin-left: 0;
+}
+
+.social-icon i {
+    color: #202120;
+    font-size: 17px;
+    line-height: 35px;
+    padding-left: 1px;
+}
+
+.footer .copyright {
+    height: 32px;
+    display: table;  
+    font-size: 1em;
+    line-height: 32px;
+    font-family: 'Asap', sans-serif;
+    text-transform: uppercase;
+}
+    
+.footer .copyright span {
+	display: table-cell;
+	vertical-align: middle;          
+}
+
+@media only screen and (max-width: 767px) {
+    /*
+       Non-descript styles only for small screens
+    */
+    .small-content-centered {
+        text-align: center !important;
+    }
+}
+
+/* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
+/* Grid changes from small to medium here */
+@media only screen and (min-width: 768px) { 
+  .copyright {
+    text-align: right;
+  }
+  
+  header .nav-bar .nav {
+        display: inherit;
+  }
+}
+

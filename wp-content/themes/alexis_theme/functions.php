@@ -1,7 +1,22 @@
 <?php
 
+require_once(get_template_directory() . '/inc/Mobile-Detect-2.6.2/Mobile_Detect.php');
+$detect = new Mobile_Detect();
+
 /************ REGULAR FUNCTIONS ***************/
+function init_functions() {
+    
+}
+
+add_action('init', 'init_functions');
+
+function desktop_only_styles_scripts() {
+    
+}
+
 function add_scripts_styles() {
+	global $detect;
+
     // add league gothic font
     wp_register_style('league-gothic', get_template_directory_uri() . '/fonts/League-Gothic/league-gothic.css');
     wp_enqueue_style('league-gothic');
@@ -26,23 +41,29 @@ function add_scripts_styles() {
     wp_register_script('handle-off-canvas', get_template_directory_uri() . '/js/handle-off-canvas.js', array('jquery', 'jqueryMobile'));
     wp_enqueue_script('handle-off-canvas');
     
-    // add js to handle rotating words
-    // wp_register_script('rotating-words', get_template_directory_uri() . '/js/rotating-words.js', array('jquery'));
-    // wp_enqueue_script('rotating-words');
-    
-    // add js to handle moving line
-    wp_register_script('magic-line', get_template_directory_uri() . '/js/magic-line.js', array('jquery'));
-    wp_enqueue_script('magic-line');
-    
-    wp_register_style('rotating-words', get_template_directory_uri() . '/css/rotating-words-anim.css');
-    
-    wp_register_script('load-css', get_template_directory_uri() . '/js/load-css.js', array('jquery'));
+    // add mobile scripts and styles
+    if($detect->isMobile()) {
+    	wp_register_style('mobile-styles', get_template_directory_uri() . '/css/mobile.css');
+    	wp_enqueue_style('mobile-styles');
+    } else {  // add non-mobile scripts and styles
+    	// add js to handle moving line
+    	wp_register_script('magic-line', get_template_directory_uri() . '/js/magic-line.js', array('jquery'));
+    	wp_enqueue_script('magic-line');
+
+    	wp_register_style('desktop-styles', get_template_directory_uri() . '/css/desktop.css');
+    	wp_enqueue_style('desktop-styles');
+    }
 }
 
 add_action('wp_enqueue_scripts', 'add_scripts_styles');
 
 function add_footer_scripts_styles() {
-     wp_enqueue_style('rotating-words');
+	global $detect;
+	if(!$detect->isMobile()) {
+		// add css to handle rotating words
+		wp_register_style('rotating-words', get_template_directory_uri() . '/css/rotating-words-anim.css');
+	    wp_enqueue_style('rotating-words');
+	} 
 }
 
 add_action('wp_footer', 'add_footer_scripts_styles');

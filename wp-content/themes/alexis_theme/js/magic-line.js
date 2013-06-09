@@ -6,13 +6,10 @@ jQuery(document).ready(function($) {
    $('.nav .no-js').removeClass('no-js');
    
    // add in magic line
-   $('.nav ul.magic-line').prepend('<li id="magic-line">&nbsp;</li>');
+   $('.nav ul.magic-line').prepend('<li id="magic-line">&nbsp;</li>').ready(setStartingPosition);
    
    // when the magic line has been inserted, set it's starting position and width
-   $('#magic-line').ready(function() {
-       var line = $('#magic-line');
-      line.width(startingWidth).css('left', startingPosition);
-   });
+   
    
    $('.magic-line li').on('mouseover', function() {
        // get the position of the hovered element
@@ -33,12 +30,13 @@ jQuery(document).ready(function($) {
           width: startingWidth
        });
    });
-   
-   $(window).resize(function() {
-       startingPosition = $('.nav .selected').position().left;
+
+   function setStartingPosition() {
+      startingPosition = $('.nav .selected').position().left;
        $('#magic-line').stop().animate({
           left: startingPosition 
        });
-       console.log('did it');
-   });
+   }
+   
+   $(window).resize(setStartingPosition);
 });
