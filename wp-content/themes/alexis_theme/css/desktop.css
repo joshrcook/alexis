@@ -4,8 +4,6 @@
     -o-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
     backface-visibility: hidden;
-    height: 116px;
-    width: 116px;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     -o-transform-style: preserve-3d;
@@ -28,8 +26,6 @@
 }
 
 .back {
-    width: 116px;
-    height: 116px;
     -webkit-backface-visibility: hidden;
     -o-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
@@ -42,8 +38,6 @@
 
 .front {
     z-index: 5;
-    width: 116px;
-    height: 116px;
 }
 
 .movement:hover .front {
@@ -58,8 +52,6 @@
 }
 
 .poster {
-    height: 116px;
-    width: 116px;
     -webkit-perspective: 1000;
     -moz-perspective: 1000;
     -o-perspective: 1000;

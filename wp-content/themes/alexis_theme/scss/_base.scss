@@ -146,6 +146,11 @@ header {
     img {
       height: 6.375em;
     }
+
+    .movement {
+      height: 89px;
+      width: 89px;
+    }
   }
 
   .row {
@@ -274,6 +279,39 @@ div.circle {
 .footer .copyright span {
 	display: table-cell;
 	vertical-align: middle;          
+}
+
+.footer {
+
+  .poster {
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    margin-right: 1.5em;
+
+    .movement {
+      height: 32px;
+      width: 32px;
+    }
+
+    .back {
+      .icon-facebook-1 {
+        color: #3a5998;
+      }
+
+      .icon-instagram-filled {
+        color: #ffa876;
+      }
+
+      .icon-linkedin-rect {
+        color: #5ba8cf;
+      }
+    }
+  }
+
+  .poster:last-child {
+    margin-right: 0;
+  }
 }
 
 @media only screen and (max-width: 767px) {
