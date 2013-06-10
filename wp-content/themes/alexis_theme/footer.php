@@ -1,4 +1,4 @@
-                
+<?php global $detect; ?>         
                 <footer class="footer">
                    
                     <div class="row">
@@ -14,6 +14,7 @@
                                             </div>
                                         </a>
                                     </div>
+                                    <?php if(!$detect->isMobile()): ?>
                                     <div class="face back">
                                         <a class="social-icon" href="#">
                                             <div class="circle">
@@ -21,6 +22,7 @@
                                             </div>
                                         </a>
                                     </div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="poster">
@@ -32,6 +34,7 @@
                                             </div>
                                         </a>
                                     </div>
+                                    <?php if(!$detect->isMobile()): ?>
                                     <div class="face back">
                                         <a class="social-icon" href="#">
                                             <div class="circle">
@@ -39,6 +42,7 @@
                                             </div>
                                         </a>
                                     </div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="poster">
@@ -50,6 +54,7 @@
                                             </div>
                                         </a>  
                                     </div>
+                                    <?php if(!$detect->isMobile()): ?>
                                     <div class="face back">
                                         <a class="social-icon" href="#">
                                             <div class="circle">
@@ -57,6 +62,7 @@
                                             </div>
                                         </a>  
                                     </div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                               
