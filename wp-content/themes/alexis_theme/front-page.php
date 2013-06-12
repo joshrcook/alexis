@@ -1,6 +1,8 @@
 <?php get_header(); ?>
-<?php 
-if(MOBILE) {
+<?php
+global $detect;
+
+if($detect->isMobile()) {
     echo 'mobile';
 } else {
     echo 'not mobile';
