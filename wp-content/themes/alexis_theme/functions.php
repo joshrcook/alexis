@@ -5,9 +5,8 @@ $detect = '';
 /************ REGULAR FUNCTIONS ***************/
 
 function init_all() {
-	require_once(get_template_directory() . '/inc/Mobile-Detect-2.6.2/Mobile_Detect.php');
-	global $detect;
-	$detect = new Mobile_Detect;
+
+	
 }
 
 add_action('get_header', 'init_all');

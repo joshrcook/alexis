@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <?php
-global $detect;
+    require_once(get_template_directory() . '/inc/Mobile-Detect-2.6.2/Mobile_Detect.php');
+    $detect = new Mobile_Detect;
 
 if($detect->isMobile()) {
     echo 'mobile';
