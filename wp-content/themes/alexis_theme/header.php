@@ -41,20 +41,22 @@
 <header>
     <div class="row nav-bar">
         <div class="main-logo columns large-3 small-6">
-            <div class="poster">
-                <div class="movement">
-                    <div class="face front">
-                        <img src="<?php echo get_template_directory_uri() . '/img/assets/logos/ac-logo-red-shadow.png'; ?>"/>
-                    </div>
-                    <?php 
-                    global $detect;
-                    if(!$detect->isMobile()): ?>
-                        <div class="face back">
-                            <img src="<?php echo get_template_directory_uri() . '/img/assets/logos/ac-logo-b-w.png'; ?>" />
+            <a href="<?php echo get_home_url(); ?>">
+                <div class="poster">
+                    <div class="movement">
+                        <div class="face front">
+                            <img src="<?php echo get_template_directory_uri() . '/img/assets/logos/ac-logo-red-shadow.png'; ?>"/>
                         </div>
-                    <?php endif; ?>
+                        <?php 
+                        global $detect;
+                        if(!$detect->isMobile()): ?>
+                            <div class="face back">
+                                <img src="<?php echo get_template_directory_uri() . '/img/assets/logos/ac-logo-b-w.png'; ?>" />
+                            </div>
+                        <?php endif; ?>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
         <div class="large-9 small-6 columns nav">
             <p class="show-nav-off-canvas hide-for-medium-up">

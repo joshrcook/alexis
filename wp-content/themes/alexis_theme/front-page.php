@@ -1,4 +1,12 @@
 <?php get_header(); ?>
+<?php 
+global $detect; 
+if($detect->isMobile()) {
+    echo 'mobile';
+} else {
+    echo 'not mobile';
+}
+?>
 <div class="background-wrapper">
     <div class="row">
         <div class="rw-div columns large-12">

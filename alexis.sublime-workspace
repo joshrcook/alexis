@@ -1,0 +1,1179 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mobile",
+				"mobile-styles"
+			],
+			[
+				"wp_enqueu",
+				"wp_enqueue_scripts"
+			],
+			[
+				"get_template_direct",
+				"get_template_directory_uri"
+			],
+			[
+				"text-",
+				"text-transform"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"sec",
+				"secondary-color"
+			],
+			[
+				"se",
+				"secondary-font"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"existen",
+				"existence-font"
+			],
+			[
+				"get_template_di",
+				"get_template_directory_uri"
+			],
+			[
+				"get_template",
+				"get_template_directory_uri"
+			],
+			[
+				"_get",
+				"_getHeight"
+			],
+			[
+				"en",
+				"engineSize"
+			],
+			[
+				"pro",
+				"propertyValue"
+			],
+			[
+				"min",
+				"mine_map"
+			],
+			[
+				"rand",
+				"randY"
+			],
+			[
+				"grid",
+				"gridArray"
+			],
+			[
+				"au",
+				"authorPosition"
+			],
+			[
+				"line",
+				"line_length"
+			],
+			[
+				"ju",
+				"justifiedLineLength"
+			],
+			[
+				"det",
+				"determin_prime"
+			],
+			[
+				"list-",
+				"list-style-type"
+			],
+			[
+				"backg",
+				"background-size"
+			],
+			[
+				"get",
+				"getPart"
+			],
+			[
+				"add",
+				"addSelectMenu"
+			],
+			[
+				"state",
+				"states-select"
+			],
+			[
+				"select",
+				"selectIdent"
+			],
+			[
+				"sele",
+				"selectIdent"
+			],
+			[
+				"opt",
+				"optionsArray"
+			],
+			[
+				"re",
+				"reciprocal-table"
+			],
+			[
+				"text",
+				"textArray"
+			],
+			[
+				"ran",
+				"randomNum"
+			],
+			[
+				"addT",
+				"addToRandomNumbers"
+			],
+			[
+				"Ran",
+				"randomNumbers"
+			],
+			[
+				"this",
+				"thisElement"
+			],
+			[
+				"address",
+				"addressVal"
+			],
+			[
+				"print",
+				"print_students"
+			],
+			[
+				"fini",
+				"finishers_all"
+			],
+			[
+				"finisher",
+				"finishers_m"
+			],
+			[
+				"finishers_",
+				"finishers_m"
+			],
+			[
+				"runner_db",
+				"runner_db_password"
+			],
+			[
+				"wp_",
+				"wp_enqueue_script"
+			],
+			[
+				"current",
+				"current_user_can"
+			],
+			[
+				"__",
+				"__FILE__"
+			],
+			[
+				"insert",
+				"insert_query"
+			],
+			[
+				"mysql_re",
+				"mysql_real_escape_string"
+			],
+			[
+				"db",
+				"db_database"
+			],
+			[
+				"strip",
+				"strip_tags"
+			],
+			[
+				"html",
+				"htmlentities"
+			],
+			[
+				"array",
+				"arrayName"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"first",
+				"first_name"
+			],
+			[
+				"R",
+				"REQUEST_METHOD"
+			],
+			[
+				"count",
+				"count_html"
+			],
+			[
+				"sess",
+				"session_value_query"
+			],
+			[
+				"session",
+				"session_value_row"
+			],
+			[
+				"sessi",
+				"session_value_result"
+			],
+			[
+				"start",
+				"start_date"
+			],
+			[
+				"month",
+				"month"
+			],
+			[
+				"lesson",
+				"lesson_row"
+			],
+			[
+				"less",
+				"lesson_row"
+			],
+			[
+				"le",
+				"lesson_dates"
+			],
+			[
+				"lesson_titles",
+				"lesson_titles_row"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"lesson_tit",
+				"lesson_titles_query"
+			],
+			[
+				"semester",
+				"semester_code"
+			],
+			[
+				"lucky",
+				"luckyNumber"
+			],
+			[
+				"luck",
+				"luckyNumber"
+			],
+			[
+				"main",
+				"main_photo"
+			],
+			[
+				"url",
+				"url_tag"
+			],
+			[
+				"tag",
+				"tag_words"
+			],
+			[
+				"ta",
+				"tag_words"
+			],
+			[
+				"api_",
+				"api_url"
+			],
+			[
+				"h",
+				"h1	Tag"
+			],
+			[
+				"str",
+				"str_test"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"home",
+				"homework_array"
+			],
+			[
+				"anno",
+				"announcement_query"
+			],
+			[
+				"announce_",
+				"announce_delete_query"
+			],
+			[
+				"annou",
+				"announce_id"
+			],
+			[
+				"announ",
+				"announce_id"
+			],
+			[
+				"requi",
+				"require_once"
+			],
+			[
+				"end",
+				"end_date"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"hom",
+				"homework_array"
+			],
+			[
+				"ob",
+				"objective_result"
+			],
+			[
+				"objective",
+				"objective_result"
+			],
+			[
+				"obje",
+				"objectives_array"
+			],
+			[
+				"object",
+				"objective_result"
+			],
+			[
+				"objec",
+				"objective_result"
+			],
+			[
+				"img",
+				"img-wrapper"
+			],
+			[
+				"trip",
+				"trip_price"
+			],
+			[
+				"ppg",
+				"ppg"
+			],
+			[
+				"post",
+				"post_check_value"
+			],
+			[
+				"eff",
+				"efficiency"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"alph",
+				"alpha-opacity"
+			],
+			[
+				"dark-gr",
+				"dark-grey"
+			],
+			[
+				"header",
+				"header-bar"
+			],
+			[
+				"id",
+				"id00"
+			],
+			[
+				"array_ey",
+				"array_key_exists"
+			],
+			[
+				"array_key",
+				"array_key_exists"
+			],
+			[
+				"column",
+				"column-width"
+			],
+			[
+				"gutt",
+				"gutter-width"
+			],
+			[
+				"the",
+				"the_field"
+			],
+			[
+				"SPA",
+				"SPARKPRICE"
+			],
+			[
+				"OIL",
+				"OILPRICE"
+			],
+			[
+				"oil",
+				"oilqty"
+			],
+			[
+				"tire",
+				"tireqty"
+			],
+			[
+				"spa",
+				"sparkqty"
+			],
+			[
+				"spark",
+				"sparkplugs"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"plan",
+				"plan_row"
+			],
+			[
+				"end_time",
+				"end_time_simple"
+			],
+			[
+				"begin_time",
+				"begin_time_to_insert"
+			],
+			[
+				"time",
+				"time_error"
+			],
+			[
+				"begin",
+				"begin_time_to_insert"
+			],
+			[
+				"check",
+				"check_row"
+			],
+			[
+				"form",
+				"form_result"
+			],
+			[
+				"begin-",
+				"begin-hour"
+			],
+			[
+				"Announ",
+				"announcements"
+			],
+			[
+				"ses",
+				"session_year"
+			],
+			[
+				"expl",
+				"exploded_selected_month"
+			],
+			[
+				"semest",
+				"semester_code"
+			],
+			[
+				"displ",
+				"display_until"
+			],
+			[
+				"ann",
+				"announcement_row"
+			],
+			[
+				"mysqli_fet",
+				"mysqli_fetch_row"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "wp-content/themes/alexis_theme/css/desktop.css",
+			"settings":
+			{
+				"buffer_size": 1744,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/alexis_theme/functions.php",
+			"settings":
+			{
+				"buffer_size": 8955,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/alexis_theme/scss/style.scss",
+			"settings":
+			{
+				"buffer_size": 677,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/alexis_theme/scss/_base.scss",
+			"settings":
+			{
+				"buffer_size": 5159,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/alexis_theme/scss/_resets.scss",
+			"settings":
+			{
+				"buffer_size": 358,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/alexis_theme/header.php",
+			"settings":
+			{
+				"buffer_size": 3570,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/alexis_theme/scss/_768up.scss",
+			"settings":
+			{
+				"buffer_size": 129,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/alexis_theme/footer.php",
+			"settings":
+			{
+				"buffer_size": 5272,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 27.0,
+		"selected_items":
+		[
+		],
+		"width": 440.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Applications/MAMP/htdocs/alexis/wp-content/themes/alexis_theme/scss/_960up.scss",
+		"/Applications/MAMP/htdocs/alexis/wp-content/themes/alexis_theme/js/magic-line.js",
+		"/Applications/MAMP/htdocs/alexis/wp-content/themes/alexis_theme/header.php",
+		"/Applications/MAMP/htdocs/alexis/wp-content/themes/alexis_theme/css/mobile.css",
+		"/Applications/MAMP/htdocs/alexis/wp-content/themes/alexis_theme/scss/_normalize.scss",
+		"/Applications/MAMP/htdocs/alexis/wp-content/themes/alexis_theme/style.css",
+		"/Applications/MAMP/htdocs/alexis/wp-content/themes/alexis_theme/scss/base.scss",
+		"/Applications/MAMP/htdocs/alexis/wp-content/themes/alexis_theme/front-page.php",
+		"/Applications/MAMP/htdocs/erin/wp-content/themes/erin_theme/library/admin.php",
+		"/Applications/MAMP/htdocs/erin/wp-content/themes/erin_theme/front-page.php",
+		"/Applications/MAMP/htdocs/erin/wp-content/themes/erin_theme/js/mobile-menu.js",
+		"/Applications/MAMP/htdocs/erin/wp-content/themes/erin_theme/functions.php",
+		"/Applications/MAMP/htdocs/erin/wp-content/themes/erin_theme/style.css",
+		"/Applications/MAMP/htdocs/erin/wp-content/themes/erin_theme/header.php",
+		"/Applications/MAMP/htdocs/erin/wp-content/themes/erin_theme/sass/_body.scss",
+		"/Applications/MAMP/htdocs/erin/wp-content/themes/erin_theme/sass/_header.scss",
+		"/Applications/MAMP/htdocs/erin/wp-content/themes/erin_theme/sass/_footer.scss",
+		"/Applications/MAMP/htdocs/erin/wp-content/themes/erin_theme/library/bones.php",
+		"/Applications/MAMP/htdocs/erin/wp-content/themes/erin_theme/fonts/ma-sexy/ma-sexy-font.css",
+		"/Applications/MAMP/htdocs/erin/wp-content/themes/erin_theme/fonts/existence/existence-font.css",
+		"/Applications/MAMP/htdocs/erin/wp-content/themes/erin_theme/foundation-functions.php",
+		"/Applications/MAMP/htdocs/new_hope/wp-content/themes/newhope/template-staff-sidebar.php",
+		"/Applications/MAMP/htdocs/new_hope/wp-content/plugins/jrc_staff/show-meta.php",
+		"/Applications/MAMP/htdocs/new_hope/wp-content/plugins/jrc_staff/functions.php",
+		"/Applications/MAMP/htdocs/Taras-site/index.html",
+		"/Applications/MAMP/htdocs/new_hope/wp-content/plugins/post-types-order/post-types-order.php",
+		"/Applications/MAMP/htdocs/joshrcook-pyro/addons/shared_addons/themes/base/views/modules/pages/page.php",
+		"/Users/joshua/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Applications/MAMP/htdocs/beginning_php/3-1.php",
+		"/Applications/MAMP/htdocs/beginning_php/3-2.php",
+		"/Applications/MAMP/htdocs/beginning_php/4-1.php",
+		"/Applications/MAMP/htdocs/beginning_php/5-1.php",
+		"/Applications/MAMP/htdocs/beginning_php/5-2.php",
+		"/Applications/MAMP/htdocs/beginning_php/5-3.php",
+		"/Applications/MAMP/htdocs/beginning_php/4-2.php",
+		"/Applications/MAMP/htdocs/new_hope/wp-content/plugins/jrc_staff/css/bootstrap.custom.css",
+		"/Users/joshua/Desktop/.ssh:id_rsa",
+		"/Applications/MAMP/htdocs/javascript/scripts/2.js",
+		"/Applications/MAMP/htdocs/javascript/2-1.html",
+		"/Applications/MAMP/htdocs/javascript/2.html",
+		"/Applications/MAMP/htdocs/javascript/3/1.html",
+		"/Applications/MAMP/htdocs/prettify-bootstrap.css",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/Mingei/functions.php",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/Mingei/template-image-library.php",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/Mingei/js/img-lib.js",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/Mingei/archive-media_release.php",
+		"/Users/joshua/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/joshua/Dropbox/Web Books/HF-jQuery-All-Code/ch08/begin/index.html",
+		"/Users/joshua/Dropbox/Web Books/HF-jQuery-All-Code/ch06/begin/styles/my_style.css",
+		"/Users/joshua/Dropbox/Web Books/HF-jQuery-All-Code/ch06/begin/index.html",
+		"/Users/joshua/Dropbox/Web Books/HF-jQuery-All-Code/ch06/begin/scripts/my_scripts.js",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/Mingei/js/file-uploader.js",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/plugins/jrc_custom_events/init.php",
+		"/Applications/MAMP/htdocs/canteloupe/index.php",
+		"/Applications/MAMP/htdocs/Christmas-lists/index.php",
+		"/Applications/MAMP/htdocs/School/index2.php",
+		"/Users/joshua/Downloads/hereyougo.html",
+		"/Applications/MAMP/htdocs/javascript/MM_JAVASCRIPT2E/chapter03/conditional.html",
+		"/Applications/MAMP/htdocs/tumblr/index.php",
+		"/Applications/MAMP/htdocs/tumblr/header.php",
+		"/Applications/MAMP/htdocs/card/style.css",
+		"/Applications/MAMP/htdocs/card/index.php",
+		"/Applications/MAMP/htdocs/School/day_view.php",
+		"/Applications/MAMP/htdocs/School/month_view.php",
+		"/Applications/MAMP/htdocs/tumblr/inc/functions.php",
+		"/Applications/MAMP/htdocs/tumblr/test.php",
+		"/Applications/MAMP/htdocs/javascript/MM_JAVASCRIPT2E/chapter02/arrays.html",
+		"/Applications/MAMP/htdocs/test/style.css",
+		"/Applications/MAMP/htdocs/test/index.php",
+		"/Applications/MAMP/htdocs/Tumblr_site/landing.php",
+		"/Applications/MAMP/htdocs/javascript/MM_JAVASCRIPT2E/chapter02/prompt.html",
+		"/Applications/MAMP/htdocs/javascript/MM_JAVASCRIPT2E/chapter02/use_variable.html",
+		"/Applications/MAMP/htdocs/Tara/index.php",
+		"/Applications/MAMP/htdocs/Tara/style.css",
+		"/Applications/MAMP/htdocs/Tara/js/bootstrap-carousel.js",
+		"/Applications/MAMP/htdocs/Tara/new.html",
+		"/Applications/MAMP/htdocs/Tara/js/jquery.js",
+		"/Applications/MAMP/htdocs/Tumblr_site/lessframework.less",
+		"/Users/joshua/Library/Application Support/Sublime Text 2/Packages/User/CSS.sublime-settings",
+		"/Applications/MAMP/htdocs/School/template.php",
+		"/Applications/MAMP/htdocs/wordpress2/wp-content/themes/simple-blog/index.php",
+		"/Applications/MAMP/htdocs/wordpress2/wp-content/themes/simple-blog/header.php",
+		"/Applications/MAMP/htdocs/churchdeploy/workspace/themes/active/xsl/template.xsl",
+		"/Applications/MAMP/htdocs/widget_corp/inc/nav.php",
+		"/Applications/MAMP/htdocs/widget_corp/content.php",
+		"/Applications/MAMP/htdocs/widget_corp/inc/db_connect.php",
+		"/Applications/MAMP/htdocs/widget_corp/inc/functions.php",
+		"/Applications/MAMP/htdocs/widget_corp/css/public.css",
+		"/Applications/MAMP/htdocs/widget_corp/inc/footer.php",
+		"/Applications/MAMP/htdocs/widget_corp/staff.php",
+		"/Applications/MAMP/htdocs/widget_corp/inc/constants.php",
+		"/Applications/MAMP/htdocs/widget_corp/inc/header.php",
+		"/Applications/MAMP/htdocs/School/css/register.css",
+		"/Applications/MAMP/htdocs/School/register.php",
+		"/Applications/MAMP/htdocs/School/header.php",
+		"/Applications/MAMP/htdocs/School/index.php",
+		"/Applications/MAMP/htdocs/School/css/day_view.css",
+		"/Applications/MAMP/htdocs/School/css/delete_semester.css",
+		"/Applications/MAMP/htdocs/School/delete_semester.php",
+		"/Applications/MAMP/htdocs/School/css/add_semester.css",
+		"/Applications/MAMP/htdocs/School/add_semester.php",
+		"/Applications/MAMP/htdocs/School/semester.php",
+		"/Applications/MAMP/htdocs/School/css/logon.css",
+		"/Applications/MAMP/htdocs/School/css/main.css",
+		"/Applications/MAMP/htdocs/School/logon.php",
+		"/Applications/MAMP/htdocs/School/css/month_view.css",
+		"/Users/joshua/Dropbox/MySQL Create Database Query.sql",
+		"/Applications/MAMP/htdocs/School/logout.php",
+		"/Users/joshua/Dropbox/CIS Final Project/Database Items/MySQL Create Database Query.sql",
+		"/Applications/MAMP/htdocs/School/inc/list_months.php",
+		"/Applications/MAMP/htdocs/School/inc/check_session.php",
+		"/Applications/MAMP/htdocs/School/mysqli_connect.php",
+		"/Applications/MAMP/htdocs/School/css/logout.css",
+		"/Applications/MAMP/htdocs/School/css/semester.css",
+		"/Applications/MAMP/htdocs/School/css/add_semester.php",
+		"/Applications/MAMP/htdocs/School/inc/teacher_log.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"height",
+			"favicon",
+			"8em",
+			"menu-link",
+			"16px",
+			"bones_remove_wp_widget_recent_comments_style",
+			"deregister",
+			"style.css",
+			"touch",
+			".header-replacement",
+			".header-replacement {",
+			".controls",
+			"#staff_meta",
+			".bootstrap",
+			",\n",
+			"}\n",
+			"),.bootstrap",
+			"0,.bootstrap",
+			"}.",
+			",",
+			"boostrap",
+			"one_third",
+			"one-third",
+			"one_third",
+			"column",
+			"padding",
+			"addToRandomNumbers",
+			"➝",
+			">",
+			"➝",
+			"image",
+			"$post_id",
+			"\\",
+			"first_name",
+			"<br>",
+			"print_r",
+			">';\n",
+			"500",
+			"Today",
+			"today",
+			"Today",
+			"today",
+			"Today",
+			"today",
+			"Today",
+			"today",
+			"Today",
+			"mktime",
+			"insert into",
+			"submit",
+			"tip",
+			"#tip",
+			"th>",
+			"th",
+			"sun",
+			"<th>",
+			"th",
+			"This Week",
+			"this week",
+			"month-name",
+			".month-name",
+			"title",
+			"homeworks",
+			"objective",
+			"class=",
+			"../assets/",
+			"-moz",
+			"</div>",
+			"z-index",
+			"border-ra",
+			"25",
+			"$times",
+			"3",
+			"2",
+			"$i",
+			"i",
+			"column grid_4",
+			".",
+			"1",
+			"width: ",
+			"10px",
+			";",
+			":",
+			"link",
+			"1",
+			"input",
+			"length",
+			"\n",
+			"length",
+			"tr",
+			"border",
+			"add announcement",
+			"objective",
+			"h1",
+			"random number",
+			"test log",
+			"month_view",
+			"semester",
+			"random number",
+			"the from date",
+			"the date",
+			"continue",
+			"update",
+			"print_r",
+			"uppercase",
+			"print_r",
+			"selected_month",
+			"$_GET['semester_code']",
+			"$result3",
+			"$_SESSION",
+			"query2",
+			"query",
+			"$selected_month",
+			"current_month_array",
+			"selected_date",
+			"php",
+			"php_date",
+			"month-name",
+			"month_name",
+			"list_mon",
+			"print_r",
+			"explode",
+			"$_POST['selected_month']",
+			"$selected_month",
+			"$current_month",
+			"teacher_ID",
+			"print_r",
+			"$_POST"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"<br>",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 7,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "wp-content/themes/alexis_theme/css/desktop.css",
+					"settings":
+					{
+						"buffer_size": 1744,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1390,
+								1390
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "wp-content/themes/alexis_theme/functions.php",
+					"settings":
+					{
+						"buffer_size": 8955,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2067,
+								2067
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "wp-content/themes/alexis_theme/scss/style.scss",
+					"settings":
+					{
+						"buffer_size": 677,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								433,
+								433
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "wp-content/themes/alexis_theme/scss/_base.scss",
+					"settings":
+					{
+						"buffer_size": 5159,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4616,
+								4616
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3962.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "wp-content/themes/alexis_theme/scss/_resets.scss",
+					"settings":
+					{
+						"buffer_size": 358,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								358,
+								358
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "wp-content/themes/alexis_theme/header.php",
+					"settings":
+					{
+						"buffer_size": 3570,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1986,
+								1986
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 52.0,
+						"translation.y": 429.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "wp-content/themes/alexis_theme/scss/_768up.scss",
+					"settings":
+					{
+						"buffer_size": 129,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								103,
+								103
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "wp-content/themes/alexis_theme/footer.php",
+					"settings":
+					{
+						"buffer_size": 5272,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3775,
+								3775
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Applications/MAMP/htdocs/Taras-site/film.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 258.0,
+	"status_bar_visible": true
+}
