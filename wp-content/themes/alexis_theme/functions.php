@@ -1,14 +1,9 @@
 <?php
 
 require_once(get_template_directory() . '/inc/Mobile-Detect-2.6.2/Mobile_Detect.php');
-$detect = new Mobile_Detect();
+$detect = '';
 
 /************ REGULAR FUNCTIONS ***************/
-function init_functions() {
-    
-}
-
-add_action('init', 'init_functions');
 
 function desktop_only_styles_scripts() {
     
@@ -16,7 +11,7 @@ function desktop_only_styles_scripts() {
 
 function add_scripts_styles() {
 	global $detect;
-
+	$detect = new Mobile_Detect;
     // add league gothic font
     wp_register_style('league-gothic', get_template_directory_uri() . '/fonts/League-Gothic/league-gothic.css');
     wp_enqueue_style('league-gothic');
