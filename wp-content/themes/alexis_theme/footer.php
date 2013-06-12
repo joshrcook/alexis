@@ -14,7 +14,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <?php if(!$detect->isMobile()): ?>
+                                    <?php if(!MOBILE): ?>
                                     <div class="face back">
                                         <a class="social-icon" href="#">
                                             <div class="circle">
@@ -34,7 +34,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <?php if(!$detect->isMobile()): ?>
+                                    <?php if(!MOBILE): ?>
                                     <div class="face back">
                                         <a class="social-icon" href="#">
                                             <div class="circle">
@@ -54,7 +54,7 @@
                                             </div>
                                         </a>  
                                     </div>
-                                    <?php if(!$detect->isMobile()): ?>
+                                    <?php if(!MOBILE): ?>
                                     <div class="face back">
                                         <a class="social-icon" href="#">
                                             <div class="circle">

@@ -1,17 +1,19 @@
 <?php
 
-require_once(get_template_directory() . '/inc/Mobile-Detect-2.6.2/Mobile_Detect.php');
-$detect = '';
+
 
 /************ REGULAR FUNCTIONS ***************/
 
-function desktop_only_styles_scripts() {
-    
+function init_all() {
+	require_once(get_template_directory() . '/inc/detectmobilebrowser.php');
 }
 
+add_action('get_header', 'init_all');
+
 function add_scripts_styles() {
-	global $detect;
-	$detect = new Mobile_Detect;
+
+	
+
     // add league gothic font
     wp_register_style('league-gothic', get_template_directory_uri() . '/fonts/League-Gothic/league-gothic.css');
     wp_enqueue_style('league-gothic');
@@ -37,7 +39,7 @@ function add_scripts_styles() {
     wp_enqueue_script('handle-off-canvas');
     
     // add mobile scripts and styles
-    if($detect->isMobile()) {
+    if(MOBILE) {
     	wp_register_style('mobile-styles', get_template_directory_uri() . '/css/mobile.css');
     	wp_enqueue_style('mobile-styles');
     } else {  // add non-mobile scripts and styles
@@ -54,7 +56,7 @@ add_action('wp_enqueue_scripts', 'add_scripts_styles');
 
 function add_footer_scripts_styles() {
 	global $detect;
-	if(!$detect->isMobile()) {
+	if(!MOBILE) {
 		// add css to handle rotating words
 		wp_register_style('rotating-words', get_template_directory_uri() . '/css/rotating-words-anim.css');
 	    wp_enqueue_style('rotating-words');

@@ -49,7 +49,7 @@
                         </div>
                         <?php 
                         global $detect;
-                        if(!$detect->isMobile()): ?>
+                        if(!MOBILE): ?>
                             <div class="face back">
                                 <img src="<?php echo get_template_directory_uri() . '/img/assets/logos/ac-logo-b-w.png'; ?>" />
                             </div>
