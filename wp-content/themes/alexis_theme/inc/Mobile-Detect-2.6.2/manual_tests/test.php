@@ -36,7 +36,6 @@ ini_set('display_errors', true);
 include '../Mobile_Detect.php';
 $detect = new Mobile_Detect();
 
-/*
 $detect->setUserAgent('Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)');
 $isBot = $detect->is('Bot'); var_dump ($isBot);
 
@@ -50,7 +49,7 @@ $version = $detect->version('Android'); var_dump ($version);
 $isSafari = $detect->isSafari(); var_dump ($isSafari);
 $grade = $detect->mobileGrade(); var_dump ($grade);
 exit;
-*/
+
 
 
 include 'test_list.inc.php';
