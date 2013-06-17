@@ -48,9 +48,9 @@ function add_scripts_styles() {
 add_action('wp_enqueue_scripts', 'add_scripts_styles');
 
 function add_footer_scripts_styles() {
-	if(!MOBILE) {
+	if(!MOBILE && is_front_page()) {
             // add css to handle rotating words
-            wp_register_style('rotating-words', get_template_directory_uri() . '/css/rotating-words-anim.css');
+        wp_register_style('rotating-words', get_template_directory_uri() . '/css/rotating-words-anim.css');
 	    wp_enqueue_style('rotating-words');
 	} 
 }

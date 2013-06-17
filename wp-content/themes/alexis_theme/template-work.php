@@ -25,8 +25,12 @@ if(have_posts()): while(have_posts()): the_post();
     }
 ?>
             <div class="large-4 small-12 columns small-content-centered work-post">
-                <div class="work-featured-image"><?php the_post_thumbnail('Portfolio-Small'); ?></div>
-                <div class="work-title"><?php the_title(); ?></div>
+                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                    <div class="work-featured-image"><?php the_post_thumbnail('Portfolio-Small'); ?></div>
+                </a>
+                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                    <div class="work-title"><?php the_title(); ?></div>
+                </a>
                 <div class="work-tags"><?php display_tags($tags); ?></div>
                 <hr />
             </div>
