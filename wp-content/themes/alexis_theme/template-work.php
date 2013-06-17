@@ -7,7 +7,8 @@ get_header();
 
 
 $post_args = array(
-    'post_type' => 'jrc_por'
+    'post_type' => 'jrc_por',
+    'order' => 'ASC'
 );
 query_posts($post_args);
 

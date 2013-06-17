@@ -10,16 +10,16 @@ get_header();
 	</div>
 	<div class="columns large-6 small-6">
 		<div class="por-nav text-right">
-			<span class="back"><</span>
-			<span class="all">[]</span>
-			<span class="forward">></span>
+			<?php previous_post_link('%link', '<'); ?>
+			<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Work' ))); ?>">[]</a>
+			<?php next_post_link('%link', '>'); ?>
 		</div>
 	</div>
 </div>
 <div class="row">
 	<div class="columns">
 		<div class="featured-image text-center">
-			<?php the_post_thumbnail(); ?>
+			<?php the_post_thumbnail(''); ?>
 		</div>
 	</div>
 </div>
