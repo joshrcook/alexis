@@ -1,0 +1,13 @@
+@mixin single-title {
+	font-family: 'Asap', sans-serif;
+	font-style: italic;
+	font-weight: 700;
+	font-size: 1.85714285714286em;
+	line-height: 1em;
+}
+
+@mixin columns($count) {
+	column-count:$count;
+	-moz-column-count:$count; /* Firefox */
+	-webkit-column-count:$count; /* Safari and Chrome */
+}

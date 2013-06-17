@@ -43,6 +43,9 @@ function add_scripts_styles() {
     	wp_register_style('desktop-styles', get_template_directory_uri() . '/css/desktop.css');
     	wp_enqueue_style('desktop-styles');
     }
+
+    wp_register_script('foundation-orbit', get_template_directory_uri() . '/js/vendor/foundation-4.2.2.orbit/js/foundation.min.js', array('jquery'));
+    wp_enqueue_script('foundation-orbit');
 }
 
 add_action('wp_enqueue_scripts', 'add_scripts_styles');
