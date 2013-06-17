@@ -14,6 +14,9 @@ function add_scripts_styles() {
     // add fontello font
     wp_register_style('fontello', get_template_directory_uri() . '/fonts/Fontello/css/fontello.css');
     wp_enqueue_style('fontello');
+    // add the font awesome font
+    wp_register_style('font-awesome', 'http://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css');
+    wp_enqueue_style('font-awesome');
     
     // add home page specific styles
     if(is_front_page()) {
@@ -26,7 +29,7 @@ function add_scripts_styles() {
     wp_enqueue_script('jqueryMobile');
     
     // add js to handle sidebar flyout
-    wp_register_script('handle-off-canvas', get_template_directory_uri() . '/js/handle-off-canvas.js', array('jquery', 'jqueryMobile'));
+    wp_register_script('handle-off-canvas', get_template_directory_uri() . '/js/handle-off-canvas.js?' . time(), array('jquery', 'jqueryMobile'));
     wp_enqueue_script('handle-off-canvas');
     // add mobile scripts and styles
     if(MOBILE) {

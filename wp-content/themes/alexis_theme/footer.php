@@ -1,4 +1,3 @@
-<?php global $detect; ?>         
                 <footer class="footer">
                    
                     <div class="row">

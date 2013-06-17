@@ -1,11 +1,6 @@
 <?php get_header(); ?>
 <?php
 
-if(MOBILE) {
-    echo 'mobile';
-} else {
-    echo 'not mobile';
-}
 ?>
 <div class="background-wrapper">
     <div class="row">

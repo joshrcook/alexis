@@ -1,5 +1,5 @@
 #outer-container {
-  background: url(../img/assets/photos/alexis-background.jpg) left 92% no-repeat;
+  background: url(../img/assets/photos/alexis-background-no-lines.jpg) left 92% no-repeat;
   background-size: 120% ;
 }
 
@@ -28,7 +28,6 @@
 .rw-words span {
     position: absolute;
     overflow: hidden;
-    width: 100%;
     opacity: 0;
     height: 92px;
     color: #d71f37;
@@ -55,7 +54,7 @@
 
 @media only screen and (min-width: 768px) { 
   #outer-container {
-    background: url(../img/assets/photos/alexis-background.jpg) right 98% no-repeat;
+    background: url(../img/assets/photos/alexis-background-no-lines.jpg) right 98% no-repeat;
     background-size: 900px auto;
   }
   

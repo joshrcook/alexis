@@ -2,14 +2,18 @@ header {
 
 	.main-logo {
 
-		img {
-		  height: 8.375em;
-		}
+		.poster {
 
-		.movement {
-	      height: 116px;
-	      width: 116px;
-	    }
+			img {
+			  height: 113px;
+			  width: 115px;
+			}
+
+			.movement {
+		      height: 113px;
+		      width: 115px;
+		    }
+		}	
 	}
 }
 

@@ -60,7 +60,7 @@
         </div>
         <div class="large-9 small-6 columns nav">
             <p class="show-nav-off-canvas hide-for-medium-up">
-                <img class="inactive-sidebar" src="<?php echo get_template_directory_uri() . '/img/assets/components/show-nav-button.png'; ?>" alt="Show off-canvas navigation" />
+                <i class="inactive-sidebar icon-reorder font-awesome" style="color: black;"></i>
             </p>
             <ul class="button-group hide-for-small text-right magic-line">
                 <?php 

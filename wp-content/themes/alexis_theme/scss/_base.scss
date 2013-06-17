@@ -10,6 +10,10 @@
     font-family: 'CrimsonRoman', serif;
 }
 
+.font-awesome {
+    font-family: 'FontAwesome';
+}
+
 /*
     Styles for off-canvas nav 
 */
@@ -35,8 +39,8 @@ section[role="complementary-nav"] {
   background-color: #1b1c1c;
 
   p.header-replace {
-    height: 9.58928571428571em;
-    margin: 0;
+    height: 7.875em;
+    margin: 10px 0 0 0;
     padding: 0;
   }
 
@@ -46,6 +50,7 @@ section[role="complementary-nav"] {
 
   ul {
     list-style-type: none;
+    position: fixed;
 
     li {
 
@@ -74,6 +79,17 @@ header {
 
     .nav {
 
+      p {
+        margin: 0;
+
+        i {
+          line-height: 3.9375em;
+          font-size: 2em;
+          padding-right: .5em;
+          font-style: normal;
+        }
+      }
+
       #magic-line {
         position: absolute;
         height: 5px;
@@ -84,6 +100,8 @@ header {
 
       .show-nav-off-canvas {
         position: relative;
+        text-align: right;
+        height: 7.875em;
 
         img {
           position: absolute;
@@ -149,16 +167,22 @@ header {
   .main-logo {
     padding-top: 1.25em;
     padding-bottom: 1.25em;
-    height: 8.875em;
+    height: 7.875em;
 
     img {
-      height: 6.375em;
+      height: 5.375em;
     }
 
-    .movement {
-      height: 89px;
-      width: 89px;
+    .poster {
+      display: inline-block;
+
+      .movement {
+        height: 75px;
+        width: 77px;
+        display: inline-block;
+      }
     }
+    
   }
 
   .row {
