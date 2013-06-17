@@ -54,7 +54,7 @@
 
 @media only screen and (min-width: 768px) { 
   #outer-container {
-    background: url(../img/assets/photos/alexis-background-no-lines.jpg) right 98% no-repeat;
+    background: url(../img/assets/photos/alexis-background-no-lines.jpg) 111px 98% no-repeat;
     background-size: 900px auto;
   }
   
@@ -67,4 +67,10 @@
         height: 45em;
   }
 
+}
+
+@media only screen and (min-width: 960px) {
+  #outer-container {
+    background-position: right 98%;
+  }
 }
