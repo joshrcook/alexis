@@ -3,6 +3,9 @@
 	[
 		{
 			"path": "/Applications/MAMP/htdocs/alexis"
+		},
+		{
+			"path": "/Applications/MAMP/htdocs/docent"
 		}
 	]
 }
