@@ -67,10 +67,9 @@
                 
                 $menu_items = get_nav_menu_items('main-nav');
                 global $post;
-                // echo '<pre>' . print_r($menu_items, 1) . '</pre>';
                 foreach($menu_items as $menu_item) {
                     echo '<li';
-                    if(isset($post->ID) && $post->ID == $menu_item->object_id) {
+                    if((isset($post->ID) && $post->ID == $menu_item->object_id) || (fnmatch('*/work/[a-z]?*', $_SERVER['REQUEST_URI']) && fnmatch('*/work/*', $menu_item->url))) {
                         echo ' class="selected no-js"><img src="' . get_template_directory_uri() . '/img/assets/components/nav-arrow-top-black.png" /';
                     }
                         echo '><a class="button secondary" href="' . $menu_item->url . '">' . $menu_item->title . '</a></li>';

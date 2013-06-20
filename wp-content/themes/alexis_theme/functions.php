@@ -37,7 +37,7 @@ function add_scripts_styles() {
     	wp_enqueue_style('mobile-styles');
     } else {  // add non-mobile scripts and styles
     	// add js to handle moving line
-    	wp_register_script('magic-line', get_template_directory_uri() . '/js/magic-line.js', array('jquery'));
+    	wp_register_script('magic-line', get_template_directory_uri() . '/js/magic-line.js', array('jquery'), false, true);
     	wp_enqueue_script('magic-line');
 
     	wp_register_style('desktop-styles', get_template_directory_uri() . '/css/desktop.css');

@@ -37,7 +37,10 @@ function jrc_por_init() {
 		'publicly_queryable' => true, 
 		'show_ui' => true, 
 		'query_var' => true, 
-		'rewrite' => true, 
+		'rewrite' => array(
+			'slug' => 'work',
+			'with_front' => true,
+		), 
 		'capability_type' => 'post',
 		'hierarchical' => true,  // test this
 		'menu_position' => null,

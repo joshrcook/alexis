@@ -37,3 +37,13 @@ License URI:
 @media only screen and (min-width: 960px) {
 	@import "960up";
 }
+
+.icon-reorder:before {
+  content: none;
+  font-family: 'FontAwesome' !important;
+}
+
+.icon-reorder {
+  font-family: 'FontAwesome' !important;
+  width: auto;
+}

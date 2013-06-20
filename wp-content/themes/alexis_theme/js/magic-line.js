@@ -1,4 +1,5 @@
 jQuery(document).ready(function($) {
+
    var startingWidth = $('.nav .selected').width();
    var startingPosition = $('.nav .selected').position().left;
    

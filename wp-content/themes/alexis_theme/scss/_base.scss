@@ -213,6 +213,11 @@ button.secondary:focus,
     margin-top: 3em;
     margin-bottom: 3em;
 
+    .work-featured-image {
+      height: 300px;
+      line-height: 300px;
+    }
+
   .work-title {
     font-size: 1.85714285714286em;
     color: #333333;
@@ -371,6 +376,11 @@ button.secondary:focus,
       width: auto;
       margin: 0;
     }
+  }
+
+  .featured-image img {
+    width: 100%;
+    margin: 4em auto;
   }
 
   div.slideshow-link  {

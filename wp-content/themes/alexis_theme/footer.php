@@ -80,7 +80,7 @@
                         <p class="header-replace columns">&nbsp;</p>
                     </div>
                     <div class="row">
-                         <div class="columns">
+                        <div class="columns">
                             <hr />
                         </div>
                     </div>

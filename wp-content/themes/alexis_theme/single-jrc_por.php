@@ -21,7 +21,7 @@ get_header();
 <div class="row">
 	<div class="columns large-8 large-offset-2">
 		<div class="featured-image text-center">
-			<?php the_post_thumbnail('full'); ?>
+			<?php the_post_thumbnail('Portfolio-Large'); ?>
 		</div>
 	</div>
 </div>

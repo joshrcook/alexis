@@ -3,7 +3,7 @@
 // add image sizes for portfolio images
 add_image_size('Portfolio-Small', 300, 300, false);
 add_image_size('Portfolio-Medium', 600, 600, false);
-add_image_size('Portfolio-Large', 900, 900, false);
+add_image_size('Portfolio-Large', 700, 99999999, false);
 
 // add taxonomies to portfolio post type
 function jrc_por_add_taxonomies() {
