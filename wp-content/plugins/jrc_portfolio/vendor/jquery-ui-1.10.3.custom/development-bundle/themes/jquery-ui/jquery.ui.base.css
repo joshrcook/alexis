@@ -1,0 +1,25 @@
+/*!
+ * jQuery UI CSS Framework 1.10.3
+ * http://jqueryui.com
+ *
+ * Copyright 2013 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming
+ */
+@import url("jquerybootstrap .ui.core.css");
+
+@import url("jquerybootstrap .ui.accordion.css");
+@import url("jquerybootstrap .ui.autocomplete.css");
+@import url("jquerybootstrap .ui.button.css");
+@import url("jquerybootstrap .ui.datepicker.css");
+@import url("jquerybootstrap .ui.dialog.css");
+@import url("jquerybootstrap .ui.menu.css");
+@import url("jquerybootstrap .ui.progressbar.css");
+@import url("jquerybootstrap .ui.resizable.css");
+@import url("jquerybootstrap .ui.selectable.css");
+@import url("jquerybootstrap .ui.slider.css");
+@import url("jquerybootstrap .ui.spinner.css");
+@import url("jquerybootstrap .ui.tabs.css");
+@import url("jquerybootstrap .ui.tooltip.css");

@@ -48,7 +48,12 @@ get_header();
 <?php 
 if(($quote = get_post_meta($post->ID, 'quote', true)) && ($quote_author = get_post_meta($post->ID, 'quote_author', true))) {
 ?>
-<div class="pic-bg">
+<?php 
+$bg_id = get_post_meta($post->ID, 'bg-id', true);
+if($bg_id)
+$url = wp_get_attachment_image_src($bg_id, 'full');
+?>
+<div class="pic-bg" <?php if($url): ?>style="background-image: url(<?php echo $url[0]; ?>);"<?php endif; ?>>
 	<div class="row">
 		<div class="columns large-10 large-centered">
 			<blockquote>
@@ -60,19 +65,28 @@ if(($quote = get_post_meta($post->ID, 'quote', true)) && ($quote_author = get_po
 </div>
 <div class="hr after-quote"></div>
 <?php } ?>
+<?php 
+$image_ids = json_decode(get_post_meta($post->ID, 'media-id', true));
+if(is_array($image_ids)):
+?>
 <div class="row">
 	<div class="columns">
 		<ul data-orbit id="slideshow">
+		<?php 
+		foreach($image_ids as $id):
+		?>
 		  <li>
-		    <img src="<?php echo get_template_directory_uri(); ?>/img/test/slideshow-1.jpg" />
+		    <?php echo wp_get_attachment_image($id, 'full'); ?>
 		  </li>
-		  <li>
-		    <img src="<?php echo get_template_directory_uri(); ?>/img/test/slideshow-2.jpg" />
-		  </li>
+		<?php
+		endforeach;
+		?>
 		</ul>
 	</div>
 </div>
-<?php endwhile; endif; ?>
+<?php 
+endif; // end image-id if
+endwhile; endif; ?>
 </div><!-- end .jrc-por -->
 <script type="text/javascript">
 	jQuery(document).foundation('orbit', {

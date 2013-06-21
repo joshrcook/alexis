@@ -4,7 +4,6 @@
 add_image_size('Portfolio-Small', 300, 300, false);
 add_image_size('Portfolio-Medium', 600, 600, false);
 add_image_size('Portfolio-Large', 700, 99999999, false);
-add_image_size('Quote_Background', 1000, 400, true);
 
 // add taxonomies to portfolio post type
 function jrc_por_add_taxonomies() {
@@ -51,8 +50,27 @@ function add_admin_scripts_styles()
     global $typenow;
 
     if($typenow == 'jrc_por') {
-        wp_register_style('bootstrap', plugins_url() . '/jrc_portfolio/css/vendor/bootstrap/bootstrap.base.scoped.min.css');
-        wp_enqueue_style('bootstrap');
+        // bootstrap scoped to '.bootstrap'
+        wp_register_style('jrc_por_bootstrap', plugins_url() . '/jrc_portfolio/css/vendor/bootstrap/bootstrap.base.scoped.min.css');
+        wp_enqueue_style('jrc_por_bootstrap');
+        // jquery ui css
+        wp_register_style('jrc_por_jquery_ui_theme', plugins_url() . '/jrc_portfolio/vendor/jquery-ui-1.10.3.custom/css/jquery-ui-1.10.3.custom.min.css');
+        wp_enqueue_style('jrc_por_jquery_ui_theme');
+        // jquery ui sortable, scoped to '.bootstrap'
+        wp_register_script('jrc_por_jquery_ui_sortable', plugins_url() . '/jrc_portfolio/vendor/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js', array('jquery'), false, true);
+        wp_enqueue_script('jrc_por_jquery_ui_sortable');
+        // sortable init on '.media-items'
+        wp_register_script('jrc_por_sortable_init', plugins_url() . '/jrc_portfolio/js/sortable.js', array('jquery', 'jrc_por_jquery_ui_sortable'), false, true);
+        wp_enqueue_script('jrc_por_sortable_init');
+        // get media init
+        wp_register_script('jrc_por_get_media_slider', plugins_url() . '/jrc_portfolio/js/get-media-slider.js', array('jquery'), false, true);
+        wp_enqueue_script('jrc_por_get_media_slider');
+        // get background media init
+        wp_register_script('jrc_por_get_media_bg', plugins_url() . '/jrc_portfolio/js/get-media-background.js', array('jquery'), false, true);
+        wp_enqueue_script('jrc_por_get_media_bg');
+        // get media css
+        wp_register_style('jrc_por_admin_css', plugins_url() . '/jrc_portfolio/css/admin.css');
+        wp_enqueue_style('jrc_por_admin_css');
     }
 }
 
