@@ -92,9 +92,11 @@ function jrc_por_save_bg($post_id)
     
     // we're in!
     
-    if(isset($_POST['bg-id'])) {
+    if(isset($_POST['bg-id']) && !empty($_POST['bg-id'])) {
         $id = (int)$_POST['bg-id'];
         update_post_meta($post_id, 'bg-id', $id);
+    } else {
+    	update_post_meta($post_id, 'bg-id', '');
     }
 }
 
