@@ -1,6 +1,7 @@
 <?php
 
 get_header();
+
 ?>
 <div class="jrc-por">
 <?php if(have_posts()): while(have_posts()): the_post(); ?>
@@ -44,17 +45,21 @@ get_header();
 	</div>
 </div>
 <div class="hr after-content"></div>
+<?php 
+if(($quote = get_post_meta($post->ID, 'quote', true)) && ($quote_author = get_post_meta($post->ID, 'quote_author', true))) {
+?>
 <div class="pic-bg">
 	<div class="row">
 		<div class="columns large-10 large-centered">
 			<blockquote>
-				<span>Invention is 10% inspiration and 90% perspiration.</span>
-				<footer>&#8212; Thomas Edison</footer>
+				<span><?php echo $quote; ?></span>
+				<footer>&#8212; <?php echo $quote_author; ?></footer>
 			</blockquote>
 		</div>
 	</div>
 </div>
 <div class="hr after-quote"></div>
+<?php } ?>
 <div class="row">
 	<div class="columns">
 		<ul data-orbit id="slideshow">
@@ -70,7 +75,10 @@ get_header();
 <?php endwhile; endif; ?>
 </div><!-- end .jrc-por -->
 <script type="text/javascript">
-	jQuery(document).foundation('orbit');
+	jQuery(document).foundation('orbit', {
+		next_class: 'angle-right orbit-next',
+		prev_class: 'angle-left orbit-prev'
+	});
 </script>
 <?php
 get_footer();

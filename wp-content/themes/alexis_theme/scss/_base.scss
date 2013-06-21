@@ -465,6 +465,44 @@ button.secondary:focus,
   .orbit-container {
     margin: 6em auto;
 
+    .angle-left {
+      
+      span {
+        background-image: url('img/assets/components/slider-nav-left-arrow-white-small.png');
+        margin-left: 14px;
+      }
+    }
+
+    .angle-right {
+
+      span {
+        background-image: url('img/assets/components/slider-nav-right-arrow-white-small.png');
+        margin-right: 14px; 
+      }
+    }
+
+    .angle-left, .angle-right {
+      text-indent: -9999px !important;
+
+      span {
+        border: none;
+        background-color: rgba(0,0,0,.6);
+        background-repeat: no-repeat;
+        background-color: transparent;
+        height: 32px;
+        width: 32px;
+        background-size: contain;
+      }
+    }
+
+    .icon-angle-left, .icon-angle-right {
+
+    }
+
+    .icon-angle-left:before, .icon-angle-right:before {
+      font-family: 'FontAwesome';
+    }
+
     .orbit-slide-number, .orbit-timer {
       display: none;
     }

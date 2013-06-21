@@ -13,6 +13,7 @@ License: GPL2
 add_action('init', 'jrc_por_init');
 require_once('jrc_por_functions.php');
 require_once('jrc_por_taxonomies.php');
+require_once('jrc_por_meta_box.php');
 
 
 function jrc_por_init() {

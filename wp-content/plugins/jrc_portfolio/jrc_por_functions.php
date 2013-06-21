@@ -4,6 +4,7 @@
 add_image_size('Portfolio-Small', 300, 300, false);
 add_image_size('Portfolio-Medium', 600, 600, false);
 add_image_size('Portfolio-Large', 700, 99999999, false);
+add_image_size('Quote_Background', 1000, 400, true);
 
 // add taxonomies to portfolio post type
 function jrc_por_add_taxonomies() {
@@ -35,19 +36,6 @@ function jrc_por_add_taxonomies() {
 }
 add_action('init', 'jrc_por_add_taxonomies');
 
-function jrc_por_meta_boxes()
-{          
-    
-}
-
-add_action('add_meta_boxes', 'jrc_por_meta_boxes');
-
-// callback for main portfolio meta box
-function jrc_por_items()
-{
-    echo '<p>This is some content.</p>';
-}
-
 // add featured image instructions
 function jrc_por_add_featured_image_instructions($html)
 {
@@ -56,3 +44,22 @@ function jrc_por_add_featured_image_instructions($html)
 }
 
 add_filter('admin_post_thumbnail_html', 'jrc_por_add_featured_image_instructions', 10, 2);
+
+
+function add_admin_scripts_styles()
+{
+    global $typenow;
+
+    if($typenow == 'jrc_por') {
+        wp_register_style('bootstrap', plugins_url() . '/jrc_portfolio/css/vendor/bootstrap/bootstrap.base.scoped.min.css');
+        wp_enqueue_style('bootstrap');
+    }
+}
+
+add_action('admin_enqueue_scripts', 'add_admin_scripts_styles');
+
+
+
+
+
+
