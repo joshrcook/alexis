@@ -36,8 +36,8 @@ function jrc_por_slider_meta()
     <div class="media">
     	<form method="post">
     		<?php wp_nonce_field('jrc_por_save_slider', 'jrc_por_slider_nonce'); ?>
-    		<?php $custom = get_post_custom();
-    		$media_id_array = json_decode($custom['media-id'][0]);
+    		<?php 
+    		$media_id_array = json_decode(get_post_meta($post->ID, 'media-id', true));
     		?>
     		<div class="media-items">
     		<?php
