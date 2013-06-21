@@ -1,0 +1,19 @@
+[21-Jun-2013 15:39:25] PHP Notice:  Undefined index:  media-id in /home1/joshrcoo/public_html/alexis/wp-content/plugins/jrc_portfolio/jrc_por_meta_box.php on line 40
+[21-Jun-2013 15:41:48] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[21-Jun-2013 15:41:48] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[21-Jun-2013 15:41:48] PHP Notice:  Undefined index:  media-id in /home1/joshrcoo/public_html/alexis/wp-content/plugins/jrc_portfolio/jrc_por_save_meta.php on line 60
+[21-Jun-2013 15:41:48] PHP Warning:  Invalid argument supplied for foreach() in /home1/joshrcoo/public_html/alexis/wp-content/plugins/jrc_portfolio/jrc_por_save_meta.php on line 60
+[21-Jun-2013 15:41:48] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[21-Jun-2013 15:41:48] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php:1068) in /home1/joshrcoo/public_html/alexis/wp-includes/pluggable.php on line 877
+[21-Jun-2013 15:42:09] PHP Notice:  Undefined variable: post in /home1/joshrcoo/public_html/alexis/wp-content/plugins/jrc_portfolio/jrc_por_meta_box.php on line 40
+[21-Jun-2013 15:42:09] PHP Notice:  Trying to get property of non-object in /home1/joshrcoo/public_html/alexis/wp-content/plugins/jrc_portfolio/jrc_por_meta_box.php on line 40
+[21-Jun-2013 15:43:27] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[21-Jun-2013 15:43:27] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[21-Jun-2013 15:43:27] PHP Notice:  Undefined index:  media-id in /home1/joshrcoo/public_html/alexis/wp-content/plugins/jrc_portfolio/jrc_por_save_meta.php on line 60
+[21-Jun-2013 15:43:27] PHP Warning:  Invalid argument supplied for foreach() in /home1/joshrcoo/public_html/alexis/wp-content/plugins/jrc_portfolio/jrc_por_save_meta.php on line 60
+[21-Jun-2013 15:43:27] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[21-Jun-2013 15:43:27] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php:1068) in /home1/joshrcoo/public_html/alexis/wp-includes/pluggable.php on line 877
+[21-Jun-2013 15:45:14] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[21-Jun-2013 15:45:14] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[21-Jun-2013 15:45:14] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[21-Jun-2013 15:45:14] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php:1068) in /home1/joshrcoo/public_html/alexis/wp-includes/pluggable.php on line 877

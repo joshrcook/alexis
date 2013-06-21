@@ -57,8 +57,12 @@ function jrc_por_save_slider($post_id)
 
 	global $ids;
 
+	if(isset($_POST['media-id'])) {
 	foreach($_POST['media-id'] as $id) {
 		$ids[] = (int)$id;
+	}
+	} else {
+		$ids = array();
 	}
 
 	update_post_meta($post_id, 'media-id', json_encode($ids));

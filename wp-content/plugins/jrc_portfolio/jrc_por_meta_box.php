@@ -31,6 +31,7 @@ function jrc_por_quote_meta()
 
 function jrc_por_slider_meta() 
 {
+global $post;
     ?>
 <div class="bootstrap slider sortable">
     <div class="media">

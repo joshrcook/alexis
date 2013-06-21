@@ -1,0 +1,10 @@
+[11-Jun-2013 20:16:28] PHP Notice:  Undefined index:  test in /home1/joshrcoo/public_html/alexis/wp-content/themes/alexis_theme/inc/Mobile-Detect-2.6.2/manual_tests/test_list.inc.php on line 2
+[11-Jun-2013 20:16:36] PHP Notice:  Undefined variable: html in /home1/joshrcoo/public_html/alexis/wp-content/themes/alexis_theme/inc/Mobile-Detect-2.6.2/manual_tests/nonmobile_useragents_nonmobileTest.inc.php on line 5
+[11-Jun-2013 20:16:41] PHP Notice:  Undefined variable: description in /home1/joshrcoo/public_html/alexis/wp-content/themes/alexis_theme/inc/Mobile-Detect-2.6.2/manual_tests/test.php on line 88
+[11-Jun-2013 20:17:11] PHP Notice:  Undefined index:  test in /home1/joshrcoo/public_html/alexis/wp-content/themes/alexis_theme/inc/Mobile-Detect-2.6.2/manual_tests/test_list.inc.php on line 2
+[11-Jun-2013 20:17:18] PHP Notice:  Undefined variable: html in /home1/joshrcoo/public_html/alexis/wp-content/themes/alexis_theme/inc/Mobile-Detect-2.6.2/manual_tests/mobile_useragents_gradeTest.inc.php on line 5
+[11-Jun-2013 20:17:21] PHP Notice:  Undefined variable: description in /home1/joshrcoo/public_html/alexis/wp-content/themes/alexis_theme/inc/Mobile-Detect-2.6.2/manual_tests/test.php on line 88
+[11-Jun-2013 20:17:42] PHP Notice:  Undefined index:  test in /home1/joshrcoo/public_html/alexis/wp-content/themes/alexis_theme/inc/Mobile-Detect-2.6.2/manual_tests/test_list.inc.php on line 2
+[11-Jun-2013 20:17:46] PHP Notice:  Undefined variable: html in /home1/joshrcoo/public_html/alexis/wp-content/themes/alexis_theme/inc/Mobile-Detect-2.6.2/manual_tests/mobile_useragents_osVersionTest.inc.php on line 5
+[11-Jun-2013 20:17:48] PHP Notice:  Undefined variable: description in /home1/joshrcoo/public_html/alexis/wp-content/themes/alexis_theme/inc/Mobile-Detect-2.6.2/manual_tests/test.php on line 88
+[11-Jun-2013 20:17:59] PHP Notice:  Undefined index:  test in /home1/joshrcoo/public_html/alexis/wp-content/themes/alexis_theme/inc/Mobile-Detect-2.6.2/manual_tests/test_list.inc.php on line 2
