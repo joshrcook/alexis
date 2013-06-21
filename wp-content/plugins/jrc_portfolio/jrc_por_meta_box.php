@@ -71,7 +71,7 @@ function jrc_por_quote_bg_meta()
 <div class="quote-bg">
 	<div class="media">
 	    <div class="media-items">
-	        <?php $id = get_post_meta($post->ID, 'bg-id', 'true');
+	        <?php $id = get_post_meta($post->ID, 'bg-id', true);
 	              if($id) {
 	                  echo '<div class="media-item">
 	                            <input type="hidden" name="bg-id" value="' . $id . '" />';
