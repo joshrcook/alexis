@@ -17,3 +17,27 @@
 [21-Jun-2013 15:45:14] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
 [21-Jun-2013 15:45:14] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
 [21-Jun-2013 15:45:14] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php:1068) in /home1/joshrcoo/public_html/alexis/wp-includes/pluggable.php on line 877
+[21-Jun-2013 15:50:11] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[21-Jun-2013 15:50:11] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[21-Jun-2013 15:50:11] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[21-Jun-2013 15:50:11] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php:1068) in /home1/joshrcoo/public_html/alexis/wp-includes/pluggable.php on line 877
+[21-Jun-2013 15:51:07] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[21-Jun-2013 15:51:07] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[21-Jun-2013 15:51:07] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[21-Jun-2013 15:51:07] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php:1068) in /home1/joshrcoo/public_html/alexis/wp-includes/pluggable.php on line 877
+[21-Jun-2013 15:52:37] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[21-Jun-2013 15:52:37] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[21-Jun-2013 15:52:37] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[21-Jun-2013 15:52:37] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php:1068) in /home1/joshrcoo/public_html/alexis/wp-includes/pluggable.php on line 877
+[21-Jun-2013 15:54:09] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[21-Jun-2013 15:54:09] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[21-Jun-2013 15:54:09] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[21-Jun-2013 15:54:09] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php:1068) in /home1/joshrcoo/public_html/alexis/wp-includes/pluggable.php on line 877
+[22-Jun-2013 02:34:37] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[22-Jun-2013 02:34:37] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[22-Jun-2013 02:34:37] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[22-Jun-2013 02:34:37] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php:1068) in /home1/joshrcoo/public_html/alexis/wp-includes/pluggable.php on line 877
+[22-Jun-2013 02:39:10] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[22-Jun-2013 02:39:10] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[22-Jun-2013 02:39:10] PHP Notice:  Undefined offset:  0 in /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php on line 1068
+[22-Jun-2013 02:39:10] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/joshrcoo/public_html/alexis/wp-includes/capabilities.php:1068) in /home1/joshrcoo/public_html/alexis/wp-includes/pluggable.php on line 877

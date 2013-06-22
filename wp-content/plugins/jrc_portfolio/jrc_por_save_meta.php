@@ -14,10 +14,6 @@ function jrc_por_save_meta($post_id)
 		return $post_id;
 	}
 
-	if(!current_user_can('edit_post')) {
-		return $post_id;
-	}
-	
 	// we're in!
 	if(isset($_POST['quote'])) {
 		$quote = esc_textarea($_POST['quote']);
@@ -45,10 +41,6 @@ function jrc_por_save_slider($post_id)
 	}
 
 	if( !wp_verify_nonce( $_POST['jrc_por_slider_nonce'], 'jrc_por_save_slider')) {
-		return $post_id;
-	}
-
-	if(!current_user_can('edit_post')) {
 		return $post_id;
 	}
 
@@ -83,10 +75,6 @@ function jrc_por_save_bg($post_id)
         return $post_id;
     }
 
-    if(!current_user_can('edit_post')) {
-        return $post_id;
-    }
-    
     // we're in!
     
     if(isset($_POST['bg-id']) && !empty($_POST['bg-id'])) {
