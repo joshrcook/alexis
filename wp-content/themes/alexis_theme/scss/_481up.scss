@@ -1,0 +1,22 @@
+.jrc-por {
+	
+	.content {
+
+		.columns-2 {
+
+			.outer-content {
+
+				p {
+					@include columns(2);
+				}
+			}
+		}
+	}
+
+	.pic-bg {
+
+		blockquote {
+			font-size: 4em;
+		}
+	}
+}

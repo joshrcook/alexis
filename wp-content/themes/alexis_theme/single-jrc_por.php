@@ -55,7 +55,7 @@ $url = wp_get_attachment_image_src($bg_id, 'full');
 ?>
 <div class="pic-bg" <?php if($url): ?>style="background-image: url(<?php echo $url[0]; ?>);"<?php endif; ?>>
 	<div class="row">
-		<div class="columns large-10 large-centered">
+		<div class="columns large-9 large-centered small-10 small-centered">
 			<blockquote>
 				<span><?php echo $quote; ?></span>
 				<footer>&#8212; <?php echo $quote_author; ?></footer>

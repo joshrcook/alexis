@@ -300,7 +300,7 @@ button.secondary:focus,
           i {
             color: #202120;
             font-size: 17px;
-            line-height: 35px;
+            line-height: 32px;
             padding-left: 1px;
           }
         }
@@ -411,7 +411,6 @@ button.secondary:focus,
         
 
         p {
-          @include columns(2);
           color: white;
           margin: 0;
           font-family: 'Asap', sans-serif;
@@ -439,7 +438,9 @@ button.secondary:focus,
       color: $color4;
       padding: 0;
       border: none;
-      font-size: 6em;
+      font-size: 3em;
+      line-height: 1.5em;
+      margin: 1em auto;
 
       span:before {
         content: '"';
