@@ -523,7 +523,7 @@
 			"file": "wp-content/plugins/jrc_portfolio/jrc_por_init.php",
 			"settings":
 			{
-				"buffer_size": 1542,
+				"buffer_size": 1581,
 				"line_ending": "Unix"
 			}
 		},
@@ -531,7 +531,15 @@
 			"file": "wp-content/plugins/jrc_portfolio/jrc_por_meta_box.php",
 			"settings":
 			{
-				"buffer_size": 1550,
+				"buffer_size": 2844,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/plugins/jrc_portfolio/jrc_por_save_meta.php",
+			"settings":
+			{
+				"buffer_size": 2079,
 				"line_ending": "Unix"
 			}
 		},
@@ -539,7 +547,7 @@
 			"file": "wp-content/plugins/jrc_portfolio/jrc_por_functions.php",
 			"settings":
 			{
-				"buffer_size": 2569,
+				"buffer_size": 3987,
 				"line_ending": "Unix"
 			}
 		},
@@ -555,7 +563,7 @@
 			"file": "wp-content/themes/alexis_theme/single-jrc_por.php",
 			"settings":
 			{
-				"buffer_size": 2140,
+				"buffer_size": 2416,
 				"line_ending": "Unix"
 			}
 		},
@@ -592,6 +600,11 @@
 	},
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/alexis/wp-content/plugins/jrc_portfolio/js/get-media-background.js",
+		"/Applications/MAMP/htdocs/alexis/wp-content/plugins/jrc_portfolio/js/sortable.js",
+		"/Applications/MAMP/htdocs/alexis/wp-content/plugins/jrc_portfolio/css/admin.css",
+		"/Applications/MAMP/htdocs/alexis/wp-content/plugins/jrc_portfolio/js/get-media-slider.js",
+		"/Applications/MAMP/htdocs/alexis/wp-content/plugins/jrc_portfolio/js/get-media-background",
 		"/Applications/MAMP/htdocs/alexis/wp-content/themes/alexis_theme/img/test/Projects.jpg",
 		"/Applications/MAMP/htdocs/alexis/wp-content/plugins/jrc_portfolio/css/vendor/bootstrap/bootstrap.base.scoped.min.css",
 		"/Applications/MAMP/htdocs/alexis/wp-content/themes/alexis_theme/single-jrc_por.php",
@@ -714,12 +727,7 @@
 		"/Applications/MAMP/htdocs/School/index.php",
 		"/Applications/MAMP/htdocs/School/css/day_view.css",
 		"/Applications/MAMP/htdocs/School/css/delete_semester.css",
-		"/Applications/MAMP/htdocs/School/delete_semester.php",
-		"/Applications/MAMP/htdocs/School/css/add_semester.css",
-		"/Applications/MAMP/htdocs/School/add_semester.php",
-		"/Applications/MAMP/htdocs/School/semester.php",
-		"/Applications/MAMP/htdocs/School/css/logon.css",
-		"/Applications/MAMP/htdocs/School/css/main.css"
+		"/Applications/MAMP/htdocs/School/delete_semester.php"
 	],
 	"find":
 	{
@@ -738,6 +746,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"bg-id",
+			"media-id",
 			"control-group",
 			"img",
 			"icon",
@@ -863,9 +873,7 @@
 			"month-name",
 			"month_name",
 			"list_mon",
-			"print_r",
-			"explode",
-			"$_POST['selected_month']"
+			"print_r"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -886,7 +894,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -894,15 +902,15 @@
 					"file": "wp-content/plugins/jrc_portfolio/jrc_por_init.php",
 					"settings":
 					{
-						"buffer_size": 1542,
+						"buffer_size": 1581,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								207,
-								207
+								399,
+								399
 							]
 						],
 						"settings":
@@ -911,7 +919,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 59.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -921,41 +929,69 @@
 					"file": "wp-content/plugins/jrc_portfolio/jrc_por_meta_box.php",
 					"settings":
 					{
-						"buffer_size": 1550,
+						"buffer_size": 2844,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								733,
-								733
+								2168,
+								2168
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": 2.0,
+						"translation.y": 713.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "wp-content/plugins/jrc_portfolio/jrc_por_functions.php",
+					"file": "wp-content/plugins/jrc_portfolio/jrc_por_save_meta.php",
 					"settings":
 					{
-						"buffer_size": 2569,
+						"buffer_size": 2079,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								261,
-								261
+								2024,
+								2024
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 865.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "wp-content/plugins/jrc_portfolio/jrc_por_functions.php",
+					"settings":
+					{
+						"buffer_size": 3987,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								208,
+								208
 							]
 						],
 						"settings":
@@ -965,13 +1001,13 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 16.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "wp-content/plugins/jrc_portfolio/css/vendor/bootstrap/bootstrap.base.scoped.min.css",
 					"settings":
 					{
@@ -997,19 +1033,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "wp-content/themes/alexis_theme/single-jrc_por.php",
 					"settings":
 					{
-						"buffer_size": 2140,
+						"buffer_size": 2416,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2104,
-								2104
+								1531,
+								1531
 							]
 						],
 						"settings":
@@ -1018,13 +1054,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 555.0,
+						"translation.y": 498.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "wp-content/themes/alexis_theme/scss/_base.scss",
 					"settings":
 					{
@@ -1114,6 +1150,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 219.0,
+	"side_bar_width": 290.0,
 	"status_bar_visible": true
 }

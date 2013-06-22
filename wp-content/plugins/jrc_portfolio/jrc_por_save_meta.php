@@ -14,13 +14,10 @@ function jrc_por_save_meta($post_id)
 		return $post_id;
 	}
 
-	if( 'page' == $_POST['post_type']) {
-		if(!current_user_can('edit_page', $post_id)) {
-			return $post_id;
-		}
-	} else if(!current_user_can('edit_post')) {
+	if(!current_user_can('edit_post')) {
 		return $post_id;
 	}
+	
 	// we're in!
 	if(isset($_POST['quote'])) {
 		$quote = esc_textarea($_POST['quote']);
