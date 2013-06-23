@@ -45,6 +45,14 @@ jQuery(document).ready(function($) {
         $('.show-nav-off-canvas i').removeClass('inactive-sidebar').addClass('active-sidebar');
         $('#outer-container').addClass('active-sidebar');
         offCanvasWindow.show();
+        
+
+        // add handler for menu position
+        $(window).on('scrollstop', handleNavPosition);
+        if(!navInScreenTop()) {
+            // make sure the menu is in the screen on top
+            menu.css('top', (getScrollTop() - origMenuPosition.top));
+        }
     }
     
     function hideSidebar() {
@@ -57,6 +65,10 @@ jQuery(document).ready(function($) {
         window.setTimeout(function() {
             offCanvasWindow.hide();
         }, hideDelay);
+
+        // turn off the menu position handler
+        $(window).off('scrollstop', handleNavPosition);
+        resetNavPosition();
     }
     
     function setSidebarHeight() {
@@ -73,8 +85,9 @@ jQuery(document).ready(function($) {
     // set the swipe stuff
     setSwipe();
 
-    var oldScrollTop = $('body').scrollTop();
 
+
+    var oldScrollTop = $('body').scrollTop();
 
     function getScrollTop() {
         return $('body').scrollTop();
@@ -119,25 +132,30 @@ jQuery(document).ready(function($) {
             return false;
         }
     }
-    $(window).on('scrollstop', function() {
+
+    function resetNavPosition() {
+        menu.css('top', 0);
+    }
+
+    function handleNavPosition() {
         if(scrolledDown()) {
-            if(navInScreenTop()) {
-                console.log('still in screen on top.'); // great! do nothing.
-            } else {
-                console.log('went out of screen top.'); // scroll the menu so that it is in the screen.
+            if(!navInScreenTop()) {
+                // make sure the menu is in the screen on top
                 menu.css('top', (getScrollTop() - origMenuPosition.top));
             }
-            console.log('scrolled down');
         } else { // scrolled up!
-            if(navInScreenBottom()) {
-                console.log('still in screen on bottom');
-            } else {
-                console.log('out of bottom of screen');
-                menu.css('top', (getScrollBottom() - menu.height() - origMenuPosition.top));
+            if(!navInScreenBottom()) {
+                // out of the bottom of the screen
+                var newTop = getScrollBottom() - menu.height() - origMenuPosition.top;
+                if(newTop < origMenuPosition.top) {
+                    // menu.css('top', origMenuPosition.top);
+                    menu.css('top', 0);
+                } else {
+                    menu.css('top', (getScrollBottom() - menu.height() - origMenuPosition.top));
+                }
             }
-            console.log('scrolled up');
         }
 
         setScrollTop(); // set this for next time
-    });
+    }
 });
