@@ -24,12 +24,15 @@ function add_scripts_styles() {
         wp_enqueue_style('home-page-css');
     }
     
-    // add jquery mobile
+    // add jquery mobile to handle touch and scroll events
     wp_register_script('jqueryMobile', get_template_directory_uri() . '/js/jquery.mobile.custom/jquery.mobile.custom.min.js', array('jquery'));
     wp_enqueue_script('jqueryMobile');
+
+    // add scrollTo js to handle smooth scrolling
+    wp_register_script('scrollTo', get_template_directory_uri() . '/js/vendor/jquery.scrollTo-1.4.3.1-min.js', array('jquery'), false, true);
     
     // add js to handle sidebar flyout
-    wp_register_script('handle-off-canvas', get_template_directory_uri() . '/js/handle-off-canvas.js?' . time(), array('jquery', 'jqueryMobile'));
+    wp_register_script('handle-off-canvas', get_template_directory_uri() . '/js/handle-off-canvas.js?' . time(), array('jquery', 'jqueryMobile', 'scrollTo'), false, true);
     wp_enqueue_script('handle-off-canvas');
     // add mobile scripts and styles
     if(MOBILE) {

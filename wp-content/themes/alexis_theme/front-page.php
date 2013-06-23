@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php
-
+wp_enqueue_script('scrollTo');
 ?>
 <div class="background-wrapper">
     <div class="row">

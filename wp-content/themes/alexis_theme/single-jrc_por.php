@@ -1,6 +1,7 @@
 <?php
 
 get_header();
+wp_enqueue_script('scrollTo');
 
 ?>
 <div class="jrc-por">
