@@ -77,6 +77,34 @@ function add_admin_scripts_styles()
 add_action('admin_enqueue_scripts', 'add_admin_scripts_styles');
 
 
+// set the contants for the reorder plugin
+define( 'REORDER_DIR', plugin_dir_path(__FILE__) . '/inc/metronet-reorder-posts/' ); // Plugin folder DIR
+define( 'REORDER_URL', plugin_dir_url(__FILE__) .  '/inc/metronet-reorder-posts/' ); // Plugin folder URL
+
+// require the reorder class
+require_once(REORDER_DIR . 'class-reorder.php');
+
+// instantiate a new instance of the reorder class
+function jrc_por_reorder_init() {
+    $post_type = 'jrc_por';
+
+    // Instantiate new reordering
+    new Reorder(
+        array(
+            'post_type'   => $post_type,
+            'order'       => 'ASC',
+            'heading'     => __( 'Reorder Portfolio Items', 'reorder' ),
+            'final'       => '',
+            'initial'     => '',
+            'menu_label'  => __( 'Reorder', 'reorder' ),
+            // 'icon'        => REORDER_URL . '/metronet-icon.png',
+            'post_status' => 'publish',
+        )
+    );
+}
+
+add_action( 'wp_loaded', 'jrc_por_reorder_init', 100 ); //Load low priority in init for other plugins to generate their post types
+
 
 
 
