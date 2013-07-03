@@ -1,3 +1,5 @@
+    </div><!-- end #content -->
+</div><!-- end #content-wrapper -->
                 <footer class="footer">
                    
                     <div class="row">
@@ -9,7 +11,7 @@
                                     <div class="face front">
                                         <a class="social-icon" href="#">
                                             <div class="circle">
-                                                <i class="icon-linkedin-rect"></i>
+                                                <i class="icon-linkedin-sign"></i>
                                             </div>
                                         </a>
                                     </div>
@@ -17,7 +19,7 @@
                                     <div class="face back">
                                         <a class="social-icon" href="#">
                                             <div class="circle">
-                                                <i class="icon-linkedin-rect"></i>
+                                                <i class="icon-linkedin-sign"></i>
                                             </div>
                                         </a>
                                     </div>
@@ -29,7 +31,7 @@
                                     <div class="face front">
                                         <a class="social-icon" href="#">
                                             <div class="circle">
-                                                <i class="icon-facebook-1"></i>
+                                                <i class="icon-facebook"></i>
                                             </div>
                                         </a>
                                     </div>
@@ -37,7 +39,7 @@
                                     <div class="face back">
                                         <a class="social-icon" href="#">
                                             <div class="circle">
-                                                <i class="icon-facebook-1"></i>
+                                                <i class="icon-facebook"></i>
                                             </div>
                                         </a>
                                     </div>
@@ -49,7 +51,7 @@
                                     <div class="face front">
                                         <a class="social-icon" href="#">
                                             <div class="circle">
-                                                <i class="icon-instagram-filled"></i>
+                                                <i class="icon-instagram"></i>
                                             </div>
                                         </a>  
                                     </div>
@@ -57,7 +59,7 @@
                                     <div class="face back">
                                         <a class="social-icon" href="#">
                                             <div class="circle">
-                                                <i class="icon-instagram-filled"></i>
+                                                <i class="icon-instagram"></i>
                                             </div>
                                         </a>  
                                     </div>

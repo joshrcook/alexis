@@ -62,6 +62,10 @@ section[role="complementary-nav"] {
   }
 }
 
+#content {
+  padding-top: 2em;
+}
+
 /*
 		Header styles
 */
@@ -209,7 +213,6 @@ button.secondary:focus,
 
 .work-row {
     font-family: 'Asap', sans-serif;
-    margin-top: 3em;
     margin-bottom: 3em;
 
     .work-featured-image {
@@ -298,7 +301,7 @@ button.secondary:focus,
 
           i {
             color: #202120;
-            font-size: 17px;
+            font-size: 20px;
             line-height: 32px;
             padding-left: 1px;
           }
@@ -316,15 +319,15 @@ button.secondary:focus,
 
         .circle {
 
-          i.icon-facebook-1 {
+          i.icon-facebook {
             color: #3a5998;
           }
 
-          i.icon-instagram-filled {
+          i.icon-instagram {
             color: #ffa876;
           }
 
-          i.icon-linkedin-rect {
+          i.icon-linkedin-sign {
             color: #5ba8cf;
           }
         }
@@ -462,58 +465,123 @@ button.secondary:focus,
     background-color: $color5;
   }
 
-  .orbit-container {
+  .flexslider {
     margin: 6em auto;
+    position: relative;
 
-    .angle-left {
-      
-      span {
-        background-image: url('img/assets/components/slider-nav-left-arrow-white-small.png');
-        margin-left: 14px;
-      }
-    }
-
-    .angle-right {
-
-      span {
-        background-image: url('img/assets/components/slider-nav-right-arrow-white-small.png');
-        margin-right: 14px; 
-      }
-    }
-
-    .angle-left, .angle-right {
-      text-indent: -9999px !important;
-
-      span {
-        border: none;
-        background-color: rgba(0,0,0,.6);
-        background-repeat: no-repeat;
-        background-color: transparent;
-        height: 32px;
-        width: 32px;
-        background-size: contain;
-      }
-    }
-
-    .icon-angle-left, .icon-angle-right {
-
-    }
-
-    .icon-angle-left:before, .icon-angle-right:before {
-      font-family: 'FontAwesome';
-    }
-
-    .orbit-slide-number, .orbit-timer {
+    .flex-control-nav {
       display: none;
     }
 
+    .flex-direction-nav {
+    }
+
+    .flex-direction-navigation {
+
+      ul {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        z-index: 9999999;
+
+        li {
+          position: inherit;
+          width: 100%;
+
+          a {
+            color: black;
+            position: inherit;
+            margin-top: -3em;
+            background-color: rgba(255,255,255,.6);
+            padding: 1em;
+
+            &.flex-prev {
+              left: 0
+            }
+
+            &.flex-next {
+              right: 0
+            }
+
+            i {
+              color: black;
+              font-size: 5em;
+              margin-top: -2.5em;
+            }
+          }
+        }
+      }
+    }
     img {
       width: 100%;
+      height: auto;
     }
   }
 
   .orbit-bullets {
     display: none;
+  }
+}
+
+/* Blog page styles */
+
+.blog-post {
+  font-family: $font2;
+  margin-bottom: 2em;
+
+  a {
+    color: black;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-family: $font1;
+    font-size: 4em;
+    font-weight: 100;
+    color: $color2;
+    margin: 0;
+    line-height: 1em;
+  }
+
+  hr {
+    border: 0;
+    border-bottom: 1px dotted #ccc;
+    margin-bottom: 0;
+  }
+
+  p.category {
+    font-weight: bold;
+  }
+
+  p {
+    line-height: 2;
+    font-size: .9em;
+  }
+}
+
+.blog-post p.continue, .blog-post time, h4.widgettitle {
+    font-size: 1.5em;
+    margin: 0;
+    line-height: 1em;
+    font-family: $font2;
+    color: $color6;
+    font-style: italic;
+    letter-spacing: 1px;
+    font2-weight: bold;
+}
+
+li.cat-item {
+  font-family: $font2;
+  font-size: .9em;
+  font-weight: bold;
+
+  a {
+    color: black;
   }
 }
 
@@ -529,12 +597,6 @@ button.secondary:focus,
 /* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
 /* Grid changes from small to medium here */
 @media only screen and (min-width: 768px) { 
-  .copyright {
-    text-align: right;
-  }
   
-  header .nav-bar .nav {
-        display: inherit;
-  }
 }
 

@@ -1,4 +1,4 @@
-#outer-container {
+#outer-container.home {
   background: url(../img/assets/photos/alexis-background-no-lines.jpg) left 92% no-repeat;
   background-size: 120% ;
 }
@@ -47,13 +47,13 @@
 
 @media only screen and (min-width: 600px) {
   /* change the background picture size and position */
-  #outer-container {
+  #outer-container.home {
     background-size: 750px auto;
   }
 }
 
 @media only screen and (min-width: 768px) { 
-  #outer-container {
+  #outer-container.home {
     background: url(../img/assets/photos/alexis-background-no-lines.jpg) 111px 98% no-repeat;
     background-size: 900px auto;
   }
@@ -64,13 +64,13 @@
   }
   
   .background-wrapper {
-        height: 45em;
+    height: 45em;
   }
 
 }
 
 @media only screen and (min-width: 960px) {
-  #outer-container {
+  #outer-container.home {
     background-position: right 98%;
   }
 }

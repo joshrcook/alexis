@@ -11,18 +11,14 @@ function add_scripts_styles() {
     // add crimson font
     wp_register_style('crimson', get_template_directory_uri() . '/fonts/Crimson/crimson.css');
     wp_enqueue_style('crimson');
-    // add fontello font
-    wp_register_style('fontello', get_template_directory_uri() . '/fonts/Fontello/css/fontello.css');
-    wp_enqueue_style('fontello');
+
     // add the font awesome font
     wp_register_style('font-awesome', 'http://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css');
     wp_enqueue_style('font-awesome');
     
     // add home page specific styles
-    if(is_front_page()) {
-        wp_register_style('home-page-css', get_template_directory_uri() . '/css/home-page.css');
-        wp_enqueue_style('home-page-css');
-    }
+    wp_register_style('home-page-css', get_template_directory_uri() . '/css/home-page.css');
+    wp_enqueue_style('home-page-css');
     
     // add jquery mobile to handle touch and scroll events
     wp_register_script('jqueryMobile', get_template_directory_uri() . '/js/jquery.mobile.custom/jquery.mobile.custom.min.js', array('jquery'));
@@ -30,6 +26,7 @@ function add_scripts_styles() {
 
     // add scrollTo js to handle smooth scrolling
     wp_register_script('scrollTo', get_template_directory_uri() . '/js/vendor/jquery.scrollTo-1.4.3.1-min.js', array('jquery'), false, true);
+    wp_enqueue_script('scrollTo');
     
     // add js to handle sidebar flyout
     wp_register_script('handle-off-canvas', get_template_directory_uri() . '/js/handle-off-canvas.js?' . time(), array('jquery', 'jqueryMobile', 'scrollTo'), false, true);
@@ -49,13 +46,26 @@ function add_scripts_styles() {
 
     wp_register_script('foundation-orbit', get_template_directory_uri() . '/js/vendor/foundation-4.2.2.orbit/js/foundation.min.js', array('jquery'));
     wp_enqueue_script('foundation-orbit');
+
+    if(!MOBILE) {
+	    wp_register_script('content-replace', get_template_directory_uri() . '/js/content-replace.js', array('jquery'), false, true);
+	    wp_enqueue_script('content-replace');
+
+	    wp_register_script('jquery-ui', 'http://code.jquery.com/ui/1.10.3/jquery-ui.js', array('jquery'));
+	    wp_enqueue_script('jquery-ui');
+	}
+
+	// register the main flexslider script
+	wp_register_script('jrc-theme-flexslider', get_template_directory_uri() . '/js/vendor/woothemes-FlexSlider/jquery.flexslider-min.js', array('jquery'));
+
+	// register the flexslider loader
+	wp_register_script('jrc-theme-flexslider-loader', get_template_directory_uri() . '/js/load-flexslider.js', array('jquery', 'jrc-theme-flexslider'), false, true);
 }
 
 add_action('wp_enqueue_scripts', 'add_scripts_styles');
 
 function add_footer_scripts_styles() {
-	if(!MOBILE && is_front_page()) {
-            // add css to handle rotating words
+	if(!MOBILE) {// add css to handle rotating words
         wp_register_style('rotating-words', get_template_directory_uri() . '/css/rotating-words-anim.css');
 	    wp_enqueue_style('rotating-words');
 	} 
@@ -73,6 +83,20 @@ function get_nav_menu_items($menu_slug) {
     $menu = wp_get_nav_menu_object( $locations[ $menu_slug ] );
     return wp_get_nav_menu_items( $menu->term_id );
 }
+
+// function to remove image links
+add_filter( 'the_content', 'attachment_image_link_remove_filter' );
+
+function attachment_image_link_remove_filter( $content ) {
+	 $content =
+	 preg_replace(
+	 array('{<a(.*?)(wp-att|wp-content/uploads)[^>]*><img}',
+	 '{ wp-image-[0-9]*" /></a>}'),
+	 array('<img','" />'),
+	 $content
+	 );
+	 return $content;
+ }
 
 
 /************ INCLUDE THE FOUNDATION CORE ************/
@@ -155,9 +179,9 @@ you like. Enjoy!
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
 	register_sidebar(array(
-		'id' => 'sidebar1',
-		'name' => __('Sidebar 1', 'bonestheme'),
-		'description' => __('The first (primary) sidebar.', 'bonestheme'),
+		'id' => 'sidebar-blog',
+		'name' => __('Blog Sidebar', 'bonestheme'),
+		'description' => __('The sidebar that shows up on the blog main page.', 'bonestheme'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',

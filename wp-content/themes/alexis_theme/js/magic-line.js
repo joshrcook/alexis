@@ -8,9 +8,7 @@ jQuery(document).ready(function($) {
    
    // add in magic line
    $('.nav ul.magic-line').prepend('<li id="magic-line">&nbsp;</li>').ready(setStartingPosition);
-   
-   // when the magic line has been inserted, set it's starting position and width
-   
+  
    
    $('.magic-line li').on('mouseover', function() {
        // get the position of the hovered element
@@ -25,7 +23,10 @@ jQuery(document).ready(function($) {
    });
    
    $('.magic-line').on('mouseleave', function() {
-       // reset everything
+       // recalculate to make sure we're going back to the right place
+       setStartingPosition();
+       setStartingWidth();
+
        $('#magic-line').stop().animate({
           left: startingPosition,
           width: startingWidth
@@ -37,6 +38,10 @@ jQuery(document).ready(function($) {
        $('#magic-line').stop().animate({
           left: startingPosition 
        });
+   }
+
+   function setStartingWidth() {
+      startingWidth = $('.nav .selected').width();
    }
    
    $(window).resize(setStartingPosition);

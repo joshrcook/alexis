@@ -1,9 +1,10 @@
-<?php
+<?php get_header();
 
-get_header();
 wp_enqueue_script('scrollTo');
-
+wp_enqueue_script('jrc-theme-flexslider');
+wp_enqueue_script('jrc-theme-flexslider-loader');
 ?>
+
 <div class="jrc-por">
 <?php if(have_posts()): while(have_posts()): the_post(); ?>
 <div class="row">
@@ -13,7 +14,7 @@ wp_enqueue_script('scrollTo');
 	<div class="columns large-6 small-6">
 		<div class="por-nav text-right">
 			<?php previous_post_link('%link', '<i class="icon-angle-left"></i>'); ?>
-			<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Work' ))); ?>">
+			<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Work' ))); ?>" class="all-posts">
 				<i class="icon-th"></i>
 			</a>
 			<?php next_post_link('%link', '<i class="icon-angle-right"></i>'); ?>
@@ -72,28 +73,28 @@ if(is_array($image_ids)):
 ?>
 <div class="row">
 	<div class="columns">
-		<ul data-orbit id="slideshow">
-		<?php 
-		foreach($image_ids as $id):
-		?>
-		  <li>
-		    <?php echo wp_get_attachment_image($id, 'full'); ?>
-		  </li>
-		<?php
-		endforeach;
-		?>
-		</ul>
+		<div class="flexslider">
+		  <ul class="slides">
+		    <?php 
+			foreach($image_ids as $id):
+			?>
+				<li>
+					<?php echo wp_get_attachment_image($id, 'full'); ?>
+				</li>
+			<?php
+			endforeach;
+			?>
+		  </ul>
+		  <div class="flex-direction-navigation">
+		  </div>
+		</div>
+		
 	</div>
 </div>
 <?php 
 endif; // end image-id if
 endwhile; endif; ?>
 </div><!-- end .jrc-por -->
-<script type="text/javascript">
-	jQuery(document).foundation('orbit', {
-		next_class: 'angle-right orbit-next',
-		prev_class: 'angle-left orbit-prev'
-	});
-</script>
+
 <?php
 get_footer();

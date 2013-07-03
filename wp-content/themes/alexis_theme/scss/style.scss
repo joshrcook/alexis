@@ -38,6 +38,10 @@ License URI:
 	@import "960up";
 }
 
+@media only screen and (min-width: 1120px) {
+	@import "1120up";
+}
+
 .icon-reorder:before {
   content: none;
   font-family: 'FontAwesome' !important;

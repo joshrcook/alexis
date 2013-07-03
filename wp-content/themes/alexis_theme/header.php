@@ -36,12 +36,12 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="outer-container" />
+<div id="outer-container" <?php if(is_front_page()) echo 'class="home"'; ?> />
 <div class="top-strip">&nbsp;</div>
 <header>
     <div class="row nav-bar">
         <div class="main-logo columns large-3 small-6">
-            <a href="<?php echo get_home_url(); ?>">
+            <a href="<?php echo get_home_url() . '/'; ?>">
                 <div class="poster">
                     <div class="movement">
                         <div class="face front">
@@ -82,5 +82,7 @@
         <span class="columns large-12"><hr /></span>
     </div>
 </header><!-- end header -->
+<div id="content-wrapper">
+    <div id="content">
 
             
