@@ -1,23 +1,20 @@
 <?php get_header(); ?>
-<div class="background-wrapper">
-    <div class="row">
-        <div class="rw-div columns large-12">
-            <span>I am a</span>
-            <br />
-            <div class="rw-words rw-words-1">
-                <span>creative thinker</span>
-                <span>problem solver</span>
-                <span>graphic artist</span>
-            </div><span>&nbsp;</span><br />
-            <span>with a passion</span>
-            <br />
-            <span>for&nbsp;</span>
-            <div class="rw-words rw-words-2">
-                <span>design</span>
-                <span>art</span>
-                <span>illustration</span>
+
+<?php // take inspiration from the about page for this design ?>
+<div class="row">
+    <div class="background-image">
+        <div class="columns large-6">
+            <div class="title-page">
+                <h1>Hello.<br />
+                    Hola.</h1>
+                    <hr />
+                <p>I am Alexis Contreras,<br />
+                    a creative thinker<br />
+                    with a passion<br />
+                    for design.</p>
             </div>
         </div>
+        <img class="absolute-image right hide-for-small" src="<?php echo get_template_directory_uri() . '/img/assets/photos/shoe2.jpg'; ?>" />
     </div>
 </div>
 <?php get_footer(); ?>

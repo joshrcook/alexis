@@ -37,6 +37,7 @@ section[role="complementary-nav"] {
   height: 100%;
   display: block;
   background-color: #1b1c1c;
+  font-family: $font1;
 
   p.header-replace {
     height: 7.875em;
@@ -79,6 +80,7 @@ section[role="complementary-nav"] {
 header {
 
   .nav-bar {
+    font-family: $font1;
 
     .nav {
 
@@ -127,6 +129,10 @@ header {
         text-align: center;
         position: relative;
         width: 75px;
+
+        &:last-child {
+          margin-right: 0;
+        }
 
         a {
           display: block;
@@ -207,6 +213,46 @@ button.secondary:focus,
   background-color: inherit;
 }
 
+div.title-page {
+  
+  h1 {
+    font-size: 11em;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'LeagueGothicRegular';
+    color: #6D6E70;
+    line-height: .85;
+    margin: 0;
+    margin-top: .1em;
+  }
+
+  p {
+    color: #6D6E70;
+    font-size: 2em;
+    margin-top: 0;
+  }
+}
+
+.background-image {
+  position: relative;
+  overflow: hidden;
+
+  div.columns {
+    z-index: 10;
+  }
+
+  img.absolute-image {
+    position: absolute;
+    bottom: 0;
+    max-height: 100%;
+    max-width: 100%;
+
+    &.right {
+      right: 0;
+    }
+  }
+}
+
 /*
     Work page styles
 */
@@ -265,9 +311,9 @@ button.secondary:focus,
   .copyright {
     height: 32px;
     display: table;  
-    font-size: 1em;
+    font-size: 1.15em;
     line-height: 32px;
-    font-family: 'Asap', sans-serif;
+    font-family: $font3;
     letter-spacing: .1em;
 
     span {
@@ -583,6 +629,20 @@ li.cat-item {
   a {
     color: black;
   }
+}
+
+.background-wrapper {
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: contain;
+
+  &.about {
+    height: 35em;
+  }
+}
+
+.over-image-white * {
+  text-shadow: 0 0 4px #fff;
 }
 
 @media only screen and (max-width: 767px) {

@@ -64,14 +64,7 @@ function add_scripts_styles() {
 
 add_action('wp_enqueue_scripts', 'add_scripts_styles');
 
-function add_footer_scripts_styles() {
-	if(!MOBILE) {// add css to handle rotating words
-        wp_register_style('rotating-words', get_template_directory_uri() . '/css/rotating-words-anim.css');
-	    wp_enqueue_style('rotating-words');
-	} 
-}
 
-add_action('wp_footer', 'add_footer_scripts_styles');
 /**
  * Function to get the menu items from a menu, given a slug
  * 
@@ -82,6 +75,19 @@ function get_nav_menu_items($menu_slug) {
     $locations = get_nav_menu_locations();
     $menu = wp_get_nav_menu_object( $locations[ $menu_slug ] );
     return wp_get_nav_menu_items( $menu->term_id );
+}
+
+function display_tags($tags)
+{
+    $tag_count = count($tags);
+    $counter = 0;
+    foreach($tags as $tag) {
+        echo '<li class="tag">'.$tag->name.'</li>';
+        if(($tag_count - 1) != $counter) {
+            echo '<span class="tag-separator">&nbsp;/&nbsp;</span>';
+        }
+        $counter++;
+    }
 }
 
 // function to remove image links

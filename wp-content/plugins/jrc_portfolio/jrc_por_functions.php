@@ -38,7 +38,7 @@ add_action('init', 'jrc_por_add_taxonomies');
 // add featured image instructions
 function jrc_por_add_featured_image_instructions($html)
 {
-    $html .= '<p class="description">Please include an image that is '.FEATURED_IMAGE_WIDTH.'x'.FEATURED_IMAGE_HEIGHT.'px</p>';
+    $html .= '<p class="description">Please include an image that is at least '.FEATURED_IMAGE_WIDTH.'px wide</p>';
     return $html;
 }
 

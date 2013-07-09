@@ -36,7 +36,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="outer-container" <?php if(is_front_page()) echo 'class="home"'; ?> />
+<div id="outer-container" <?php if(is_home()) { echo 'class="home"'; } ?> />
 <div class="top-strip">&nbsp;</div>
 <header>
     <div class="row nav-bar">
@@ -48,7 +48,6 @@
                             <img src="<?php echo get_template_directory_uri() . '/img/assets/logos/ac-logo-red-shadow.png'; ?>"/>
                         </div>
                         <?php 
-                        global $detect;
                         if(!MOBILE): ?>
                             <div class="face back">
                                 <img src="<?php echo get_template_directory_uri() . '/img/assets/logos/ac-logo-b-w.png'; ?>" />

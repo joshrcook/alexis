@@ -56,6 +56,5 @@ function jrc_por_init() {
 
 // settings
 define('FEATURED_IMAGE_WIDTH', 900);
-define('FEATURED_IMAGE_HEIGHT', 900);
 
 

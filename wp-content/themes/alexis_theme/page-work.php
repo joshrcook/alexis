@@ -46,16 +46,3 @@ endwhile;
 endif;
 
 get_footer();
-
-function display_tags($tags)
-{
-    $tag_count = count($tags);
-    $counter = 0;
-    foreach($tags as $tag) {
-        echo '<li class="tag">'.$tag->name.'</li>';
-        if(($tag_count - 1) != $counter) {
-            echo '<span class="tag-separator">&nbsp;/&nbsp;</span>';
-        }
-        $counter++;
-    }
-}

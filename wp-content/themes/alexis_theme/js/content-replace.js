@@ -3,12 +3,12 @@ jQuery(function($) {
 		console.log('history is supported');
 
 		$(document).on('click', 'a:not(a[rel=next], a[rel=prev], a.all-posts)', function(event) {
-			event.preventDefault();
 
 			_href = $(this).attr('href');
 
 			// only take action if it is a link to an internal page
-			if(_href.indexOf(window.location.origin) !== -1) {
+			if(_href.indexOf(window.location.origin) != -1  && _href.indexOf('wp-admin') != -1) {
+				event.preventDefault();
 
 			// change the url without a page refresh and add a history entry
 			history.pushState(null, null, _href);

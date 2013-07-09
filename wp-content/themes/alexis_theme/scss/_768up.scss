@@ -17,6 +17,17 @@ header {
 	}
 }
 
+div.title-page {
+
+	h1 {
+		font-size: 15em;
+	}
+
+	p {
+		font-size: 2.5em;
+	}
+}
+
 .jrc-por {
 	
 	.pic-bg {
@@ -33,5 +44,21 @@ header {
 
 header .nav-bar .nav {
     display: inherit;
+}
+
+.background-wrapper {
+	
+	&.about {
+		height: 42em;
+	}
+}
+
+@media only screen and (min-height: 850px) {
+	.background-wrapper {
+
+		&.about {
+			height: 47em;
+		}
+	}
 }
 
