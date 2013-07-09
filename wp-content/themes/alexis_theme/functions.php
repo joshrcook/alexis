@@ -49,7 +49,7 @@ function add_scripts_styles() {
 
     if(!MOBILE) {
 	    wp_register_script('content-replace', get_template_directory_uri() . '/js/content-replace.js', array('jquery'), false, true);
-	    wp_enqueue_script('content-replace');
+	    // wp_enqueue_script('content-replace');
 
 	    wp_register_script('jquery-ui', 'http://code.jquery.com/ui/1.10.3/jquery-ui.js', array('jquery'));
 	    wp_enqueue_script('jquery-ui');

@@ -79,6 +79,13 @@ section[role="complementary-nav"] {
 
 header {
 
+  &.page-header {
+
+    h1 {
+      margin-top: 0;
+    }
+  }
+
   .nav-bar {
     font-family: $font1;
 
@@ -220,14 +227,14 @@ div.title-page {
     text-transform: uppercase;
     font-weight: 500;
     font-family: 'LeagueGothicRegular';
-    color: #6D6E70;
+    color: $color4;
     line-height: .85;
     margin: 0;
     margin-top: .1em;
   }
 
   p {
-    color: #6D6E70;
+    color: $color4;
     font-size: 2em;
     margin-top: 0;
   }
@@ -296,9 +303,90 @@ div.title-page {
 		Footer styles
 */
 
+.poster {
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  margin-right: 1.5em;
+
+  .movement {
+    height: 32px;
+    width: 32px;
+
+    div.circle {
+      background-color: $color4;
+      display:inline-block;
+      margin-left: 1.5em;
+      border-radius: 100px;
+      width: 32px;
+      height: 32px;
+      text-align: center;
+
+      i {
+        color: white;
+        font-size: 20px;
+        line-height: 32px;
+        padding-left: 1px;
+      }
+    }
+
+    .social-icon:first-child .circle {
+      margin-left: 0;
+    }
+  }
+
+  .back {
+
+    .social-icon {
+
+      div.circle {
+
+        i.icon-rss {
+          color: #f68000;
+        }
+      }
+    }
+  }
+}
+
 .footer {
-  background-color: #202120;    
+  background-color: $color4;    
   color: white;
+
+  .poster {
+
+    .movement {
+
+      .social-icon {
+
+        div.circle {
+          background-color: white;
+
+          i {
+            color: $color4;
+          }
+        }
+      }
+
+      .back {
+
+        .social-icon {
+
+          i.icon-facebook {
+            color: #3a5998;
+          }
+
+          i.icon-instagram {
+            color: #ffa876;
+          }
+
+          i.icon-linkedin-sign {
+            color: #5ba8cf;
+          }
+        }
+      }
+    }
+  }
 
   .row {
     margin: 1em auto;
@@ -323,63 +411,6 @@ div.title-page {
   }
 
   /* Social icon styles */
-
-  .poster {
-    height: 32px;
-    width: 32px;
-    display: inline-block;
-    margin-right: 1.5em;
-
-    .movement {
-      height: 32px;
-      width: 32px;
-
-      .social-icon {
-
-        div.circle {
-          display:inline-block;
-          background-color: white;
-          margin-left: 1.5em;
-          border-radius: 100px;
-          width: 32px;
-          height: 32px;
-          text-align: center;
-
-          i {
-            color: #202120;
-            font-size: 20px;
-            line-height: 32px;
-            padding-left: 1px;
-          }
-        }
-      }
-
-      .social-icon:first-child .circle {
-        margin-left: 0;
-      }
-    }
-
-    .back {
-
-      .social-icon {
-
-        .circle {
-
-          i.icon-facebook {
-            color: #3a5998;
-          }
-
-          i.icon-instagram {
-            color: #ffa876;
-          }
-
-          i.icon-linkedin-sign {
-            color: #5ba8cf;
-          }
-        }
-      }
-    }
-  }
 
   .poster:last-child {
     margin-right: 0;
@@ -619,7 +650,16 @@ div.title-page {
     color: $color6;
     font-style: italic;
     letter-spacing: 1px;
-    font2-weight: bold;
+    font-weight: bold;
+}
+
+input.search, input.search:focus {
+  background-image: url(img/assets/icons/search-black.png);
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  padding-left: 28px;
+  font-size: .9em;
+  font-weight: normal;
 }
 
 li.cat-item {
