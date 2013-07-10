@@ -15,6 +15,10 @@ function add_scripts_styles() {
     // add the font awesome font
     wp_register_style('font-awesome', 'http://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css');
     wp_enqueue_style('font-awesome');
+
+    // add the entypo font
+    wp_register_style('entypo', get_template_directory_uri() . '/css/entypo-font.css');
+    wp_enqueue_style('entypo');
     
     // add home page specific styles
     wp_register_style('home-page-css', get_template_directory_uri() . '/css/home-page.css');

@@ -14,6 +14,18 @@
     font-family: 'FontAwesome';
 }
 
+.entypo {
+  font-family: 'Entypo';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.entypo-social {
+  font-family: 'Entypo-social';
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*
     Styles for off-canvas nav 
 */
@@ -327,24 +339,15 @@ div.title-page {
         font-size: 20px;
         line-height: 32px;
         padding-left: 1px;
+
+        &.entypo, &.entypo-social {
+          font-size: 2.3em;
+        }
       }
     }
 
     .social-icon:first-child .circle {
       margin-left: 0;
-    }
-  }
-
-  .back {
-
-    .social-icon {
-
-      div.circle {
-
-        i.icon-rss {
-          color: #f68000;
-        }
-      }
     }
   }
 }

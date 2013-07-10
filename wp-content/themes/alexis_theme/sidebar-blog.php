@@ -14,7 +14,7 @@
 		</div>
 		<div class="face back">
 			<a class="social-icon" href="#">
-				<div class="circle">
+				<div class="circle" style="background-color: #f68000;">
 					<i class="icon-rss"></i>
 				</div>
 			</a>
