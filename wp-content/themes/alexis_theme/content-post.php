@@ -16,7 +16,7 @@
 		</div>
 		<div class="columns large-9">
 			<?php the_content('<div class="row">
-								<div class="column text-right">
+								<div class="columns text-right">
 									<p class="continue">Continue Reading &rsaquo;</p>
 								</div>
 							</div>'); ?>
