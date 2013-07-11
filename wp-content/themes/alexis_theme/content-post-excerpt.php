@@ -6,7 +6,7 @@
 	</div>
 	<div class="row">
 		<div class="columns">
-			<time datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php the_time('M j, Y'); ?></time>
+			<time class="secondary-text" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php the_time('M j, Y'); ?></time>
 		</div>
 	</div>
 	<hr class="blog-hr" />
@@ -17,7 +17,7 @@
 		<div class="columns large-9">
 			<?php the_content('<div class="row">
 								<div class="columns text-right">
-									<p class="continue">Continue Reading &rsaquo;</p>
+									<h4 class="secondary-text">Continue Reading &rsaquo;</h4>
 								</div>
 							</div>'); ?>
 		</div>

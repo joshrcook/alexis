@@ -352,6 +352,11 @@ div.title-page {
   }
 }
 
+.art-social .poster {
+  margin-right: .5em;
+  margin-bottom: .5em;
+}
+
 .footer {
   background-color: $color4;    
   color: white;
@@ -645,7 +650,7 @@ div.title-page {
   }
 }
 
-.blog-post p.continue, .blog-post time, h4.widgettitle {
+h4.widgettitle, .secondary-text {
     font-size: 1.5em;
     margin: 0;
     line-height: 1em;
@@ -667,7 +672,6 @@ input.search, input.search:focus {
 
 li.cat-item {
   font-family: $font2;
-  font-size: .9em;
   font-weight: bold;
 
   a {

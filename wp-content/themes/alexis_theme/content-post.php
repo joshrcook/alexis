@@ -6,7 +6,7 @@
 	</div>
 	<div class="row">
 		<div class="columns">
-			<time datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php the_time('M j, Y'); ?></time>
+			<time class="secondary-text" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php the_time('M j, Y'); ?></time>
 		</div>
 	</div>
 	<hr class="blog-hr" />
@@ -17,64 +17,10 @@
 		<div class="columns large-9">
 			<?php the_content('<div class="row">
 								<div class="columns text-right">
-									<p class="continue">Continue Reading &rsaquo;</p>
+									<h4 class="secondary-text">Continue Reading &rsaquo;</h4>
 								</div>
 							</div>'); ?>
-			<div class="row">
-				<div class="columns">
-					<p class="continue">Share this on:</p>
-				</div>
-			</div>
-			<?php $social_array = array(
-				'facebook' => array(
-								'icon' => '&#62220;',
-								'link' => '#',
-								'color' => '#3a5998'
-								),
-				'twitter' => array(
-								'icon' => '&#62217;',
-								'link' => '#',
-								'color' => '#00c2f8'
-								),
-				'pinterest' => array(
-								'icon' => '&#62226;',
-								'link' => '#',
-								'color' => '#cd1f28'
-								),
-				'linked-in'=> array(
-								'icon' => '&#62232;',
-								'link' => '#',
-								'color' => '#007ab5'
-								),
-				'google-plus' => array(
-								'icon' => '&#62223;',
-								'link' => '#',
-								'color' => '#dd4b39'
-								)
-			);
-			?>
-			<p class="social">
-					<?php foreach($social_array as $icon): ?>
-						<div class="poster">
-							<div class="movement">
-								<div class="face front">
-									<a class="social-icon" href="<?php echo $icon['link']; ?>">
-										<div class="circle">
-											<i class="entypo-social"><?php echo $icon['icon']; ?></i>
-										</div>
-									</a>
-								</div>
-								<div class="face back">
-									<a class="social-icon" href="<?php echo $icon['link']; ?>">
-										<div class="circle" style="background-color: <?php echo $icon['color']; ?>;">
-											<i class="entypo-social"><?php echo $icon['icon']; ?></i>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-					<?php endforeach; ?>
-			</p>
+			<?php get_template_part('content', 'social'); ?>
 		</div>
 	</div>
 	<hr class="blog-hr" />

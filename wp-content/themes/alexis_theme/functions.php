@@ -4,6 +4,7 @@
 require_once(get_template_directory() . '/inc/detectmobilebrowser.php');
 /************ REGULAR FUNCTIONS ***************/
 
+
 function add_scripts_styles() {
     // add league gothic font
     wp_register_style('league-gothic', get_template_directory_uri() . '/fonts/League-Gothic/league-gothic.css');
@@ -61,6 +62,9 @@ function add_scripts_styles() {
 
 	// register the main flexslider script
 	wp_register_script('jrc-theme-flexslider', get_template_directory_uri() . '/js/vendor/woothemes-FlexSlider/jquery.flexslider-min.js', array('jquery'));
+
+	// register the flexslider css
+	wp_register_style('jrc-theme-flexslider-css', get_template_directory_uri() . '/js/vendor/woothemes-FlexSlider/flexslider.css');
 
 	// register the flexslider loader
 	wp_register_script('jrc-theme-flexslider-loader', get_template_directory_uri() . '/js/load-flexslider.js', array('jquery', 'jrc-theme-flexslider'), false, true);
@@ -191,7 +195,17 @@ function bones_register_sidebars() {
 	register_sidebar(array(
 		'id' => 'sidebar-blog',
 		'name' => __('Blog Sidebar', 'bonestheme'),
-		'description' => __('The sidebar that shows up on the blog main page.', 'bonestheme'),
+		'description' => __('The sidebar that shows up on any blog page.', 'bonestheme'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+	register_sidebar(array(
+		'id' => 'sidebar-art',
+		'name' => __('Art Sidebar', 'bonestheme'),
+		'description' => __('The sidebar that shows up on the art page.', 'bonestheme'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',

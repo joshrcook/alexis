@@ -12,12 +12,14 @@
 				</div>
 			</a>
 		</div>
-		<div class="face back">
-			<a class="social-icon" href="#">
-				<div class="circle" style="background-color: #f68000;">
-					<i class="icon-rss"></i>
-				</div>
-			</a>
-		</div>
+		<?php if(!MOBILE): ?>
+			<div class="face back">
+				<a class="social-icon" href="#">
+					<div class="circle" style="background-color: #f68000;">
+						<i class="icon-rss"></i>
+					</div>
+				</a>
+			</div>
+		<?php endif; ?>
 	</div>
 </div>
