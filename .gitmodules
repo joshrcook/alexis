@@ -1,0 +1,3 @@
+[submodule "wp-content/plugins/jrc_art/Easy-Wordpress-Custom-Post-Types"]
+	path = wp-content/plugins/jrc_art/Easy-Wordpress-Custom-Post-Types
+	url = https://github.com/JeffreyWay/Easy-WordPress-Custom-Post-Types.git
