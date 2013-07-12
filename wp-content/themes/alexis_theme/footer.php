@@ -6,66 +6,51 @@
                         
                         <div class="large-6 columns small-content-centered text-left">
                             <!-- <img alt="Connect via LinkedIn" src="<?php echo get_template_directory_uri() . '/img/assets/icons/linkedin-circle-white-32x32.png'; ?>" /> -->
-                            <div class="poster">
-                                <div class="movement">
-                                    <div class="face front">
-                                        <a class="social-icon" href="#">
-                                            <div class="circle">
-                                                <i class="icon-linkedin-sign"></i>
-                                            </div>
-                                        </a>
+                            <?php $social_icons = array(
+                                'linked-in' => array(
+                                    'class' => 'icon-linkedin-sign',
+                                    'link' => '#',
+                                    'color' => '#5ba8cf'
+                                ),
+                                'facebook' => array(
+                                    'class' => 'icon-facebook',
+                                    'link' => '#',
+                                    'color' => '#3a5998'
+                                ),
+                                'instagram' => array(
+                                    'class' => 'icon-instagram',
+                                    'link' => '#',
+                                    'color' => '#ffa876'
+                                ),
+                                'email' => array(
+                                    'class' => 'icon-envelope',
+                                    'link' => '#',
+                                    'color' => '#1c91ff'
+                                )
+                            ); 
+                            ?>
+                            <?php foreach($social_icons as $icon): ?>
+                                <div class="poster">
+                                    <div class="movement">
+                                        <div class="face front">
+                                            <a class="social-icon" href="<?php echo $icon['link']; ?>">
+                                                <div class="circle">
+                                                    <i class="<?php echo $icon['class']; ?>"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <?php if(!MOBILE): ?>
+                                        <div class="face back">
+                                            <a class="social-icon" href="<?php echo $icon['link']; ?>">
+                                                <div class="circle">
+                                                    <i class="<?php echo $icon['class']; ?>" style="color: <?php echo $icon['color']; ?>;"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <?php endif; ?>
                                     </div>
-                                    <?php if(!MOBILE): ?>
-                                    <div class="face back">
-                                        <a class="social-icon" href="#">
-                                            <div class="circle">
-                                                <i class="icon-linkedin-sign"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <?php endif; ?>
                                 </div>
-                            </div>
-                            <div class="poster">
-                                <div class="movement">
-                                    <div class="face front">
-                                        <a class="social-icon" href="#">
-                                            <div class="circle">
-                                                <i class="icon-facebook"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <?php if(!MOBILE): ?>
-                                    <div class="face back">
-                                        <a class="social-icon" href="#">
-                                            <div class="circle">
-                                                <i class="icon-facebook"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                            <div class="poster">
-                                <div class="movement">
-                                    <div class="face front">
-                                        <a class="social-icon" href="#">
-                                            <div class="circle">
-                                                <i class="icon-instagram"></i>
-                                            </div>
-                                        </a>  
-                                    </div>
-                                    <?php if(!MOBILE): ?>
-                                    <div class="face back">
-                                        <a class="social-icon" href="#">
-                                            <div class="circle">
-                                                <i class="icon-instagram"></i>
-                                            </div>
-                                        </a>  
-                                    </div>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
+                            <?php endforeach; ?>
                               
                         </div>                      
                         <div class="large-6 columns hide-for-small copyright crimson text-right">

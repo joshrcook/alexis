@@ -7,27 +7,38 @@
 	'facebook' => array(
 					'icon' => '&#62220;',
 					'link' => '#',
-					'color' => '#3a5998'
+					'color' => '#3a5998',
+					'class' => 'entypo-social'
 					),
 	'twitter' => array(
 					'icon' => '&#62217;',
 					'link' => '#',
-					'color' => '#00c2f8'
+					'color' => '#00c2f8',
+					'class' => 'entypo-social'
 					),
 	'pinterest' => array(
 					'icon' => '&#62226;',
 					'link' => '#',
-					'color' => '#cd1f28'
+					'color' => '#cd1f28',
+					'class' => 'entypo-social'
 					),
 	'linked-in'=> array(
 					'icon' => '&#62232;',
 					'link' => '#',
-					'color' => '#007ab5'
+					'color' => '#007ab5',
+					'class' => 'entypo-social'
 					),
 	'google-plus' => array(
 					'icon' => '&#62223;',
 					'link' => '#',
-					'color' => '#dd4b39'
+					'color' => '#dd4b39',
+					'class' => 'entypo-social'
+					),
+	'email' => array(
+					'icon' => '&#9993;',
+					'link' => '#',
+					'color' => '#1c91ff',
+					'class' => 'entypo'
 					)
 );
 ?>
@@ -40,7 +51,7 @@
 						<div class="face front">
 							<a class="social-icon" href="<?php echo $icon['link']; ?>">
 								<div class="circle">
-									<i class="entypo-social"><?php echo $icon['icon']; ?></i>
+									<i class="<?php echo $icon['class']; ?>"><?php echo $icon['icon']; ?></i>
 								</div>
 							</a>
 						</div>
@@ -48,7 +59,7 @@
 							<div class="face back">
 								<a class="social-icon" href="<?php echo $icon['link']; ?>">
 									<div class="circle" style="background-color: <?php echo $icon['color']; ?>;">
-										<i class="entypo-social"><?php echo $icon['icon']; ?></i>
+										<i class="<?php echo $icon['class']; ?>"><?php echo $icon['icon']; ?></i>
 									</div>
 								</a>
 							</div>
