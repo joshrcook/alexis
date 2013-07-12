@@ -43,6 +43,10 @@ section[role="complementary-nav"],
     margin-left: -80%;
 }
 
+#content-wrapper {
+  margin-bottom: 2em;
+}
+
 section[role="complementary-nav"] {
   margin-right: -200%;
   width: 80%;
@@ -205,8 +209,6 @@ header {
       display: inline-block;
 
       .movement {
-        height: 75px;
-        width: 77px;
         display: inline-block;
       }
     }
@@ -316,8 +318,6 @@ div.title-page {
 */
 
 .poster {
-  height: 32px;
-  width: 32px;
   display: inline-block;
   margin-right: 1.5em;
 
