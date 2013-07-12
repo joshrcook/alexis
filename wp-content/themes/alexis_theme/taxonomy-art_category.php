@@ -1,9 +1,9 @@
 <?php get_header(); ?>
+
 <?php wp_enqueue_script('jrc-theme-flexslider'); ?>
 <?php wp_enqueue_style('jrc-theme-flexslider-css'); ?>
 <div class="row">
 	<div class="columns large-9 small-12">
-		<?php query_posts(array('post_type' => 'jrc_art', 'posts_per_page' => 0)); ?>
 		<div id="slider" class="flexslider">
 			<ul class="slides">
 				<?php if(have_posts()): while(have_posts()): the_post(); ?>
@@ -22,6 +22,7 @@
 			</ul>
 		</div>
 		<?php endif; ?>
+
 
 	</div>
 	<div class="columns large-3 art-social">
