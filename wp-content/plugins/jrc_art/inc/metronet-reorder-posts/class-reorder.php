@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Reorder posts
  * 
@@ -21,7 +22,8 @@
  * @author Ryan Hellyer <ryan@metronet.no>
  * @since 1.0
  */
-if(!class_exists('Reorder')) {
+
+if(!class_exists('Reorder')):
 class Reorder {
 
 	/**
@@ -402,4 +404,4 @@ class Reorder {
 
 }
 
-}
+endif;
