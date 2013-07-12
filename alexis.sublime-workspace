@@ -542,6 +542,46 @@
 				"buffer_size": 11090,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "wp-content/themes/alexis_theme/scss/_base.scss",
+			"settings":
+			{
+				"buffer_size": 11265,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/alexis_theme/category.php",
+			"settings":
+			{
+				"buffer_size": 36,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/alexis_theme/single-jrc_por.php",
+			"settings":
+			{
+				"buffer_size": 2570,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/alexis_theme/sidebar-art.php",
+			"settings":
+			{
+				"buffer_size": 325,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/plugins/jrc_art/jrc_art_init.php",
+			"settings":
+			{
+				"buffer_size": 521,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -714,6 +754,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"bones_scripts",
 			"secondary",
 			"post",
 			"blog",
@@ -840,8 +881,7 @@
 			"uppercase",
 			"print_r",
 			"selected_month",
-			"$_GET['semester_code']",
-			"$result3"
+			"$_GET['semester_code']"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -862,6 +902,7 @@
 	"groups":
 	[
 		{
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -902,8 +943,8 @@
 						"selection":
 						[
 							[
-								186,
-								186
+								129,
+								23
 							]
 						],
 						"settings":
@@ -911,7 +952,7 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 90.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -930,6 +971,139 @@
 							[
 								232,
 								232
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 794.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "wp-content/themes/alexis_theme/scss/_base.scss",
+					"settings":
+					{
+						"buffer_size": 11265,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10885,
+								10885
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "wp-content/themes/alexis_theme/category.php",
+					"settings":
+					{
+						"buffer_size": 36,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								36,
+								36
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "wp-content/themes/alexis_theme/single-jrc_por.php",
+					"settings":
+					{
+						"buffer_size": 2570,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2201,
+								2201
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 690.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "wp-content/themes/alexis_theme/sidebar-art.php",
+					"settings":
+					{
+						"buffer_size": 325,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								30,
+								30
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "wp-content/plugins/jrc_art/jrc_art_init.php",
+					"settings":
+					{
+						"buffer_size": 521,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								516,
+								516
 							]
 						],
 						"settings":

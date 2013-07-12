@@ -551,56 +551,59 @@ div.title-page {
     background-color: $color5;
   }
 
-  .flexslider {
-    margin: 6em auto;
-    position: relative;
+  .portfolio-flexslider {
 
-    .flex-control-nav {
-      display: none;
-    }
+    .flexslider {
+      margin: 6em auto;
+      position: relative;
 
-    .flex-direction-nav {
-    }
+      .flex-control-nav {
+        display: none;
+      }
 
-    .flex-direction-navigation {
+      .flex-direction-nav {
+      }
 
-      ul {
-        position: absolute;
-        width: 100%;
-        top: 50%;
-        z-index: 9999999;
+      .flex-direction-navigation {
 
-        li {
-          position: inherit;
+        ul {
+          position: absolute;
           width: 100%;
+          top: 50%;
+          z-index: 9999999;
 
-          a {
-            color: black;
+          li {
             position: inherit;
-            margin-top: -3em;
-            background-color: rgba(255,255,255,.6);
-            padding: 1em;
+            width: 100%;
 
-            &.flex-prev {
-              left: 0
-            }
-
-            &.flex-next {
-              right: 0
-            }
-
-            i {
+            a {
               color: black;
-              font-size: 5em;
-              margin-top: -2.5em;
+              position: inherit;
+              margin-top: -3em;
+              background-color: rgba(255,255,255,.6);
+              padding: 1em;
+
+              &.flex-prev {
+                left: 0
+              }
+
+              &.flex-next {
+                right: 0
+              }
+
+              i {
+                color: black;
+                font-size: 5em;
+                margin-top: -2.5em;
+              }
             }
           }
         }
       }
-    }
-    img {
-      width: 100%;
-      height: auto;
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 
@@ -691,6 +694,20 @@ li.cat-item {
 
 .over-image-white * {
   text-shadow: 0 0 4px #fff;
+}
+
+.flexslider#slider {
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.flexslider#carousel {
+  overflow: hidden;
+}
+
+.flexslider {
+  border: none !important;
+
 }
 
 @media only screen and (max-width: 767px) {

@@ -9,7 +9,7 @@ Author URI: joshrcook.com
 License: GPL2
 */
 
-require_once('Easy-Wordpress-Custom-Post-Types-master/jw_custom_posts.php');
+require_once('Easy-Wordpress-Custom-Post-Types/jw_custom_posts.php');
 
 $jrc_art = new JW_Post_type('jrc_art', array(
 	'supports' => array('title', 'thumbnail'),
@@ -17,4 +17,4 @@ $jrc_art = new JW_Post_type('jrc_art', array(
 	'has_archive' => false
 ));
 
-$jrc_art->add_taxonomy('Art Category');
+$jrc_art->add_taxonomy('art_category', 'Art Categories', array('label' => 'Art Categories'));

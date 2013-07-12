@@ -73,22 +73,23 @@ if(is_array($image_ids)):
 ?>
 <div class="row">
 	<div class="columns">
-		<div class="flexslider">
-		  <ul class="slides">
-		    <?php 
-			foreach($image_ids as $id):
-			?>
-				<li>
-					<?php echo wp_get_attachment_image($id, 'full'); ?>
-				</li>
-			<?php
-			endforeach;
-			?>
-		  </ul>
-		  <div class="flex-direction-navigation">
-		  </div>
+		<div class="portfolio-flexslider">
+			<div class="flexslider">
+			  <ul class="slides">
+			    <?php 
+				foreach($image_ids as $id):
+				?>
+					<li>
+						<?php echo wp_get_attachment_image($id, 'full'); ?>
+					</li>
+				<?php
+				endforeach;
+				?>
+			  </ul>
+			  <div class="flex-direction-navigation">
+			  </div>
+			</div>
 		</div>
-		
 	</div>
 </div>
 <?php 
