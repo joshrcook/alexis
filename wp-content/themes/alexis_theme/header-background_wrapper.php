@@ -36,7 +36,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="outer-container" />
+<div id="outer-container" class="about background-wrapper" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/assets/photos/alexis-background-no-lines.jpg); "/>
 <div class="top-strip">&nbsp;</div>
 <header>
     <div class="row nav-bar">

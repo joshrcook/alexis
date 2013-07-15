@@ -207,9 +207,13 @@ header {
 
     .poster {
       display: inline-block;
+      height: 100%;
+      width: 75px;
 
       .movement {
         display: inline-block;
+        height: 100%;
+        width: 75px;
       }
     }
     
@@ -320,6 +324,8 @@ div.title-page {
 .poster {
   display: inline-block;
   margin-right: 1.5em;
+  height: 32px;
+  width: 32px;
 
   .movement {
     height: 32px;
@@ -391,7 +397,6 @@ div.title-page {
     display: table;  
     font-size: 1.15em;
     line-height: 32px;
-    font-family: $font3;
     letter-spacing: .1em;
 
     span {
@@ -672,7 +677,13 @@ li.cat-item {
 
   &.about {
     height: 35em;
+    background-size: 100% !important;
+    background-position: 100% 93%;
   }
+}
+
+.about-content {
+  margin-bottom: 20em;
 }
 
 .over-image-white * {
@@ -700,11 +711,5 @@ li.cat-item {
     .small-content-centered {
         text-align: center !important;
     }
-}
-
-/* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
-/* Grid changes from small to medium here */
-@media only screen and (min-width: 768px) { 
-  
 }
 

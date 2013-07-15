@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
         hideSidebar(); 
     });
     
-    $(window).on('resize', setSwipe);
+    // $(window).on('resize', setSwipe);
     
     function setSwipe() {
         // run the resize of the sidebar no matter what
@@ -83,7 +83,7 @@ jQuery(document).ready(function($) {
     setSidebarHeight();
     
     // set the swipe stuff
-    setSwipe();
+    // setSwipe();
 
 
 

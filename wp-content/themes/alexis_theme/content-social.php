@@ -33,12 +33,6 @@
 					'link' => '#',
 					'color' => '#dd4b39',
 					'class' => 'entypo-social'
-					),
-	'email' => array(
-					'icon' => '&#9993;',
-					'link' => '#',
-					'color' => '#1c91ff',
-					'class' => 'entypo'
 					)
 );
 ?>

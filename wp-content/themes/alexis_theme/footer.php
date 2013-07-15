@@ -53,7 +53,7 @@
                             <?php endforeach; ?>
                               
                         </div>                      
-                        <div class="large-6 columns hide-for-small copyright crimson text-right">
+                        <div class="large-6 columns hide-for-small asap copyright text-right">
                             Copyright &copy; <?php echo date('Y'); ?>, Alexis Contreras
                         </div>
                         

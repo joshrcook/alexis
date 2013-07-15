@@ -523,7 +523,7 @@
 			"file": "wp-content/themes/alexis_theme/scss/_base.scss",
 			"settings":
 			{
-				"buffer_size": 11066,
+				"buffer_size": 10992,
 				"line_ending": "Unix"
 			}
 		}
@@ -698,6 +698,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"poster",
 			"content-wrapper",
 			"social",
 			"bones_scripts",
@@ -824,8 +825,7 @@
 			"continue",
 			"update",
 			"print_r",
-			"uppercase",
-			"print_r"
+			"uppercase"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -854,15 +854,15 @@
 					"file": "wp-content/themes/alexis_theme/scss/_base.scss",
 					"settings":
 					{
-						"buffer_size": 11066,
+						"buffer_size": 10992,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								659,
-								659
+								3340,
+								3340
 							]
 						],
 						"settings":
@@ -872,7 +872,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 559.0,
+						"translation.y": 2760.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

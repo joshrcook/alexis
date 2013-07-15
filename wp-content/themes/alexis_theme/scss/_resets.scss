@@ -23,3 +23,11 @@ html, body {
 ul, li {
     list-style-type: none;
 }
+
+a {
+  color: $color6;
+
+  &:hover {
+    color: $color2;
+  }
+}
