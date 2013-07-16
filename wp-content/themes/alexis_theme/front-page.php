@@ -14,7 +14,10 @@
                     for design.</p>
             </div>
         </div>
-        <img class="absolute-image right hide-for-small" src="<?php echo get_template_directory_uri() . '/img/assets/photos/shoe2.jpg'; ?>" />
+        <?php if(has_post_thumbnail()) : ?>
+            <?php echo get_the_post_thumbnail($post->ID, 'full', array('class' => 'absolute-image right hide-for-small')); ?>
+        <?php endif; ?>
+        <!--<img class="absolute-image right hide-for-small" src="<?php echo get_template_directory_uri() . '/img/assets/photos/shoe2.jpg'; ?>" />-->
     </div>
 </div>
 <?php get_footer(); ?>
