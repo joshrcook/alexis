@@ -68,6 +68,16 @@ function add_scripts_styles() {
 
 	// register the flexslider loader
 	wp_register_script('jrc-theme-flexslider-loader', get_template_directory_uri() . '/js/load-flexslider.js', array('jquery', 'jrc-theme-flexslider'), false, true);
+
+	// register the IE only css
+	?>
+	<!--[if lte IE 10]>
+	<?php
+	wp_register_style('ie-10-css', get_template_directory_uri() . '/css/ie10.css', 'main-style');
+	// wp_enqueue_style('ie-10-css');
+	?>
+	<![endif]-->
+	<?php
 }
 
 add_action('wp_enqueue_scripts', 'add_scripts_styles');

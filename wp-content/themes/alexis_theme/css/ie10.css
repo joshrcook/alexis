@@ -1,0 +1,24 @@
+.back {
+	display: none;
+}
+
+.movement:hover .front {
+	z-index: 5;
+	opacity: 1;
+}
+
+.movement {
+	transition: none;
+}
+
+.back {
+	transform: none;
+}
+
+.poster:hover .movement {
+	transform: none;
+}
+
+.poster .movement div.circle i.entypo-social {
+	line-height: 16px;
+}

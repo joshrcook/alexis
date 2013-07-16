@@ -71,7 +71,7 @@ $url = wp_get_attachment_image_src($bg_id, 'full');
 $image_ids = json_decode(get_post_meta($post->ID, 'media-id', true));
 if(is_array($image_ids)):
 ?>
-<div class="row">
+<div class="row" id="slideshow">
 	<div class="columns">
 		<div class="portfolio-flexslider">
 			<div class="flexslider">
