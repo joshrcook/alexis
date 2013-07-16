@@ -30,8 +30,12 @@
     <?php wp_head(); ?>
     <!-- end of wordpress head -->
 
-    <!-- drop Google Analytics Here -->
-    <!-- end analytics -->
+    <!--[if lte IE 10]>
+        <link href="<?php echo get_template_directory_uri(); ?>/css/ie10.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!--[if lte IE 9]>
+        <link href="<?php echo get_template_directory_uri(); ?>/css/ie9.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
 
 </head>
 

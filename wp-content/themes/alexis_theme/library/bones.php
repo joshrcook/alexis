@@ -148,20 +148,17 @@ function bones_scripts_and_styles() {
     // enqueue styles and scripts
     wp_enqueue_script( 'bones-modernizr' );
     wp_enqueue_style('main-style');
-	?>
-	<!--[if lte IE 10]>
-	<?php
+
+    // register the IE only css
 	wp_register_style('ie10', get_template_directory_uri() . '/css/ie10.css');
-	wp_enqueue_style('ie10');
-	?>
-	<![endif]-->
-	<!--[if lte IE 9]>
-	<?php
 	wp_register_style('ie9', get_template_directory_uri() . '/css/ie9.css');
+
+	wp_enqueue_style('ie10');
+	$wp_styles->add_data('ie10', 'conditional', 'lte IE 10');
+
 	wp_enqueue_style('ie9');
-	?>
-	<![endif]-->
-	<?php
+	$wp_styles->add_data('ie9', 'conditional', 'let IE 9');
+
     // wp_enqueue_style( 'bones-stylesheet' );
     // wp_enqueue_style('bones-ie-only');
 
