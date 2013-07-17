@@ -9,22 +9,22 @@
                             <?php $social_icons = array(
                                 'linked-in' => array(
                                     'class' => 'icon-linkedin-sign',
-                                    'link' => '#',
+                                    'link' => 'http://www.linkedin.com/pub/alexis-contreras/30/a54/6a2',
                                     'color' => '#5ba8cf'
                                 ),
                                 'facebook' => array(
                                     'class' => 'icon-facebook',
-                                    'link' => '#',
+                                    'link' => 'https://www.facebook.com/alexis.e.contreras.39',
                                     'color' => '#3a5998'
                                 ),
                                 'instagram' => array(
                                     'class' => 'icon-instagram',
-                                    'link' => '#',
+                                    'link' => 'http://instagram.com/acontrrs88',
                                     'color' => '#ffa876'
                                 ),
                                 'email' => array(
                                     'class' => 'icon-envelope',
-                                    'link' => '#',
+                                    'link' => 'mailto:aecs.contreras@gmail.com',
                                     'color' => '#1c91ff'
                                 )
                             ); 
