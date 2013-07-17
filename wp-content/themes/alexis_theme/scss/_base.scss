@@ -321,6 +321,14 @@ div.title-page {
 		Footer styles
 */
 
+.social-icon {
+  margin-right: 1.5em;
+}
+
+.social-icon:last-child {
+  margin-right: 0;
+}
+
 .poster {
   display: inline-block;
   margin-right: 1.5em;
@@ -334,7 +342,6 @@ div.title-page {
     div.circle {
       background-color: $color4;
       display:inline-block;
-      margin-left: 1.5em;
       border-radius: 100px;
       width: 32px;
       height: 32px;
@@ -350,10 +357,6 @@ div.title-page {
           font-size: 2.3em;
         }
       }
-    }
-
-    .social-icon:first-child .circle {
-      margin-left: 0;
     }
   }
 }
@@ -371,14 +374,11 @@ div.title-page {
 
     .movement {
 
-      .social-icon {
+      div.circle {
+        background-color: white;
 
-        div.circle {
-          background-color: white;
-
-          i {
-            color: $color4;
-          }
+        i {
+          color: $color4;
         }
       }
     }
