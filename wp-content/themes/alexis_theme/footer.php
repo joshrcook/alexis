@@ -30,26 +30,24 @@
                             ); 
                             ?>
                             <?php foreach($social_icons as $icon): ?>
+                            <a class="social-icon" href="<?php echo $icon['link']; ?>">
                                 <div class="poster">
                                     <div class="movement">
-                                        <div class="face front">
-                                            <a class="social-icon" href="<?php echo $icon['link']; ?>">
-                                                <div class="circle">
-                                                    <i class="<?php echo $icon['class']; ?>"></i>
-                                                </div>
-                                            </a>
+                                        <div class="face front">  
+                                            <div class="circle">
+                                                <i class="<?php echo $icon['class']; ?>"></i>
+                                            </div>
                                         </div>
                                         <?php if(!MOBILE): ?>
                                         <div class="face back">
-                                            <a class="social-icon" href="<?php echo $icon['link']; ?>">
-                                                <div class="circle">
-                                                    <i class="<?php echo $icon['class']; ?>" style="color: <?php echo $icon['color']; ?>;"></i>
-                                                </div>
-                                            </a>
+                                            <div class="circle">
+                                                <i class="<?php echo $icon['class']; ?>" style="color: <?php echo $icon['color']; ?>;"></i>
+                                            </div>
                                         </div>
                                         <?php endif; ?>
                                     </div>
                                 </div>
+                            </a>
                             <?php endforeach; ?>
                               
                         </div>                      
