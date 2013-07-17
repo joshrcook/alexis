@@ -30,9 +30,11 @@
                             ); 
                             ?>
                             <?php foreach($social_icons as $icon): ?>
-                            <a class="social-icon" href="<?php echo $icon['link']; ?>">
+                            
                                 <div class="poster">
+                                    
                                     <div class="movement">
+                                        <a class="social-icon" href="<?php echo $icon['link']; ?>">
                                         <div class="face front">  
                                             <div class="circle">
                                                 <i class="<?php echo $icon['class']; ?>"></i>
@@ -45,9 +47,11 @@
                                             </div>
                                         </div>
                                         <?php endif; ?>
+                                        </a>
                                     </div>
+                                    
                                 </div>
-                            </a>
+                            
                             <?php endforeach; ?>
                               
                         </div>                      
