@@ -536,7 +536,7 @@ class wpdb {
 	function __construct( $dbuser, $dbpassword, $dbname, $dbhost ) {
 		register_shutdown_function( array( $this, '__destruct' ) );
 
-		if ( WP_DEBUG && WP_DEBUG_DISPLAY )
+		if ( WP_DEBUG )
 			$this->show_errors();
 
 		$this->init_charset();
@@ -640,13 +640,13 @@ class wpdb {
 	 * @param string   $charset The character set (optional)
 	 * @param string   $collate The collation (optional)
 	 */
-	function set_charset( $dbh, $charset = null, $collate = null ) {
-		if ( ! isset( $charset ) )
+	function set_charset($dbh, $charset = null, $collate = null) {
+		if ( !isset($charset) )
 			$charset = $this->charset;
-		if ( ! isset( $collate ) )
+		if ( !isset($collate) )
 			$collate = $this->collate;
-		if ( $this->has_cap( 'collation' ) && ! empty( $charset ) ) {
-			if ( function_exists( 'mysql_set_charset' ) && $this->has_cap( 'set_charset' ) ) {
+		if ( $this->has_cap( 'collation', $dbh ) && !empty( $charset ) ) {
+			if ( function_exists( 'mysql_set_charset' ) && $this->has_cap( 'set_charset', $dbh ) ) {
 				mysql_set_charset( $charset, $dbh );
 				$this->real_escape = true;
 			} else {
@@ -987,9 +987,12 @@ class wpdb {
 	 * @return null|false|string Sanitized query string, null if there is no query, false if there is an error and string
 	 * 	if there was something to prepare
 	 */
-	function prepare( $query, $args ) {
+	function prepare( $query, $args = null ) {
 		if ( is_null( $query ) )
 			return;
+
+		if ( func_num_args() < 2 )
+			_doing_it_wrong( 'wpdb::prepare', 'wpdb::prepare() requires at least two arguments.', '3.5' );
 
 		$args = func_get_args();
 		array_shift( $args );
@@ -1117,6 +1120,8 @@ class wpdb {
 		$this->last_result = array();
 		$this->col_info    = null;
 		$this->last_query  = null;
+		$this->rows_affected = $this->num_rows = 0;
+		$this->last_error  = '';
 
 		if ( is_resource( $this->result ) )
 			mysql_free_result( $this->result );
@@ -1297,6 +1302,7 @@ class wpdb {
 	function _insert_replace_helper( $table, $data, $format = null, $type = 'INSERT' ) {
 		if ( ! in_array( strtoupper( $type ), array( 'REPLACE', 'INSERT' ) ) )
 			return false;
+		$this->insert_id = 0;
 		$formats = $format = (array) $format;
 		$fields = array_keys( $data );
 		$formatted_fields = array();
@@ -1687,12 +1693,12 @@ class wpdb {
 	}
 
 	/**
-	 * Determine if a database supports a particular feature.
+	 * Determine if a database supports a particular feature
 	 *
 	 * @since 2.7.0
-	 * @see wpdb::db_version()
+	 * @see   wpdb::db_version()
 	 *
-	 * @param string $db_cap The feature to check for.
+	 * @param string $db_cap the feature
 	 * @return bool
 	 */
 	function has_cap( $db_cap ) {
@@ -1700,11 +1706,11 @@ class wpdb {
 
 		switch ( strtolower( $db_cap ) ) {
 			case 'collation' :    // @since 2.5.0
-			case 'group_concat' : // @since 2.7.0
-			case 'subqueries' :   // @since 2.7.0
+			case 'group_concat' : // @since 2.7
+			case 'subqueries' :   // @since 2.7
 				return version_compare( $version, '4.1', '>=' );
 			case 'set_charset' :
-				return version_compare( $version, '5.0.7', '>=' );
+				return version_compare($version, '5.0.7', '>=');
 		};
 
 		return false;

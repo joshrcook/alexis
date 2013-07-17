@@ -98,7 +98,7 @@ class WP_Upgrader {
 					break;
 				default:
 					if ( ! $wp_filesystem->find_folder($dir) )
-						return new WP_Error('fs_no_folder', sprintf($this->strings['fs_no_folder'], $dir));
+						return new WP_Error( 'fs_no_folder', sprintf( $this->strings['fs_no_folder'], esc_html( basename( $dir ) ) ) );
 					break;
 			}
 		}
@@ -166,7 +166,6 @@ class WP_Upgrader {
 		global $wp_filesystem;
 		$defaults = array( 'source' => '', 'destination' => '', //Please always pass these
 						'clear_destination' => false, 'clear_working' => false,
-						'abort_if_destination_exists' => true,
 						'hook_extra' => array());
 
 		$args = wp_parse_args($args, $defaults);
@@ -195,7 +194,7 @@ class WP_Upgrader {
 			$source = trailingslashit($source) . trailingslashit($source_files[0]);
 		elseif ( count($source_files) == 0 )
 			return new WP_Error( 'incompatible_archive', $this->strings['incompatible_archive'], __( 'The plugin contains no files.' ) ); //There are no files?
-		else //It's only a single file, the upgrader will use the foldername of this file as the destination folder. foldername is based on zip filename.
+		else //Its only a single file, The upgrader will use the foldername of this file as the destination folder. foldername is based on zip filename.
 			$source = trailingslashit($source);
 
 		//Hook ability to change the source file location..
@@ -225,7 +224,7 @@ class WP_Upgrader {
 				return $removed;
 			else if ( ! $removed )
 				return new WP_Error('remove_old_failed', $this->strings['remove_old_failed']);
-		} elseif ( $abort_if_destination_exists && $wp_filesystem->exists($remote_destination) ) {
+		} elseif ( $wp_filesystem->exists($remote_destination) ) {
 			//If we're not clearing the destination folder and something exists there already, Bail.
 			//But first check to see if there are actually any files in the folder.
 			$_files = $wp_filesystem->dirlist($remote_destination);
@@ -273,7 +272,6 @@ class WP_Upgrader {
 		$defaults = array( 	'package' => '', //Please always pass this.
 							'destination' => '', //And this
 							'clear_destination' => false,
-							'abort_if_destination_exists' => true, // Abort if the Destination directory exists, Pass clear_destination as false please
 							'clear_working' => true,
 							'is_multi' => false,
 							'hook_extra' => array() //Pass any extra $hook_extra args here, this will be passed to any hooked filters.
@@ -320,7 +318,6 @@ class WP_Upgrader {
 											'source' => $working_dir,
 											'destination' => $destination,
 											'clear_destination' => $clear_destination,
-											'abort_if_destination_exists' => $abort_if_destination_exists,
 											'clear_working' => $clear_working,
 											'hook_extra' => $hook_extra
 										) );
@@ -415,7 +412,6 @@ class Plugin_Upgrader extends WP_Upgrader {
 		// Force refresh of plugin update information
 		delete_site_transient('update_plugins');
 		wp_cache_delete( 'plugins', 'plugins' );
-		do_action( 'upgrader_process_complete', $this, array( 'action' => 'install', 'type' => 'plugin' ), $package );
 
 		return true;
 	}
@@ -461,7 +457,6 @@ class Plugin_Upgrader extends WP_Upgrader {
 		// Force refresh of plugin update information
 		delete_site_transient('update_plugins');
 		wp_cache_delete( 'plugins', 'plugins' );
-		do_action( 'upgrader_process_complete', $this, array( 'action' => 'update', 'type' => 'plugin' ), $plugin );
 	}
 
 	function bulk_upgrade($plugins) {
@@ -544,7 +539,6 @@ class Plugin_Upgrader extends WP_Upgrader {
 		// Force refresh of plugin update information
 		delete_site_transient('update_plugins');
 		wp_cache_delete( 'plugins', 'plugins' );
-		do_action( 'upgrader_process_complete', $this, array( 'action' => 'update', 'type' => 'plugin', 'bulk' => true ), $plugins );
 
 		return $results;
 	}
@@ -621,11 +615,11 @@ class Plugin_Upgrader extends WP_Upgrader {
 		$plugins_dir = $wp_filesystem->wp_plugins_dir();
 		$this_plugin_dir = trailingslashit( dirname($plugins_dir . $plugin) );
 
-		if ( ! $wp_filesystem->exists($this_plugin_dir) ) //If it's already vanished.
+		if ( ! $wp_filesystem->exists($this_plugin_dir) ) //If its already vanished.
 			return $removed;
 
 		// If plugin is in its own directory, recursively delete the directory.
-		if ( strpos($plugin, '/') && $this_plugin_dir != $plugins_dir ) //base check on if plugin includes directory separator AND that it's not the root plugin folder
+		if ( strpos($plugin, '/') && $this_plugin_dir != $plugins_dir ) //base check on if plugin includes directory separator AND that its not the root plugin folder
 			$deleted = $wp_filesystem->delete($this_plugin_dir, true);
 		else
 			$deleted = $wp_filesystem->delete($plugins_dir . $plugin);
@@ -770,7 +764,6 @@ class Theme_Upgrader extends WP_Upgrader {
 
 		// Force refresh of theme update information
 		wp_clean_themes_cache();
-		do_action( 'upgrader_process_complete', $this, array( 'action' => 'install', 'type' => 'theme' ), $package );
 
 		return true;
 	}
@@ -817,7 +810,6 @@ class Theme_Upgrader extends WP_Upgrader {
 
 		// Force refresh of theme update information
 		wp_clean_themes_cache();
-		do_action( 'upgrader_process_complete', $this, array( 'action' => 'update', 'type' => 'theme' ), $theme );
 
 		return true;
 	}
@@ -905,7 +897,6 @@ class Theme_Upgrader extends WP_Upgrader {
 
 		// Force refresh of theme update information
 		wp_clean_themes_cache();
-		do_action( 'upgrader_process_complete', $this, array( 'action' => 'update', 'type' => 'theme', 'bulk' => true ), $themes );
 
 		return $results;
 	}
@@ -1076,9 +1067,7 @@ class Core_Upgrader extends WP_Upgrader {
 		if ( ! function_exists( 'update_core' ) )
 			return new WP_Error( 'copy_failed_space', $this->strings['copy_failed_space'] );
 
-		$result = update_core( $working_dir, $wp_dir );
-		do_action( 'upgrader_process_complete', $this, array( 'action' => 'update', 'type' => 'core' ), $result );
-		return $result;
+		return update_core($working_dir, $wp_dir);
 	}
 
 }
@@ -1129,7 +1118,7 @@ class WP_Upgrader_Skin {
 			return;
 		$this->done_header = true;
 		echo '<div class="wrap">';
-		screen_icon();
+		echo screen_icon();
 		echo '<h2>' . $this->options['title'] . '</h2>';
 	}
 	function footer() {
@@ -1144,7 +1133,7 @@ class WP_Upgrader_Skin {
 		} elseif ( is_wp_error($errors) && $errors->get_error_code() ) {
 			foreach ( $errors->get_error_messages() as $message ) {
 				if ( $errors->get_error_data() )
-					$this->feedback($message . ' ' . $errors->get_error_data() );
+					$this->feedback($message . ' ' . esc_html( $errors->get_error_data() ) );
 				else
 					$this->feedback($message);
 			}
@@ -1158,8 +1147,11 @@ class WP_Upgrader_Skin {
 		if ( strpos($string, '%') !== false ) {
 			$args = func_get_args();
 			$args = array_splice($args, 1);
-			if ( !empty($args) )
+			if ( $args ) {
+				$args = array_map( 'strip_tags', $args );
+				$args = array_map( 'esc_html', $args );
 				$string = vsprintf($string, $args);
+			}
 		}
 		if ( empty($string) )
 			return;
@@ -1199,11 +1191,11 @@ class Plugin_Upgrader_Skin extends WP_Upgrader_Skin {
 	function after() {
 		$this->plugin = $this->upgrader->plugin_info();
 		if ( !empty($this->plugin) && !is_wp_error($this->result) && $this->plugin_active ){
-			echo '<iframe style="border:0;overflow:hidden" width="100%" height="170px" src="' . wp_nonce_url('update.php?action=activate-plugin&networkwide=' . $this->plugin_network_active . '&plugin=' . $this->plugin, 'activate-plugin_' . $this->plugin) .'"></iframe>';
+			echo '<iframe style="border:0;overflow:hidden" width="100%" height="170px" src="' . wp_nonce_url('update.php?action=activate-plugin&networkwide=' . $this->plugin_network_active . '&plugin=' . urlencode( $this->plugin ), 'activate-plugin_' . $this->plugin) .'"></iframe>';
 		}
 
 		$update_actions =  array(
-			'activate_plugin' => '<a href="' . wp_nonce_url('plugins.php?action=activate&amp;plugin=' . $this->plugin, 'activate-plugin_' . $this->plugin) . '" title="' . esc_attr__('Activate this plugin') . '" target="_parent">' . __('Activate Plugin') . '</a>',
+			'activate_plugin' => '<a href="' . wp_nonce_url('plugins.php?action=activate&amp;plugin=' . urlencode( $this->plugin ), 'activate-plugin_' . $this->plugin) . '" title="' . esc_attr__('Activate this plugin') . '" target="_parent">' . __('Activate Plugin') . '</a>',
 			'plugins_page' => '<a href="' . self_admin_url('plugins.php') . '" title="' . esc_attr__('Go to plugins page') . '" target="_parent">' . __('Return to Plugins page') . '</a>'
 		);
 		if ( $this->plugin_active || ! $this->result || is_wp_error( $this->result ) || ! current_user_can( 'activate_plugins' ) )
@@ -1255,8 +1247,11 @@ class Bulk_Upgrader_Skin extends WP_Upgrader_Skin {
 		if ( strpos($string, '%') !== false ) {
 			$args = func_get_args();
 			$args = array_splice($args, 1);
-			if ( !empty($args) )
+			if ( $args ) {
+				$args = array_map( 'strip_tags', $args );
+				$args = array_map( 'esc_html', $args );
 				$string = vsprintf($string, $args);
+			}
 		}
 		if ( empty($string) )
 			return;
@@ -1280,7 +1275,7 @@ class Bulk_Upgrader_Skin extends WP_Upgrader_Skin {
 		if ( is_wp_error($error) ) {
 			foreach ( $error->get_error_messages() as $emessage ) {
 				if ( $error->get_error_data() )
-					$messages[] = $emessage . ' ' . $error->get_error_data();
+					$messages[] = $emessage . ' ' . esc_html( $error->get_error_data() );
 				else
 					$messages[] = $emessage;
 			}
@@ -1347,11 +1342,11 @@ class Bulk_Plugin_Upgrader_Skin extends Bulk_Upgrader_Skin {
 		$this->upgrader->strings['skin_before_update_header'] = __('Updating Plugin %1$s (%2$d/%3$d)');
 	}
 
-	function before($title = '') {
+	function before() {
 		parent::before($this->plugin_info['Title']);
 	}
 
-	function after($title = '') {
+	function after() {
 		parent::after($this->plugin_info['Title']);
 	}
 	function bulk_footer() {
@@ -1381,11 +1376,11 @@ class Bulk_Theme_Upgrader_Skin extends Bulk_Upgrader_Skin {
 		$this->upgrader->strings['skin_before_update_header'] = __('Updating Theme %1$s (%2$d/%3$d)');
 	}
 
-	function before($title = '') {
+	function before() {
 		parent::before( $this->theme_info->display('Name') );
 	}
 
-	function after($title = '') {
+	function after() {
 		parent::after( $this->theme_info->display('Name') );
 	}
 
@@ -1438,15 +1433,15 @@ class Plugin_Installer_Skin extends WP_Upgrader_Skin {
 
 		$install_actions = array();
 
-		$from = isset($_GET['from']) ? wp_unslash( $_GET['from'] ) : 'plugins';
+		$from = isset($_GET['from']) ? stripslashes($_GET['from']) : 'plugins';
 
 		if ( 'import' == $from )
-			$install_actions['activate_plugin'] = '<a href="' . wp_nonce_url('plugins.php?action=activate&amp;from=import&amp;plugin=' . $plugin_file, 'activate-plugin_' . $plugin_file) . '" title="' . esc_attr__('Activate this plugin') . '" target="_parent">' . __('Activate Plugin &amp; Run Importer') . '</a>';
+			$install_actions['activate_plugin'] = '<a href="' . wp_nonce_url('plugins.php?action=activate&amp;from=import&amp;plugin=' . urlencode( $plugin_file ), 'activate-plugin_' . $plugin_file) . '" title="' . esc_attr__('Activate this plugin') . '" target="_parent">' . __('Activate Plugin &amp; Run Importer') . '</a>';
 		else
-			$install_actions['activate_plugin'] = '<a href="' . wp_nonce_url('plugins.php?action=activate&amp;plugin=' . $plugin_file, 'activate-plugin_' . $plugin_file) . '" title="' . esc_attr__('Activate this plugin') . '" target="_parent">' . __('Activate Plugin') . '</a>';
+			$install_actions['activate_plugin'] = '<a href="' . wp_nonce_url('plugins.php?action=activate&amp;plugin=' . urlencode( $plugin_file ), 'activate-plugin_' . $plugin_file) . '" title="' . esc_attr__('Activate this plugin') . '" target="_parent">' . __('Activate Plugin') . '</a>';
 
 		if ( is_multisite() && current_user_can( 'manage_network_plugins' ) ) {
-			$install_actions['network_activate'] = '<a href="' . wp_nonce_url('plugins.php?action=activate&amp;networkwide=1&amp;plugin=' . $plugin_file, 'activate-plugin_' . $plugin_file) . '" title="' . esc_attr__('Activate this plugin for all sites in this network') . '" target="_parent">' . __('Network Activate') . '</a>';
+			$install_actions['network_activate'] = '<a href="' . wp_nonce_url('plugins.php?action=activate&amp;networkwide=1&amp;plugin=' . urlencode( $plugin_file ), 'activate-plugin_' . $plugin_file) . '" title="' . esc_attr__('Activate this plugin for all sites in this network') . '" target="_parent">' . __('Network Activate') . '</a>';
 			unset( $install_actions['activate_plugin'] );
 		}
 
@@ -1608,7 +1603,7 @@ class Theme_Upgrader_Skin extends WP_Upgrader_Skin {
 }
 
 /**
- * Upgrade Skin helper for File uploads. This class handles the upload process and passes it as if it's a local file to the Upgrade/Installer functions.
+ * Upgrade Skin helper for File uploads. This class handles the upload process and passes it as if its a local file to the Upgrade/Installer functions.
  *
  * @TODO More Detailed docs, for methods as well.
  *
@@ -1626,7 +1621,7 @@ class File_Upload_Upgrader {
 		if ( empty($_FILES[$form]['name']) && empty($_GET[$urlholder]) )
 			wp_die(__('Please select a file'));
 
-		//Handle a newly uploaded file, Else assume it's already been uploaded
+		//Handle a newly uploaded file, Else assume its already been uploaded
 		if ( ! empty($_FILES) ) {
 			$overrides = array( 'test_form' => false, 'test_type' => false );
 			$file = wp_handle_upload( $_FILES[$form], $overrides );
