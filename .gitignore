@@ -1,3 +1,6 @@
-/nbproject/private/
-.htaccess
 wp-config.php
+wp-content/uploads
+.htaccess
+alexis.sublime-project
+alexis.sublime-workspace
+error_log
