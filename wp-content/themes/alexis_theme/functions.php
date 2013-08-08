@@ -69,6 +69,8 @@ function add_scripts_styles() {
 
 	// register the flexslider loader
 	wp_register_script('jrc-theme-flexslider-loader', get_template_directory_uri() . '/js/load-flexslider.js', array('jquery', 'jrc-theme-flexslider'), false, true);
+
+	wp_register_script('pinterest', get_template_directory_uri() . '/js/pinterest.js');
 }
 
 add_action('wp_enqueue_scripts', 'add_scripts_styles');
