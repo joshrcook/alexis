@@ -34,8 +34,8 @@ function jrc_art_reorder_init() {
             'final'       => '',
             'initial'     => '',
             'menu_label'  => __( 'Reorder', 'reorder' ),
-            // 'icon'        => REORDER_URL . '/metronet-icon.png',
-            'post_status' => 'publish',
+            'icon'        => '',
+            'post_status' => 'publish'
         )
     );
 }
