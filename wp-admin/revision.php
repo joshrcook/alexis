@@ -31,11 +31,15 @@ case 'restore' :
 	if ( ! $post = get_post( $revision->post_parent ) )
 		break;
 
-	// Revisions disabled (previously checked autosavegs && ! wp_is_post_autosave( $revision ))
+	// Revisions disabled (previously checked autosaves && ! wp_is_post_autosave( $revision ))
 	if ( ! wp_revisions_enabled( $post ) ) {
 		$redirect = 'edit.php?post_type=' . $post->post_type;
 		break;
 	}
+
+	// Don't allow revision restore when post is locked
+	if ( wp_check_post_lock( $post->ID ) )
+		break;
 
 	check_admin_referer( "restore-post_{$revision->ID}" );
 
@@ -91,7 +95,7 @@ $revisions_overview  = '<p>' . __( 'This screen is used for managing your conten
 $revisions_overview .= '<p>' . __( 'Revisions are saved copies of your post or page, which are periodically created as you update your content. The red text on the left shows the content that was removed. The green text on the right shows the content that was added.' ) . '</p>';
 $revisions_overview .= '<p>' . __( 'From this screen you can review, compare, and restore revisions:' ) . '</p>';
 $revisions_overview .= '<ul><li>' . __( 'To navigate between revisions, <strong>drag the slider handle left or right</strong> or <strong>use the Previous or Next buttons</strong>.' ) . '</li>';
-$revisions_overview .= '<li>' . __( 'Compare two different revisions by <strong>selecting the &#8220;Compare two revisions&#8221; box</strong> to the side.' ) . '</li>';
+$revisions_overview .= '<li>' . __( 'Compare two different revisions by <strong>selecting the &#8220;Compare any two revisions&#8221; box</strong> to the side.' ) . '</li>';
 $revisions_overview .= '<li>' . __( 'To restore a revision, <strong>click Restore This Revision</strong>.' ) . '</li></ul>';
 
 get_current_screen()->add_help_tab( array(
@@ -130,22 +134,6 @@ require_once( './admin-header.php' );
 	</div>
 </script>
 
-<script id="tmpl-revisions-tooltip" type="text/html">
-	<div class="author-card">
-	<# if ( 'undefined' !== typeof data && 'undefined' !== typeof data.author ) { #>
-		{{{ data.author.avatar }}}
-		<div class="author-info">
-				
-			<span class="byline"><?php printf( __( 'Revision by %s' ),
-				'<span class="author-name">{{ data.author.name }}</span>' ); ?></span>
-			<span class="time-ago">{{ data.timeAgo }}</span>
-			<span class="date">({{ data.dateShort }})</span>
-		</div>
-	<# } #>
-	</div>
-	<div class="revisions-tooltip-arrow"><span></span></div>
-</script>
-
 <script id="tmpl-revisions-checkbox" type="text/html">
 	<div class="revision-toggle-compare-mode">
 		<label>
@@ -156,49 +144,54 @@ require_once( './admin-header.php' );
 			}
 			#>
 			/>
-			<?php esc_attr_e( 'Compare two revisions' ); ?>
+			<?php esc_attr_e( 'Compare any two revisions' ); ?>
 		</label>
 	</div>
 </script>
 
 <script id="tmpl-revisions-meta" type="text/html">
-	<div class="diff-meta diff-meta-from">
+	<# if ( ! _.isUndefined( data.attributes ) ) { #>
 		<div class="diff-title">
-			<strong><?php _ex( 'From:', 'Followed by post revision info' ); ?></strong>
-		<# if ( 'undefined' !== typeof data.from ) { #>
-			<div class="author-card">
-				{{{ data.from.attributes.author.avatar }}}
-				<div class="author-info">
-					<span class="byline"><?php printf( __( 'Revision by %s' ),
-						'<span class="author-name">{{ data.from.attributes.author.name }}</span>' ); ?></span>
-					<span class="time-ago">{{ data.from.attributes.timeAgo }}</span>
-					<span class="date">({{ data.from.attributes.dateShort }})</span>
-				</div>
-			</div>
-		<# } #>
-		</div>
-	</div>
-
-	<div class="diff-meta diff-meta-to">
-		<div class="diff-title">
-			<strong><?php _ex( 'To:', 'Followed by post revision info' ); ?></strong>
-		<# if ( 'undefined' !== typeof data.to ) { #>
-			<div class="author-card">
-				{{{ data.to.attributes.author.avatar }}}
-				<div class="author-info">
-					<span class="byline"><?php printf( __( 'Revision by %s' ),
-						'<span class="author-name">{{ data.to.attributes.author.name }}</span>' ); ?></span>
-					<span class="time-ago">{{ data.to.attributes.timeAgo }}</span>
-					<span class="date">({{ data.to.attributes.dateShort }})</span>
-				</div>
-		<# } #>
-			<input 
-			<# if ( data.to.attributes.current ) { #>
-				disabled="disabled"
+			<# if ( 'from' === data.type ) { #>
+				<strong><?php _ex( 'From:', 'Followed by post revision info' ); ?></strong>
+			<# } else if ( 'to' === data.type ) { #>
+				<strong><?php _ex( 'To:', 'Followed by post revision info' ); ?></strong>
 			<# } #>
-			type="button" class="restore-revision button button-primary" data-restore-link="{{{ data.restoreLink }}}" value="<?php esc_attr_e( 'Restore This Revision' ); ?>" />
+			<div class="author-card<# if ( data.attributes.autosave ) { #> autosave<# } #>">
+				{{{ data.attributes.author.avatar }}}
+				<div class="author-info">
+				<# if ( data.attributes.autosave ) { #>
+					<span class="byline"><?php printf( __( 'Autosave by %s' ),
+						'<span class="author-name">{{ data.attributes.author.name }}</span>' ); ?></span>
+				<# } else if ( data.attributes.current ) { #>
+					<span class="byline"><?php printf( __( 'Current Revision by %s' ),
+						'<span class="author-name">{{ data.attributes.author.name }}</span>' ); ?></span>
+				<# } else { #>
+					<span class="byline"><?php printf( __( 'Revision by %s' ),
+						'<span class="author-name">{{ data.attributes.author.name }}</span>' ); ?></span>
+				<# } #>
+					<span class="time-ago">{{ data.attributes.timeAgo }}</span>
+					<span class="date">({{ data.attributes.dateShort }})</span>
+				</div>
+			<# if ( 'to' === data.type && data.attributes.restoreUrl ) { #>
+				<input  <?php if ( wp_check_post_lock( $post->ID ) ) { ?>
+					disabled="disabled"
+				<?php } else { ?>
+					<# if ( data.attributes.current ) { #>
+						disabled="disabled"
+					<# } #>
+				<?php } ?>
+				<# if ( data.attributes.autosave ) { #>
+					type="button" class="restore-revision button button-primary" value="<?php esc_attr_e( 'Restore This Autosave' ); ?>" />
+				<# } else { #>
+					type="button" class="restore-revision button button-primary" value="<?php esc_attr_e( 'Restore This Revision' ); ?>" />
+				<# } #>
+			<# } #>
 		</div>
-	</div>
+	<# if ( 'tooltip' === data.type ) { #>
+		<div class="revisions-tooltip-arrow"><span></span></div>
+	<# } #>
+<# } #>
 </script>
 
 <script id="tmpl-revisions-diff" type="text/html">
